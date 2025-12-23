@@ -5,11 +5,18 @@ def main() -> None:
     deck = Deck()
     deck.shuffle()
 
-    c1 = deck.draw()
-    c2 = deck.draw()
+    hand = deck.deal(2)
+    board = deck.deal(5)
+    villian = deck.deal(2)
 
-    print(c1.rank.display() + c1.suit.display())
-    print(c2.rank.display() + c2.suit.display())
+    print("hand:")
+    for card in hand:
+        print(card.rank.display() + card.suit.display())
+
+    print("board:")
+
+    for card in board:
+        print(card.rank.display() + card.suit.display())
 
 if __name__ == "__main__":
     main()

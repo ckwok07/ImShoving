@@ -15,3 +15,9 @@ class Deck:
 
     def draw(self) -> Card:
         return self.cards.pop()
+    
+    def deal(self, num) -> list[Card]:
+        hand = []
+        for i in range(num):
+            hand.append(self.draw())
+        return hand
