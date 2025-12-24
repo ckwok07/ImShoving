@@ -22,7 +22,7 @@ class Evaluator:
             ranks.append(card.rank)
             suits.append(card.suit)
 
-        ranks.sort(Reverse = True)
+        ranks.sort()
 
         for rank in ranks:
             if rank in rankCount:
@@ -32,6 +32,7 @@ class Evaluator:
 
         # check if straight
         straight = False
+        straight_high = 0
         if len(rankCount) == 5:
             # normal straight
             if ranks[-1] - ranks[0] == 4:
@@ -50,10 +51,89 @@ class Evaluator:
             flush = True
 
         # classify hand
-        if flush and straight:
-            # straight flush
-            straightFlush = True
-        elif len(rankCount) == 2 and 4 in rankCount.values():
-            four = True
-        elif len(rankCount) == 2 and 3 in rankCount.valeus() and 2 in rankCount.values():
-            boat = True
+        counts = sorted(rankCount.values(), reverse=True)
+
+        if straight and flush: # straight flush
+            hand_class = 8
+
+            return (hand_class, straight_high, 0, 0, 0, 0)
+        
+        elif counts == [4, 1]: # quads
+            hand_class = 7
+            quad = 0
+            kicker = 0
+
+            for rank, count in rankCount.items():
+                if count == 4:
+                    quad = rank
+                elif count == 1:
+                    kicker = rank
+
+            return (hand_class, quad, kicker, 0, 0, 0)
+        
+        elif counts == [3, 2]: # boat
+            hand_class = 6
+            trip = 0
+            pair = 0
+
+            for rank, count in rankCount.items():
+                if count == 3:
+                    trip = rank
+                elif count == 2:
+                    pair = rank
+            return (hand_class, trip, pair, 0, 0, 0)
+        
+        elif flush: # flush
+            hand_class = 5
+
+            return (hand_class, ranks[-1], ranks[-2], ranks[-3], ranks[-4], ranks[-5])
+        
+        elif straight: # straight
+            hand_class = 4
+
+            return (hand_class, straight_high, 0, 0, 0, 0)
+        
+        elif counts == [3, 1, 1]: # set
+            hand_class = 3
+            trip = 0
+            kickers = []
+
+            for rank, count in rankCount.items():
+                if count == 3:
+                    trip = rank
+                else:
+                    kickers.append(rank)
+            
+            kickers.sort(reverse = True)
+            return (hand_class, trip, kickers[0], kickers[1], 0, 0)
+        
+        elif counts == [2, 2, 1]: # two pair
+            hand_class = 2
+            pairs = []
+            kicker = 0
+
+            for rank, count in rankCount.items():
+                if count == 2:
+                    pairs.append(rank)
+                else:
+                    kicker = rank
+            
+            pairs.sort(reverse = True)
+            return (hand_class, pairs[0], pairs[1], kicker, 0, 0)
+
+        elif counts == [2, 1, 1, 1]: # pair
+            hand_class = 1
+            pair = 0
+            kickers = []
+
+            for rank, count in rankCount.items():
+                if count == 2:
+                    pair = rank
+                else:
+                    kickers.append(rank)
+
+            kickers.sort(reverse = True)
+            return (hand_class, pair, kickers[0], kickers[1], kickers[2], 0)
+        else:
+            hand_class = 0
+            return (hand_class, ranks[-1], ranks[-2], ranks[-3], ranks[-4], ranks[-5])
