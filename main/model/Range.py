@@ -1,5 +1,6 @@
 from .Card import Card
 from .Deck import Deck
+import random
 
 class Range:
     ALL_HANDS: list[list[Card]] | None = None
@@ -30,3 +31,17 @@ class Range:
                 if card1.rank == card2.rank and card1.suit == card2.suit:
                     return True
         return False
+    
+    def available_hands(self, known: list[Card]) -> list[list[Card]]:
+        available_hands = []
+
+        for hand in self.hands:
+            if not self.is_blocked(hand, known):
+                available_hands.append(hand)
+        
+        return available_hands
+    
+    def sample_hand(self, known: list[Card]) -> list[Card]:
+        possible_hands = self.available_hands(known)
+        assert possible_hands #check if a hand in the range exists
+        return random.choice(possible_hands)
