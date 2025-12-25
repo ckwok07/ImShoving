@@ -1,11 +1,22 @@
 from .Card import Card
-
+from itertools import combinations
 
 
 class Evaluator:
     @staticmethod
     def best_hand(cards: list[Card]) -> list[Card]:
-        return []
+        bestHand = None
+        bestHandScore = None
+
+        for hand in combinations(cards, 5):
+            score = Evaluator.mapper(hand)
+
+            if bestHandScore is None or score > bestHandScore:
+                bestHand = hand
+                bestHandScore = score
+
+
+        return list(bestHand)
     
     @staticmethod
     def mapper(hand: list[Card]) -> tuple[int, int, int, int, int, int]:

@@ -11,4 +11,4 @@ class Suit(Enum):
             Suit.CLUBS: "c",
             Suit.DIAMONDS: "d",
             Suit.HEARTS: "h",
-            Suit.SPADES: "s"}[self]
+            Suit.SPADES: "s"}[self]  
