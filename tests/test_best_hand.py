@@ -6,7 +6,7 @@ from main.model.Evaluator import Evaluator
 import random
 from itertools import combinations
 
-def test_best_hand_dominates_all_subsets_randomized():
+def test_best_hand_over_200_trials():
     for _ in range(200):  # number of trials
         deck = Deck()
         deck.shuffle()
@@ -183,4 +183,75 @@ def test_straight_flush():
 
     assert Evaluator.mapper(hand) == Evaluator.mapper(expected_hand)
     assert Evaluator.compare_hands(hand, expected_hand) == 0
+
+def test_best_hand_order_invariant():
+    cards = [
+        Card(14,0), Card(14,1), Card(13,2),
+        Card(12,3), Card(11,0), Card(9,1), Card(2,2)
+    ]
+
+    h1 = Evaluator.best_hand(cards)
+    cards.reverse()
+    h2 = Evaluator.best_hand(cards)
+
+    assert Evaluator.compare_hands(h1, h2) == 0
+
+def test_best_hand_identity():
+    cards = [Card(14,0), Card(13,1), Card(12,2), Card(11,3), Card(9,0)]
+    assert Evaluator.mapper(Evaluator.best_hand(cards)) == Evaluator.mapper(cards)
+
+def test_best_2fullhouses():
+    cards = [
+        Card(10,0), Card(10,1), Card(10,2),
+        Card(8,0), Card(8,1), Card(8,2),
+        Card(2,3)
+    ]
+
+    best = Evaluator.best_hand(cards)
+    assert Evaluator.mapper(best)[0] == 6  # full house
+    assert Evaluator.mapper(best) == (6, 10, 8, 0, 0, 0)
+
+def test_best_2fullhouses_order():
+    cards = [
+        Card(8,0), Card(10,1), Card(10,2),
+        Card(10,0), Card(8,1), Card(8,2),
+        Card(2,3)
+    ]
+
+    best = Evaluator.best_hand(cards)
+    assert Evaluator.mapper(best)[0] == 6  # full house
+    assert Evaluator.mapper(best) == (6, 10, 8, 0, 0, 0)
+
+def test_best_hand_flush_over_straight():
+    cards = [
+        Card(14, 1), Card(12, 1), Card(10, 1), Card(7, 1), Card(3, 1),  # flush
+        Card(9, 0), Card(8, 2)                                         # straight exists
+    ]
+
+    best = Evaluator.best_hand(cards)
+
+    assert Evaluator.mapper(best) == (5, 14, 12, 10, 7, 3)
+
+def test_best_hand_two_flushes():
+    cards = [
+        Card(14, 0), Card(11, 0), Card(9, 0), Card(6, 0), Card(2, 0),  # A-high flush
+        Card(13, 1), Card(12, 1)
+    ]
+
+    best = Evaluator.best_hand(cards)
+
+    assert Evaluator.mapper(best) == (5, 14, 11, 9, 6, 2)
+
+def test_best_hand_two_straights():
+    cards = [
+        Card(5, 0), Card(6, 1), Card(7, 2), Card(8, 3), Card(9, 0),   # 9-high
+        Card(10, 1), Card(11, 2)                                     # enables J-high
+    ]
+
+    best = Evaluator.best_hand(cards)
+
+    # J-high straight
+    assert Evaluator.mapper(best) == (4, 11, 0, 0, 0, 0)
+
+
 

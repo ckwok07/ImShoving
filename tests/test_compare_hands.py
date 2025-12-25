@@ -4,6 +4,19 @@ from main.model.Suit import Suit
 from main.model.Deck import Deck
 from main.model.Evaluator import Evaluator
 
+def test_hand_order():
+    hand1 = [
+        Card(14, 0), 
+        Card(13, 1), 
+        Card(12, 2), 
+        Card(11, 3), 
+        Card(9, 0)
+    ]
+
+    hand2 = list(reversed(hand1))
+
+    assert Evaluator.compare_hands(hand1, hand2) == 0
+
 def test_high_card_vs_high_card():
     hand1 = [
         Card(14, Suit.SPADES),
@@ -95,3 +108,17 @@ def test_same_hand():
         ]
 
         assert Evaluator.compare_hands(hand1, hand2) == 0
+
+def test_compare_hands_antisymmetric():
+    h1 = [Card(14,0), Card(13,1), Card(11,2), Card(9,3), Card(2,0)]
+    h2 = [Card(13,0), Card(12,1), Card(11,2), Card(9,3), Card(2,0)]
+
+    assert Evaluator.compare_hands(h1, h2) == 1
+    assert Evaluator.compare_hands(h2, h1) == -1
+
+def test_compare_equal_hands():
+    h1 = [Card(14,0), Card(13,1), Card(12,2), Card(11,3), Card(9,0)]
+    h2 = [Card(9,0), Card(11,3), Card(12,2), Card(13,1), Card(14,0)]
+
+    assert Evaluator.compare_hands(h1, h2) == 0
+

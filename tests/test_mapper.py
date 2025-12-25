@@ -2,6 +2,14 @@ from main.model.Card import Card
 from main.model.Suit import Suit
 from main.model.Evaluator import Evaluator
 
+def test_category():
+    high = [Card(14,0), Card(11,1), Card(9,2), Card(6,3), Card(2,0)]
+    pair = [Card(10,0), Card(10,1), Card(9,2), Card(6,3), Card(2,0)]
+    trips = [Card(8,0), Card(8,1), Card(8,2), Card(6,3), Card(2,0)]
+
+    assert Evaluator.mapper(trips) > Evaluator.mapper(pair)
+    assert Evaluator.mapper(pair) > Evaluator.mapper(high)
+
 
 def test_high_card():
     hand = [
@@ -199,3 +207,14 @@ def test_straight_flush_wheel():
         Card(5, Suit.HEARTS),
     ]
     assert Evaluator.mapper(hand) == (8, 5, 0, 0, 0, 0)
+
+def test_pair_kicker_ordering():
+    hand1 = [Card(10,0), Card(10,1), Card(14,2), Card(9,3), Card(2,0)]
+    hand2 = [Card(10,0), Card(10,1), Card(13,2), Card(9,3), Card(2,0)]
+
+    assert Evaluator.mapper(hand1) > Evaluator.mapper(hand2)
+
+def test_wheel_straight_low_ace():
+    hand = [Card(14,0), Card(2,1), Card(3,2), Card(4,3), Card(5,0)]
+    assert Evaluator.mapper(hand)[1] == 5
+
