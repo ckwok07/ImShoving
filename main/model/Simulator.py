@@ -27,4 +27,5 @@ class Simulator:
             elif result == 0:
                 ties += 1
 
-        return (wins + 0.5*ties) / trials
+            equity = (wins + 0.5*ties) / (trial + 1)
+            yield trial + 1, equity
