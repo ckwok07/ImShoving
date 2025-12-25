@@ -18,7 +18,7 @@ class Simulator:
         for trial in range(trials):
             deck = Deck()
             deck.shuffle()
-            deck.removeCards(hand[0], hand[1])
+            deck.removeCards(hand + board)
 
             villain_hand = [deck.draw(), deck.draw()]
             rest_of_board = deck.deal(missing_board)

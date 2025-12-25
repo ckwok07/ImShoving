@@ -10,12 +10,17 @@ def main() -> None:
 
     #hand = deck.deal(2)
     hand = [Card(14,Suit.SPADES), Card(14, Suit.HEARTS)]
+    #board = deck.deal(3)
+    board = [Card(8,Suit.SPADES), Card(8,Suit.HEARTS), Card(8,Suit.DIAMONDS)]
 
     print("hand:")
     for card in hand:
         print(card.display())
+    print("board:")
+    for card in board:
+        print(card.display())
 
-    for trials, winrate, tierate, equity in Simulator.simulate_equity(hand, 100_000):
+    for trials, winrate, tierate, equity in Simulator.simulate_equity(hand, board, 100_000):
             if trials % 500 == 0:
                 print(
                     f"\rtrials:{trials:6d} | "
