@@ -1,12 +1,19 @@
+from collections.abc import Iterator
 from .Evaluator import Evaluator
 from .Card import Card
 from .Deck import Deck
 
 class Simulator:
     @staticmethod
-    def simulate_equity(hand: list[Card], trials: int = 100000) -> float:
+    def simulate_equity(hand: list[Card], board: list[Card] | None = None, trials: int = 100000) -> Iterator[tuple[int, float, float, float]]:
         wins = 0
         ties = 0
+
+        if board is None:
+            board = []
+
+        missing_board = 5 - len(board)
+        assert 0 <= missing_board <= 5
 
         for trial in range(trials):
             deck = Deck()
@@ -14,11 +21,12 @@ class Simulator:
             deck.removeCards(hand[0], hand[1])
 
             villain_hand = [deck.draw(), deck.draw()]
+            rest_of_board = deck.deal(missing_board)
 
-            board = deck.deal(5)
+            full_board = board + rest_of_board
 
-            hero_best = Evaluator.best_hand(hand + board)
-            villain_best = Evaluator.best_hand(villain_hand + board)
+            hero_best = Evaluator.best_hand(hand + full_board)
+            villain_best = Evaluator.best_hand(villain_hand + full_board)
 
             result = Evaluator.compare_hands(hero_best, villain_best)
 
@@ -27,5 +35,7 @@ class Simulator:
             elif result == 0:
                 ties += 1
 
+            winrate = wins/ (trial + 1)
+            tierate = ties/ (trial + 1)
             equity = (wins + 0.5*ties) / (trial + 1)
-            yield trial + 1, equity
+            yield trial + 1, winrate, tierate, equity

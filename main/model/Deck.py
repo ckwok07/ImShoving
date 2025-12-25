@@ -23,15 +23,18 @@ class Deck:
             hand.append(self.draw())
         return hand
     
-    def removeCards(self, card1, card2) -> None:
+    def removeCards(self, cards: list[Card]) -> None:
         updated_deck = []
 
         for card in self.cards:
-            if (card.rank == card1.rank and card.suit == card1.suit):
-                continue
-            if (card.rank == card2.rank and card.suit == card2.suit):
-                continue
+            remove = False
 
-            updated_deck.append(card)
+            for c in cards:
+                if card.rank == c.rank and card.suit == c.suit:
+                    remove = True
+                    break
+
+            if not remove:
+                updated_deck.append(card)
 
         self.cards = updated_deck
