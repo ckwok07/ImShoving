@@ -25,7 +25,7 @@ class Range:
         else:
             self.hands = hands
 
-    def is_blocked(hand: list[Card], known: list[Card]) -> bool:
+    def is_blocked(self, hand: list[Card], known: list[Card]) -> bool:
         for card1 in hand:
             for card2 in known:
                 if card1.rank == card2.rank and card1.suit == card2.suit:
