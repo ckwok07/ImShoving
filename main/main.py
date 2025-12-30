@@ -22,11 +22,13 @@ def main() -> None:
     for card in board:
         print(card.display())
     
-    for trials, equity in Simulator.simulate_equity(hand, board, 2, 30000):
+    for trials, equity, std, ci95 in Simulator.simulate_equity(hand, board, 2, 30000):
         if trials % 500 == 0:
             print(
                 f"\rtrials:{trials:6d} | "
                 f"equity={equity:.4f}",
+                f"std={std:.4f}",
+                f"ci95={ci95:.4f}",
                 end="",
                 flush=True
             )
@@ -76,11 +78,13 @@ def main() -> None:
     ])
 
 
-    for trials, equity in Simulator.simulate_equity_in_range(hand, board, 2, [TT_plus], 30000):
+    for trials, equity, std, ci95 in Simulator.simulate_equity_in_range(hand, board, 2, [TT_plus], 30000):
         if trials % 500 == 0:
             print(
                 f"\rtrials:{trials:6d} | "
                 f"equity={equity:.4f}",
+                f"std={std:.4f}",
+                f"ci95={ci95:.4f}",
                 end="",
                 flush=True
             )

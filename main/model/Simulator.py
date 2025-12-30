@@ -3,6 +3,7 @@ from .Evaluator import Evaluator
 from .Card import Card
 from .Deck import Deck
 from .Range import Range
+import math
 
 # A class to simulate poker runouts
 class Simulator:
@@ -11,7 +12,7 @@ class Simulator:
     def simulate_equity(hand: list[Card], 
                         board: list[Card] | None = None,
                         players: int = 2, 
-                        trials: int = 100000) -> Iterator[tuple[int, float]]:
+                        trials: int = 100000) -> Iterator[tuple[int, float, float, float]]:
         assert 2 <= players <= 6
         assert len(hand) == 2
 
@@ -52,7 +53,10 @@ class Simulator:
                 tied = sum(1 for e in all_evals if e == best_eval)
                 equity_sum += 1.0 / tied
 
-            yield trial + 1, equity_sum / (trial + 1)
+            stderr = math.sqrt((equity_sum / (trial + 1)) * (1 - (equity_sum / (trial + 1))) / (trial + 1))
+            ci95 = 1.96 * stderr
+
+            yield trial + 1, equity_sum / (trial + 1), stderr, ci95
 
     # given a hand, board, num players, list of ranges and x trials, 
     # return percentage of showdowns won after x simulations with players with given ranges
@@ -61,7 +65,7 @@ class Simulator:
                                  board: list[Card] | None = None,
                                  players: int = 2,
                                  villianRanges: list[Range] | None = None,
-                                 trials: int = 100000) -> Iterator[tuple[int, float]]:
+                                 trials: int = 100000) -> Iterator[tuple[int, float, float, float]]:
         if villianRanges is None:
             villianRanges = []
 
@@ -111,4 +115,7 @@ class Simulator:
                 tied = sum(1 for e in all_evals if e == best_eval)
                 equity_sum += 1.0 / tied
 
-            yield trial + 1, equity_sum / (trial + 1)
+            stderr = math.sqrt((equity_sum / (trial + 1)) * (1 - (equity_sum / (trial + 1))) / (trial + 1))
+            ci95 = 1.96 * stderr
+
+            yield trial + 1, equity_sum / (trial + 1), stderr, ci95
