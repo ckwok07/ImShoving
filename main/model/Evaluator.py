@@ -1,11 +1,13 @@
 from .Card import Card
 from itertools import combinations
 
-
+# A class to evalaute poker boards
 class Evaluator:
+
+    # returns the best 5 card hand from a list of cards
     @staticmethod
     def best_hand(cards: list[Card]) -> list[Card]:
-        assert len(cards) >= 5
+        assert len(cards) >= 5, "Not enough cards"
 
         bestHand = None
         bestHandScore = None
@@ -17,9 +19,9 @@ class Evaluator:
                 bestHand = hand
                 bestHandScore = score
 
-
         return list(bestHand)
     
+    # maps a 5 card hand into a tuple(class, kickers 1-5)
     @staticmethod
     def mapper(hand: list[Card]) -> tuple[int, int, int, int, int, int]:
         assert len(hand) == 5
@@ -149,6 +151,7 @@ class Evaluator:
             hand_class = 0
             return (hand_class, ranks[-1], ranks[-2], ranks[-3], ranks[-4], ranks[-5])
 
+    # compares two 5 card hands. returns 1 if hand1 wins, -1 if hand2 wins, 0 if tie.
     @staticmethod
     def compare_hands(hand1: list[Card], hand2: list[Card]) -> int:
         assert len(hand1) == 5

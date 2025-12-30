@@ -4,7 +4,9 @@ from .Card import Card
 from .Deck import Deck
 from .Range import Range
 
+# A class to simulate poker runouts
 class Simulator:
+    # given a hand, board, num players, and x trials, return percentage of showdowns won after x simulations
     @staticmethod
     def simulate_equity(hand: list[Card], 
                         board: list[Card] | None = None,
@@ -52,6 +54,8 @@ class Simulator:
 
             yield trial + 1, equity_sum / (trial + 1)
 
+    # given a hand, board, num players, list of ranges and x trials, 
+    # return percentage of showdowns won after x simulations with players with given ranges
     @staticmethod
     def simulate_equity_in_range(hand: list[Card],
                                  board: list[Card] | None = None,
