@@ -30,6 +30,7 @@ class Handbuilder:
                 (hand[0].rank == 2 and hand[1].rank == 14) or 
                 (hand[1].rank == 2 and hand[0].rank == 14))
     
+    # return combinations of all pocket pairs >= min_rank
     @staticmethod
     def pocket_pairs(min_rank: int) -> list[list[Card]]:
         hands = []
