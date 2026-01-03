@@ -30,11 +30,12 @@ class Range:
 
     # return true if hand contains any card from known, false otherwise
     def is_blocked(self, hand: list[Card], known: list[Card]) -> bool:
-        for card1 in hand:
-            for card2 in known:
-                if card1.rank == card2.rank and card1.suit == card2.suit:
-                    return True
-        return False
+        # for card in hand:
+        #     if card in known:
+        #         return True
+        # return False
+    
+        return any(card in known for card in hand)
     
     # return all hands excluding those that have any card from known
     def available_hands(self, known: list[Card]) -> list[list[Card]]:
