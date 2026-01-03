@@ -16,4 +16,7 @@ class Card:
         suit_str = Suit(self.suit).display()
         return rank_str + suit_str
     
-    
+    def __eq__(self, other):
+        if not isinstance(other, Card):
+            return NotImplemented
+        return self.rank == other.rank and self.suit == other.suit
