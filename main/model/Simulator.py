@@ -63,10 +63,10 @@ class Simulator:
     # return percentage of showdowns won after x simulations with players with given ranges
     @staticmethod
     def simulate_equity_in_range(hand: list[Card],
-                                 board: list[Card] | None = None,
-                                 players: int = 2,
-                                 villianRanges: list[Range] | None = None,
-                                 trials: int = 100000) -> Iterator[tuple[int, float, float, float]]:
+                                board: list[Card] | None = None,
+                                players: int = 2,
+                                villianRanges: list[Range] | None = None,
+                                trials: int = 100000) -> Iterator[tuple[int, float, float, float]]:
         if villianRanges is None:
             villianRanges = []
 
@@ -123,3 +123,31 @@ class Simulator:
             ci95 = 1.96 * stderr
 
             yield trial + 1, equity_sum / (trial + 1), stderr, ci95
+
+    def simulate_call_ev_range(pot: int, 
+                        call_amount: int,
+                        hand: list[Card],
+                        board: list[Card] | None = None,
+                        players: int = 2,
+                        villianRanges: list[Range] | None = None,
+                        trials: int = 100000) -> float:
+        
+        equity = list(Simulator.simulate_equity_in_range(hand, 
+                                                         board, 
+                                                         players, 
+                                                         villianRanges, 
+                                                         trials))[-1][1]
+        return equity * pot - call_amount
+    
+    def simulate_call_ev(pot: int, 
+                        call_amount: int,
+                        hand: list[Card],
+                        board: list[Card] | None = None,
+                        players: int = 2,
+                        trials: int = 100000) -> float:
+        
+        equity = list(Simulator.simulate_equity(hand, 
+                                                board, 
+                                                players, 
+                                                trials))[-1][1]
+        return equity * (pot + call_amount) - call_amount
