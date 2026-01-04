@@ -1,6 +1,7 @@
 from .Card import Card
 from .Rank import Rank
 from .Suit import Suit
+from .Range import Range
 
 from itertools import combinations
 
@@ -30,6 +31,12 @@ class Handbuilder:
                 (hand[0].rank == 2 and hand[1].rank == 14) or 
                 (hand[1].rank == 2 and hand[0].rank == 14))
     
+    # return true if hand is suited and connected
+    @staticmethod
+    def suited_connected(hand: list[Card]) -> bool:
+        assert len(hand) == 2
+        return (Handbuilder.suited(hand) and Handbuilder.connected(hand))
+    
     # return combinations of all pocket pairs >= min_rank
     @staticmethod
     def pocket_pairs(min_rank: int) -> list[list[Card]]:
@@ -42,5 +49,14 @@ class Handbuilder:
                 hands.append(hand)
 
         return hands
-        
     
+    # return combinations of all suited hands
+    @staticmethod
+    def suited_connected_hands() -> list[list[Card]]:
+        hands = []
+
+        for hand in Range.ALL_HANDS:
+            if Handbuilder.suited_connected(hand):
+                hands.append(hand)
+                
+        return hands
