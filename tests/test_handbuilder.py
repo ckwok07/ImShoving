@@ -25,46 +25,46 @@ def test_connected():
     assert Handbuilder.connected(hand5) == True
 
 def test_pocket_pairs():
-    TT_actual = [
-    # TT
-    [Card(10, Suit.DIAMONDS), Card(10, Suit.CLUBS)],
-    [Card(10, Suit.DIAMONDS), Card(10, Suit.HEARTS)],
-    [Card(10, Suit.DIAMONDS), Card(10, Suit.SPADES)],
-    [Card(10, Suit.CLUBS),    Card(10, Suit.HEARTS)],
-    [Card(10, Suit.CLUBS),    Card(10, Suit.SPADES)],
-    [Card(10, Suit.HEARTS),   Card(10, Suit.SPADES)],
+    TT_actual = [[Card(10, Suit.DIAMONDS), Card(10, Suit.CLUBS)], 
+                [Card(10, Suit.DIAMONDS), Card(10, Suit.HEARTS)],
+                [Card(10, Suit.DIAMONDS), Card(10, Suit.SPADES)],
 
-    # JJ
-    [Card(11, Suit.DIAMONDS), Card(11, Suit.CLUBS)],
-    [Card(11, Suit.DIAMONDS), Card(11, Suit.HEARTS)],
-    [Card(11, Suit.DIAMONDS), Card(11, Suit.SPADES)],
-    [Card(11, Suit.CLUBS),    Card(11, Suit.HEARTS)],
-    [Card(11, Suit.CLUBS),    Card(11, Suit.SPADES)],
-    [Card(11, Suit.HEARTS),   Card(11, Suit.SPADES)],
+                [Card(11, Suit.DIAMONDS), Card(11, Suit.CLUBS)],
+                [Card(11, Suit.DIAMONDS), Card(11, Suit.HEARTS)],
+                [Card(11, Suit.DIAMONDS), Card(11, Suit.SPADES)],
 
-    # QQ
-    [Card(12, Suit.DIAMONDS), Card(12, Suit.CLUBS)],
-    [Card(12, Suit.DIAMONDS), Card(12, Suit.HEARTS)],
-    [Card(12, Suit.DIAMONDS), Card(12, Suit.SPADES)],
-    [Card(12, Suit.CLUBS),    Card(12, Suit.HEARTS)],
-    [Card(12, Suit.CLUBS),    Card(12, Suit.SPADES)],
-    [Card(12, Suit.HEARTS),   Card(12, Suit.SPADES)],
+                [Card(12, Suit.DIAMONDS), Card(12, Suit.CLUBS)],
+                [Card(12, Suit.DIAMONDS), Card(12, Suit.HEARTS)],
+                [Card(12, Suit.DIAMONDS), Card(12, Suit.SPADES)],
 
-    # KK
-    [Card(13, Suit.DIAMONDS), Card(13, Suit.CLUBS)],
-    [Card(13, Suit.DIAMONDS), Card(13, Suit.HEARTS)],
-    [Card(13, Suit.DIAMONDS), Card(13, Suit.SPADES)],
-    [Card(13, Suit.CLUBS),    Card(13, Suit.HEARTS)],
-    [Card(13, Suit.CLUBS),    Card(13, Suit.SPADES)],
-    [Card(13, Suit.HEARTS),   Card(13, Suit.SPADES)],
+                [Card(13, Suit.DIAMONDS), Card(13, Suit.CLUBS)],
+                [Card(13, Suit.DIAMONDS), Card(13, Suit.HEARTS)],
+                [Card(13, Suit.DIAMONDS), Card(13, Suit.SPADES)],
 
-    # AA
-    [Card(14, Suit.DIAMONDS), Card(14, Suit.CLUBS)],
-    [Card(14, Suit.DIAMONDS), Card(14, Suit.HEARTS)],
-    [Card(14, Suit.DIAMONDS), Card(14, Suit.SPADES)],
-    [Card(14, Suit.CLUBS),    Card(14, Suit.HEARTS)],
-    [Card(14, Suit.CLUBS),    Card(14, Suit.SPADES)],
-    [Card(14, Suit.HEARTS),   Card(14, Suit.SPADES)]]
+                [Card(14, Suit.DIAMONDS), Card(14, Suit.CLUBS)],
+                [Card(14, Suit.DIAMONDS), Card(14, Suit.HEARTS)],
+                [Card(14, Suit.DIAMONDS), Card(14, Suit.SPADES)],
+
+                [Card(10, Suit.CLUBS), Card(10, Suit.HEARTS)],
+                [Card(10, Suit.CLUBS), Card(10, Suit.SPADES)],
+
+                [Card(11, Suit.CLUBS), Card(11, Suit.HEARTS)],
+                [Card(11, Suit.CLUBS), Card(11, Suit.SPADES)],
+
+                [Card(12, Suit.CLUBS), Card(12, Suit.HEARTS)],
+                [Card(12, Suit.CLUBS), Card(12, Suit.SPADES)],
+
+                [Card(13, Suit.CLUBS), Card(13, Suit.HEARTS)],
+                [Card(13, Suit.CLUBS), Card(13, Suit.SPADES)],
+
+                [Card(14, Suit.CLUBS), Card(14, Suit.HEARTS)],
+                [Card(14, Suit.CLUBS), Card(14, Suit.SPADES)],
+
+                [Card(10, Suit.HEARTS), Card(10, Suit.SPADES)],
+                [Card(11, Suit.HEARTS), Card(11, Suit.SPADES)],
+                [Card(12, Suit.HEARTS), Card(12, Suit.SPADES)],
+                [Card(13, Suit.HEARTS), Card(13, Suit.SPADES)],
+                [Card(14, Suit.HEARTS), Card(14, Suit.SPADES)]]
 
     TT = Handbuilder.pocket_pairs(10)
 

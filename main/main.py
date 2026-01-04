@@ -11,6 +11,11 @@ def main() -> None:
     deck.shuffle()
     board = []
 
+    # hands = Handbuilder.suited_hands()
+    # for hand in hands:
+    #     for card in hand:
+    #         print(card.display())
+
     #hand = deck.deal(2)
     hand = [Card(14,Suit.SPADES), Card(11, Suit.SPADES)]
     #board = deck.deal(3)
@@ -36,10 +41,10 @@ def main() -> None:
     print()
 
 
-    TT_plus = Range(Handbuilder.pocket_pairs(10))
+    TT_plus = Range(Handbuilder.suited_hands())
 
 
-    for trials, equity, std, ci95 in Simulator.simulate_equity_in_range(hand, board, 2, [TT_plus], 30000):
+    for trials, equity, std, ci95 in Simulator.simulate_equity_in_range(hand, board, 2, [TT_plus], 100000):
         if trials % 500 == 0:
             print(
                 f"\rtrials:{trials:6d} | "

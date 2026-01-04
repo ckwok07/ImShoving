@@ -42,21 +42,39 @@ class Handbuilder:
     def pocket_pairs(min_rank: int) -> list[list[Card]]:
         hands = []
 
-        for rank in range(min_rank, 15):
-            for s1, s2 in combinations(Suit, 2):
-                hand = [Card(rank, s1), Card(rank, s2)]
-                assert Handbuilder.pair(hand)
+        if Range.ALL_HANDS is None:
+            Range.ALL_HANDS = Range.generateHands()
+
+        for hand in Range.ALL_HANDS:
+            if Handbuilder.pair(hand) and hand[0].rank >= min_rank:
                 hands.append(hand)
 
         return hands
     
-    # return combinations of all suited hands
+    # return combinations of all suited and connected hands
     @staticmethod
     def suited_connected_hands() -> list[list[Card]]:
         hands = []
 
+        if Range.ALL_HANDS is None:
+            Range.ALL_HANDS = Range.generateHands()
+
         for hand in Range.ALL_HANDS:
             if Handbuilder.suited_connected(hand):
+                hands.append(hand)
+                
+        return hands
+    
+    # return combinations of all suited hands
+    @staticmethod
+    def suited_hands() -> list[list[Card]]:
+        hands = []
+
+        if Range.ALL_HANDS is None:
+            Range.ALL_HANDS = Range.generateHands()
+
+        for hand in Range.ALL_HANDS:
+            if Handbuilder.suited(hand):
                 hands.append(hand)
                 
         return hands
