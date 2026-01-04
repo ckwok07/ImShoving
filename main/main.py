@@ -41,7 +41,7 @@ def main() -> None:
     print()
 
 
-    TT_plus = Range(Handbuilder.suited_hands())
+    TT_plus = Range(Handbuilder.pocket_pairs(10))
 
 
     for trials, equity, std, ci95 in Simulator.simulate_equity_in_range(hand, board, 2, [TT_plus], 100000):

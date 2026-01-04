@@ -4,6 +4,7 @@ from .Card import Card
 from .Deck import Deck
 from .Range import Range
 import math
+import random
 
 # A class to simulate poker runouts
 class Simulator:
@@ -94,7 +95,13 @@ class Simulator:
             known = hand + board
             for num in range(players - 1):
                 vRange = villianRanges[num]
-                v_hand = vRange.sample_hand(known)
+                possible = vRange.hands
+                while True:
+                    h = random.choice(possible)
+                    if h[0] not in known and h[1] not in known:
+                        v_hand = h
+                        break
+
                 villains.append(v_hand)
                 known += v_hand
                 deck.removeCards(v_hand)
@@ -103,10 +110,7 @@ class Simulator:
             full_board = board + rest_of_board
             hero_eval = Evaluator.mapper(Evaluator.best_hand(hand + full_board))
 
-            villain_evals = []
-            for v in villains:
-                best = Evaluator.best_hand(v + full_board)
-                villain_evals.append(Evaluator.mapper(best))
+            villain_evals = [Evaluator.mapper(Evaluator.best_hand(v + full_board)) for v in villains]
 
             all_evals = [hero_eval] + villain_evals
             best_eval = max(all_evals)
