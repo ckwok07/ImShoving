@@ -19,7 +19,7 @@ def main() -> None:
     #         print(card.display())
 
     #hand = deck.deal(2)
-    hand = [Card(14,Suit.SPADES), Card(11, Suit.SPADES)]
+    hand = [Card(2,Suit.SPADES), Card(7, Suit.HEARTS)]
     #board = deck.deal(3)
     board = [Card(12,Suit.SPADES), Card(10,Suit.SPADES), Card(9,Suit.DIAMONDS)]
 
