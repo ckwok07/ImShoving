@@ -1,6 +1,8 @@
 from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QLabel
 import sys
 
+from gui.table.Table import Table
+
 def main() -> None:
     app = QApplication(sys.argv)
 
@@ -13,13 +15,13 @@ def main() -> None:
 
     left_panel = QLabel("left_panel")
     left_panel.setStyleSheet("background: #191919; color: white;")
-    center_panel = QLabel("center_panel")
-    center_panel.setStyleSheet("background: #121212; color: white;")
     right_panel = QLabel("right_panel")
     right_panel.setStyleSheet("background: #191919; color: white;")
 
+    table = Table()
+
     layout.addWidget(left_panel)
-    layout.addWidget(center_panel, 1)
+    layout.addWidget(table, 1)
     layout.addWidget(right_panel)
 
     window.setCentralWidget(central)
