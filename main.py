@@ -9,6 +9,8 @@ def main() -> None:
     window = QMainWindow()
     window.setWindowTitle("ImAllIn")
     window.resize(1200,800)
+    window.setStyleSheet("background-color: #121212;")
+
 
     central = QWidget()
     layout = QHBoxLayout(central)
