@@ -10,8 +10,6 @@ def main() -> None:
     deck = Deck()
     deck.shuffle()
     board = []
-    pot = 10
-    call = 5
 
     # hands = Handbuilder.suited_hands()
     # for hand in hands:
@@ -39,8 +37,7 @@ def main() -> None:
                 flush=True)
         finalEquity = equity
     print()
-    ev = finalEquity * (pot + call) - call
-    print(f"EV = {ev}")
+    print(f"EV = {Simulator.simulate_call_ev(10, 5, finalEquity)}")
 
 
     TT_plus = Range(Handbuilder.pocket_pairs(10))
@@ -60,8 +57,7 @@ def main() -> None:
                 flush=True)
         finalEquity = equity
     print()
-    ev = finalEquity * (pot + call) - call
-    print(f"EV = {ev}")
+    print(f"EV = {Simulator.simulate_call_ev(10, 5, finalEquity)}")
 
 if __name__ == "__main__":
     main()
