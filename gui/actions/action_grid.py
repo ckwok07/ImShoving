@@ -13,8 +13,8 @@ class ActionGrid(QWidget):
         layout.setSpacing(12)
 
         actions = [Action("CHECK", None), 
-                   Action("BET", 1), 
-                   Action("BET", 2), 
+                   Action("CALL", 1), 
+                   Action("RAISE", 2), 
                    Action("ALL IN", None)]
 
         for i, action in enumerate(actions):

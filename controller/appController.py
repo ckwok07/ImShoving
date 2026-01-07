@@ -4,6 +4,7 @@ from .action import Action
 class AppController:
     def __init__(self, state: GameState) -> None:
         self.state = state
+        self.state_change = None
     
     def handle_action(self, action: Action) -> None:
         print("state before:", self.state)
@@ -21,3 +22,6 @@ class AppController:
             print("ALL IN clicked")
 
         print("state after:", self.state)
+
+        if self.state_change:
+            self.state_change(self.state)
