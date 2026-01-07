@@ -4,8 +4,9 @@ from .Board import Board
 from gui.actions.action_grid import ActionGrid
 
 class Table(QWidget):
-    def __init__(self) -> None:
+    def __init__(self, controller) -> None:
         super().__init__()
+        self.controller = controller
 
         layout = QVBoxLayout(self)
 
@@ -17,6 +18,7 @@ class Table(QWidget):
 
         self.board = Board()
         self.actions = ActionGrid()
+        self.actions.action_clicked.connect(self.on_action)
 
         layout.addWidget(title)
         layout.addWidget(self.board, alignment=Qt.AlignmentFlag.AlignHCenter)
@@ -24,6 +26,10 @@ class Table(QWidget):
         layout.addStretch()
 
         self.board.set_board(["1", "2", "3"])
+    
+    def on_action(self, action):
+        self.controller.handle_action(action)
+
 
         
 

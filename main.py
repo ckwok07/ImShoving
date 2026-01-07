@@ -1,6 +1,8 @@
 from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QLabel
 import sys
 
+from controller.appController import AppController
+from controller.gameState import GameState
 from gui.table.Table import Table
 
 def main() -> None:
@@ -20,7 +22,9 @@ def main() -> None:
     right_panel = QLabel("right_panel")
     right_panel.setStyleSheet("background: #191919; color: white;")
 
-    table = Table()
+    state = GameState(street="flop", board=["5s", "5d", "4h"], pot=16.5)
+    controller = AppController(state)
+    table = Table(controller)
 
     layout.addWidget(left_panel)
     layout.addWidget(table, 1)
