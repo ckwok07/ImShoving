@@ -12,4 +12,7 @@ class ActionButton(QPushButton):
                            }
                            QPushButton:hover {
                                 background-color: #3a3a3a
+                           }
+                           QPushButton:pressed {
+                                background-color: #1f1f1f
                            }""")
