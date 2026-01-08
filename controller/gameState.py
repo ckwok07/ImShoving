@@ -1,5 +1,7 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import List, Optional
+
+from controller.action import Action
 
 @dataclass
 class GameState:
@@ -7,3 +9,4 @@ class GameState:
     board: List[str]
     pot:float
     hero_hand: Optional[List[str]] = None
+    actions: List[Action] = field(default_factory=list)

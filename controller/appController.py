@@ -7,6 +7,9 @@ class AppController:
         self.state_change = None
     
     def handle_action(self, action: Action) -> None:
+        self.state.actions.append(action)
+        print(self.state.actions)
+
         print("state before:", self.state)
 
         if action.name == "CHECK":
