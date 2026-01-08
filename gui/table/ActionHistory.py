@@ -15,6 +15,7 @@ class ActionHistory(QWidget):
 
     def add_action(self, action: Action) -> None:
         label = QLabel(self.formatAction(action))
+        label.setStyleSheet("color: white;")
         self.layout.addWidget(label)
         self.items.append(label)
     
@@ -27,6 +28,11 @@ class ActionHistory(QWidget):
             self.layout.removeWidget(item)
             item.deleteLater()
         self.items.clear()
+
+    def set_actions(self, actions: list[Action]) -> None:
+        self.clear_actions()
+        self.add_actions(actions)
+
     
     def formatAction(self, action) -> str:
         if action.size is None:
