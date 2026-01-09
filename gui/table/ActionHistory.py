@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QHBoxLayout
 
 from controller.action import Action
 
@@ -6,7 +6,7 @@ class ActionHistory(QWidget):
     def __init__(self) -> None:
         super().__init__()
 
-        self.layout = QVBoxLayout(self)
+        self.layout = QHBoxLayout(self)
         self.items: list[QLabel] = []
 
         title = QLabel("actions")
