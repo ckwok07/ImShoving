@@ -35,14 +35,13 @@ class Table(QWidget):
         layout.addWidget(self.actions, alignment=Qt.AlignmentFlag.AlignHCenter)
         layout.addWidget(self.action_history, alignment=Qt.AlignmentFlag.AlignCenter)
         layout.addStretch()
-
-        self.board.set_board(["1", "2", "3"])
     
     def on_action(self, action):
         self.controller.handle_action(action)
 
     def on_state_change(self, state):
         self.pot_label.set_pot(state.pot)
+        self.board.set_board(state.board)
 
         recent_actions = state.actions[-5:]
         self.action_history.set_actions(recent_actions)
