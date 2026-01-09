@@ -10,7 +10,7 @@ class GameState:
     street: str
     board: List[str]
     pot:float
-    
+
     current_bet: float
     hero_amt: float
     villain_amt: float
@@ -20,3 +20,5 @@ class GameState:
 
     hero_all_in: bool = False
     villain_all_in: bool = False
+
+    hand_over: bool = False

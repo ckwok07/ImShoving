@@ -41,6 +41,8 @@ class Table(QWidget):
         layout.addStretch()
     
     def on_action(self, action):
+        if self.controller.state.hand_over:
+            return
         self.controller.handle_action(action)
 
     def on_state_change(self, state):

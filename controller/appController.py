@@ -12,6 +12,8 @@ class AppController:
         self.state_change = None
     
     def handle_action(self, action: Action) -> None:
+        if self.state.hand_over:
+            return
         self.apply_action(action)
 
         self.state.actions.append(action)
@@ -47,6 +49,10 @@ class AppController:
         return True
     
     def apply_action(self, action: Action) -> None:
+        if action.name == "FOLD":
+            self.apply_fold()
+            return
+        
         if action.name == "CHECK":
             self.apply_check()
 
@@ -87,6 +93,10 @@ class AppController:
     
     def apply_all_in(self) -> None:
         self.state.hero_all_in = True
+    
+    def apply_fold(self) -> None:
+        self.state.hand_over = True
+        self.state.street = "SHOWDOWN"
 
     def new_hand(self) -> None:
         self.deck = Deck()
