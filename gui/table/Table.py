@@ -4,6 +4,7 @@ from .Board import Board
 from gui.actions.action_grid import ActionGrid
 from .pot import PotLabel
 from .ActionHistory import ActionHistory
+from .HeroHand import HeroHand
 
 
 class Table(QWidget):
@@ -22,6 +23,7 @@ class Table(QWidget):
         self.board = Board()
         self.pot_label = PotLabel()
         self.action_history = ActionHistory()
+        self.hero_hand = HeroHand()
 
         self.pot_label.set_pot(controller.state.pot)
         self.controller.state_change = self.on_state_change
@@ -31,9 +33,10 @@ class Table(QWidget):
 
         layout.addWidget(title)
         layout.addWidget(self.board, alignment=Qt.AlignmentFlag.AlignHCenter)
+        layout.addWidget(self.action_history, alignment=Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.pot_label, alignment=Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.actions, alignment=Qt.AlignmentFlag.AlignHCenter)
-        layout.addWidget(self.action_history, alignment=Qt.AlignmentFlag.AlignCenter)
+        layout.addWidget(self.hero_hand, alignment=Qt.AlignmentFlag.AlignCenter)
         layout.addStretch()
     
     def on_action(self, action):

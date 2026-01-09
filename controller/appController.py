@@ -8,6 +8,7 @@ class AppController:
         self.state = state
         self.deck = Deck()
         self.deck.shuffle()
+        self.state.hero_hand = self.deck.deal(2)
         self.state_change = None
     
     def handle_action(self, action: Action) -> None:
@@ -90,6 +91,7 @@ class AppController:
     def new_hand(self) -> None:
         self.deck = Deck()
         self.deck.shuffle()
+        self.state.hero_hand = self.deck.deal(2)
 
         self.state.street = "PREFLOP"
         self.state.board.clear()
