@@ -16,9 +16,13 @@ class GameState:
     villain_amt: float
 
     hero_hand: Optional[List[str]] = None
+    villain_hand: Optional[List[str]] = None
     actions: List[Action] = field(default_factory=list)
 
     hero_all_in: bool = False
     villain_all_in: bool = False
+
+    hero_stack: int = 100
+    villain_stack: int = 100
 
     hand_over: bool = False

@@ -28,6 +28,8 @@ def main() -> None:
                       current_bet = 0,
                       hero_amt = 0,
                       villain_amt = 0,
+                      hero_stack = 100,
+                      villain_stack = 100,
                       hero_all_in = False,
                       villain_all_in = False)
     controller = AppController(state)

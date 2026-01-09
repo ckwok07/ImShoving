@@ -75,6 +75,7 @@ class AppController:
 
         self.state.hero_amt += amount
         self.state.pot += amount
+        self.state.hero_stack -= amount
     
     def apply_raise(self, size: float) -> None:
         if self.state.current_bet == 0:
@@ -89,6 +90,7 @@ class AppController:
         self.state.current_bet = new_bet
         self.state.hero_amt += raise_amt
         self.state.pot += raise_amt
+        self.state.hero_stack -= raise_amt
     
     def apply_all_in(self) -> None:
         self.state.hero_all_in = True
