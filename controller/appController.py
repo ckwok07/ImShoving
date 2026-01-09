@@ -14,15 +14,14 @@ class AppController:
     def handle_action(self, action: Action) -> None:
         if self.state.hand_over:
             return
+        
         self.apply_action(action)
 
         self.state.actions.append(action)
 
-        print(f"ACTION={action.name}, "
-              f"current_bet={self.state.current_bet}, "
-              f"hero_amt={self.state.hero_amt}, "
-              f"pot={self.state.pot},"
-              f"board = {self.state.board}")
+        if self.state.hand_over:
+            self.new_hand()
+            return
 
         if self.round_complete():
             self.advance_street()
@@ -99,6 +98,7 @@ class AppController:
         self.state.street = "SHOWDOWN"
 
     def new_hand(self) -> None:
+        self.state.hand_over = False
         self.deck = Deck()
         self.deck.shuffle()
         self.state.hero_hand = self.deck.deal(2)
