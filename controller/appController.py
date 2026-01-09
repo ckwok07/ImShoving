@@ -7,6 +7,7 @@ class AppController:
     def __init__(self, state: GameState) -> None:
         self.state = state
         self.deck = Deck()
+        self.deck.shuffle()
         self.state_change = None
     
     def handle_action(self, action: Action) -> None:
@@ -85,4 +86,20 @@ class AppController:
     
     def apply_all_in(self) -> None:
         self.state.hero_all_in = True
+
+    def new_hand(self) -> None:
+        self.deck = Deck()
+        self.deck.shuffle()
+
+        self.state.street = "PREFLOP"
+        self.state.board.clear()
+
+        self.state.current_bet = 0
+        self.state.hero_amt = 0
+        self.state.villain_amt = 0
+
+        self.state.actions.clear()
+
+        if self.state_change:
+            self.state_change(self.state)
     
