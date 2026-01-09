@@ -3,6 +3,8 @@ from typing import List, Optional
 
 from controller.action import Action
 
+STREETS = ["PREFLOP", "FLOP", "TURN", "RIVER", "SHOWDOWN"]
+
 @dataclass
 class GameState:
     street: str
