@@ -16,6 +16,12 @@ class Card:
         suit_str = Suit(self.suit).display()
         return rank_str + suit_str
     
+    def __str__(self) -> str:
+        return self.display()
+
+    def __repr__(self) -> str:
+        return self.display()
+    
     def __eq__(self, other):
         if not isinstance(other, Card):
             return NotImplemented

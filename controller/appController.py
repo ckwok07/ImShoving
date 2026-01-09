@@ -14,6 +14,12 @@ class AppController:
 
         self.state.actions.append(action)
 
+        print(f"ACTION={action.name}, "
+              f"current_bet={self.state.current_bet}, "
+              f"hero_amt={self.state.hero_amt}, "
+              f"pot={self.state.pot},"
+              f"board = {self.state.board}")
+
         if self.round_complete():
             self.advance_street()
 
@@ -31,9 +37,9 @@ class AppController:
         self.state.street = nxt
 
         if nxt == "FLOP":
-            self.state.board.extend(self.deck.draw(3))
+            self.state.board.extend(self.deck.deal(3))
         elif nxt == "TURN" or nxt == "RIVER":
-            self.state.board.extend(self.deck.draw(1))
+            self.state.board.extend(self.deck.deal(1))
 
     def round_complete(self) -> bool:
         return True
@@ -52,13 +58,30 @@ class AppController:
             self.apply_all_in()
 
     def apply_check(self) -> None:
-        return None
+        return
 
     def apply_call(self) -> None:
-        return None
+        amount = self.state.current_bet - self.state.hero_amt
+
+        if amount <= 0:
+            return
+
+        self.state.hero_amt += amount
+        self.state.pot += amount
     
     def apply_raise(self, size: float) -> None:
-        return None
+        if self.state.current_bet == 0:
+            new_bet = size
+        else:
+            new_bet = self.state.current_bet * size
+
+        raise_amt = new_bet - self.state.hero_amt
+        if raise_amt <= 0:
+            return
+
+        self.state.current_bet = new_bet
+        self.state.hero_amt += raise_amt
+        self.state.pot += raise_amt
     
     def apply_all_in(self) -> None:
         self.state.hero_all_in = True

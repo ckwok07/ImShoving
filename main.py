@@ -22,7 +22,14 @@ def main() -> None:
     right_panel = QLabel("right_panel")
     right_panel.setStyleSheet("background: #191919; color: white;")
 
-    state = GameState(street="flop", board=["5s", "5d", "4h"], pot=16.5)
+    state = GameState(street = "PREFLOP", 
+                      board = [], 
+                      pot = 0,
+                      current_bet = 0,
+                      hero_amt = 0,
+                      villain_amt = 0,
+                      hero_all_in = False,
+                      villain_all_in = False)
     controller = AppController(state)
     table = Table(controller)
 
