@@ -80,10 +80,18 @@ class AppController:
         
         self.state.to_act_index = 1 - self.state.button_index
 
-        if self.state.to_act_index == 1:
-            self.villain_act()
-            if self.state_change:
-                self.state_change(self.state)
+        if self.state_change:
+            self.state_change(self.state)
+        
+        if self.state.hero_all_in and self.state.villain_all_in:
+            self.advance_street()
+        elif (self.state.hero_all_in or self.state.villain_all_in) and self.state.hero_amt == self.state.villain_amt:
+            self.advance_street()
+        else:
+            if self.state.to_act_index == 1:
+                self.villain_act()
+
+        
 
     def round_complete(self) -> bool:
         if self.state.hand_over:
