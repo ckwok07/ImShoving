@@ -28,6 +28,9 @@ class AppController:
 
         if self.state_change:
             self.state_change(self.state)
+        
+        self.state.to_act_index = 1 - self.state.to_act_index
+
 
     def advance_street(self) -> None:
         current = self.state.street
@@ -43,9 +46,21 @@ class AppController:
             self.state.board.extend(self.deck.deal(3))
         elif nxt == "TURN" or nxt == "RIVER":
             self.state.board.extend(self.deck.deal(1))
+        
+        self.state.to_act_index = 1 - self.state.button_index
 
     def round_complete(self) -> bool:
-        return True
+        if self.state.hand_over:
+            return True
+        
+        if self.state.hero_all_in and self.state.villain_all_in:
+            return True
+
+        if (self.state.hero_amt == self.state.villain_amt and 
+            self.state.hero_amt == self.state.current_bet):
+            return True
+        
+        return False
     
     def apply_action(self, action: Action) -> None:
         if action.name == "FOLD":
@@ -106,6 +121,7 @@ class AppController:
 
     def new_hand(self) -> None:
         self.state.button_index = 1 - self.state.button_index
+        self.state.to_act_index = self.state.button_index
 
         self.state.hand_over = False
         self.deck = Deck()
