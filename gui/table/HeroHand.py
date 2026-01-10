@@ -33,4 +33,10 @@ class HeroHand(QWidget):
 
         for label, card in zip(self.cards, cards):
             label.setText(str(card))
+    
+    def set_active(self, active: bool):
+        if active:
+            self.setStyleSheet("QWidget {border: 3px solid orange; border-radius: 8px;} ")
+        else:
+            self.setStyleSheet("QWidget {border: 3px solid transparent; border-radidus: 8px;}")
 

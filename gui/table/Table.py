@@ -62,6 +62,9 @@ class Table(QWidget):
         self.villain_stack.set_villain_stack(state.villain_stack)
         self.villain_hand.set_hand(state.villain_hand)
 
+        self.hero_hand.set_active(state.to_act_index == 0)
+        self.villain_hand.set_active(state.to_act_index == 1)
+
         recent_actions = state.actions[-5:]
         self.action_history.set_actions(recent_actions)
 
