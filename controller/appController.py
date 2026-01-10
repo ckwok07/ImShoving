@@ -14,26 +14,45 @@ class AppController:
     def handle_action(self, action: Action) -> None:
         if self.state.hand_over:
             return
-        
-        if action.name == "CHECK" and self.state.current_bet > self.state.hero_amt:
+        elif self.state.to_act_index != 0:
             return
         
         self.apply_action(action)
-
         self.state.actions.append(action)
 
         if self.state.hand_over:
-            self.state.button_index = 1 - self.state.button_index
+            self.state.button_index = (self.state.button_index + 1) % 2
             self.new_hand()
             return
 
-        self.state.to_act_index = 1 - self.state.to_act_index
+        if self.round_complete():
+            self.advance_street()
+            if self.state_change:
+                self.state_change(self.state)
+            return
+        
+        self.state.to_act_index = 1
+        self.villain_act()
 
-        if self.state.to_act_index == 1 and not self.state.hand_over:
-            self.villain_act()
+        if self.round_complete():
+            self.advance_street()
 
         if self.state_change:
             self.state_change(self.state)
+
+    def villain_act(self) -> None:
+        if self.state.hand_over or self.state.to_act_index != 1:
+            return
+        
+        if self.state.current_bet > self.state.villain_amt:
+            action = Action("CALL")
+        else:
+            action = Action("CHECK")
+        
+        self.apply_action(action, hero=False)
+        self.state.actions.append(action)
+        
+        self.state.to_act_index = 0
 
 
     def advance_street(self) -> None:
@@ -50,8 +69,17 @@ class AppController:
             self.state.board.extend(self.deck.deal(3))
         elif nxt == "TURN" or nxt == "RIVER":
             self.state.board.extend(self.deck.deal(1))
+
+        self.state.current_bet = 0
+        self.state.hero_amt = 0
+        self.state.villain_amt = 0
         
-        self.state.to_act_index = 1 - self.state.button_index
+        self.state.to_act_index = (self.state.to_act_index + 1) % 2
+
+        if self.state.to_act_index == 1:
+            self.villain_act()
+            if self.state_change:
+                self.state_change(self.state)
 
     def round_complete(self) -> bool:
         if self.state.hand_over:
@@ -66,62 +94,96 @@ class AppController:
         
         return False
     
-    def apply_action(self, action: Action) -> None:
+    def apply_action(self, action: Action, hero: bool = True) -> None:
         if action.name == "FOLD":
-            self.apply_fold()
+            self.state.hand_over = True
+            self.state.street = "SHOWDOWN"
             return
         
         if action.name == "CHECK":
-            self.apply_check()
+            pass
 
         elif action.name == "CALL":
-            self.apply_call()
+            self.apply_call(hero)
 
         elif action.name == "RAISE" and action.size is not None:
-            self.apply_raise(action.size)
+            self.apply_raise(action.size, hero)
 
         elif action.name == "ALL_IN":
-            self.apply_all_in()
+            self.apply_all_in(hero)
 
-    def apply_check(self) -> None:
-        return
+    def apply_call(self, hero: bool = True) -> None:
+        if hero:
+            amount = self.state.current_bet - self.state.hero_amt
+            if amount <= 0:
+                return
+            
+            amount = min(amount, self.state.hero_stack)
+            self.state.hero_amt += amount
+            self.state.pot += amount
+            self.state.hero_stack -= amount
 
-    def apply_call(self) -> None:
-        amount = self.state.current_bet - self.state.hero_amt
+            if self.state.hero_stack == 0:
+                self.state.hero_all_in = True
+        else:
+            amount = self.state.current_bet - self.state.villain_amt
+            if amount <= 0:
+                return
+            
+            amount = min(amount, self.state.villain_stack)
+            self.state.villain_amt += amount
+            self.state.pot += amount
+            self.state.villain_stack -= amount
 
-        if amount <= 0:
-            return
-        
-        amount = min(amount, self.state.hero_stack)
-
-        self.state.hero_amt += amount
-        self.state.pot += amount
-        self.state.hero_stack -= amount
-
-        if self.state.hero_stack == 0:
-            self.state.hero_all_in = True
+            if self.state.villain_stack == 0:
+                self.state.villain_all_in = True
     
-    def apply_raise(self, size: float) -> None:
+    def apply_raise(self, size: float, hero: bool = True) -> None:
         if self.state.current_bet == 0:
             new_bet = size
         else:
             new_bet = self.state.current_bet * size
 
-        raise_amt = new_bet - self.state.hero_amt
-        if raise_amt <= 0:
-            return
+        if hero:
+            raise_amt = new_bet - self.state.hero_amt
+            if raise_amt <= 0:
+                return
 
-        self.state.current_bet = new_bet
-        self.state.hero_amt += raise_amt
-        self.state.pot += raise_amt
-        self.state.hero_stack -= raise_amt
+            self.state.current_bet = new_bet
+            self.state.hero_amt += raise_amt
+            self.state.pot += raise_amt
+            self.state.hero_stack -= raise_amt
+        else:
+            raise_amt = new_bet - self.state.villain_amt
+            if raise_amt <= 0:
+                return
+
+            self.state.current_bet = new_bet
+            self.state.villain_amt += raise_amt
+            self.state.pot += raise_amt
+            self.state.villain_stack -= raise_amt
     
-    def apply_all_in(self) -> None:
-        self.state.hero_all_in = True
-    
-    def apply_fold(self) -> None:
-        self.state.hand_over = True
-        self.state.street = "SHOWDOWN"
+    def apply_all_in(self, hero: bool = True) -> None:
+        if hero:
+            all_in_amt = self.state.hero_stack
+            self.state.hero_stack = 0
+            self.state.hero_amt += all_in_amt
+            self.state.pot += all_in_amt
+            
+            if self.state.hero_amt > self.state.current_bet:
+                self.state.current_bet = self.state.hero_amt
+            
+            self.state.hero_all_in = True
+        else:
+            all_in_amt = self.state.villain_stack
+            self.state.villain_stack = 0
+            self.state.villain_amt += all_in_amt
+            self.state.pot += all_in_amt
+            
+            if self.state.villain_amt > self.state.current_bet:
+                self.state.current_bet = self.state.villain_amt
+            
+            self.state.villain_all_in = True
 
     def new_hand(self) -> None:
         self.state.to_act_index = self.state.button_index
@@ -137,6 +199,8 @@ class AppController:
         self.state.hero_amt = 0
         self.state.villain_amt = 0
         self.state.pot = 0
+        self.state.hero_all_in = False
+        self.state.villain_all_in = False
 
         self.state.actions.clear()
 
@@ -147,10 +211,6 @@ class AppController:
 
         if self.state_change:
             self.state_change(self.state)
-        
-        if self.state.to_act_index == 1:
-            self.villain_act()
-
 
     def post_big_blind(self):
         bb = 1
@@ -162,51 +222,14 @@ class AppController:
         if bb_player == 0:
             self.state.hero_stack -= bb
             self.state.hero_amt = bb
+            self.state.to_act_index = 1
+            self.villain_act()
         else:
             self.state.villain_stack -= bb
             self.state.villain_amt = bb
+            self.state.to_act_index = 0
 
         self.state.pot = bb
         self.state.current_bet = bb
-        print("bb:", self.state.pot, self.state.hero_amt, self.state.villain_amt)
-    
-    def villain_act(self):
-        if self.state.current_bet == self.state.villain_amt:
-            action = Action("CHECK")
-        else:
-            action = Action("CALL")
-
-        self.apply_villain_action(action)
-        self.state.actions.append(action)
-
-        if self.round_complete():
-            self.advance_street()
-        
-        self.state.to_act_index = 0
-
-        if self.state_change:
-            self.state_change(self.state)
-    
-    def apply_villain_action(self, action: Action) -> None:
-        if action.name == "CHECK":
-            return
-        
-        if action.name == "CALL":
-            amount = self.state.current_bet - self.state.villain_amt
-            if amount <= 0:
-                return
-
-            amount = min(amount, self.state.villain_stack)
-
-            self.state.villain_amt += amount
-            self.state.pot += amount
-            self.state.villain_stack -= amount
-
-            if self.state.villain_stack == 0:
-                self.state.villain_all_in = True
-        elif action.name == "FOLD":
-            self.state.hand_over = True
-            self.state.street = "SHOWDOWN"
-
 
     
