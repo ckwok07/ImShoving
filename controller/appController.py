@@ -16,6 +16,10 @@ class AppController:
             return
         elif self.state.to_act_index != 0:
             return
+        elif action.name == "CHECK" and self.state.current_bet > self.state.hero_amt:
+            return
+        elif action.name == "CALL" and self.state.current_bet == self.state.hero_amt:
+            action = Action("CHECK")
         
         self.apply_action(action)
         self.state.actions.append(action)
@@ -74,7 +78,7 @@ class AppController:
         self.state.hero_amt = 0
         self.state.villain_amt = 0
         
-        self.state.to_act_index = (self.state.to_act_index + 1) % 2
+        self.state.to_act_index = 1 - self.state.button_index
 
         if self.state.to_act_index == 1:
             self.villain_act()
@@ -109,7 +113,7 @@ class AppController:
         elif action.name == "RAISE" and action.size is not None:
             self.apply_raise(action.size, hero)
 
-        elif action.name == "ALL_IN":
+        elif action.name == "ALL IN":
             self.apply_all_in(hero)
 
     def apply_call(self, hero: bool = True) -> None:

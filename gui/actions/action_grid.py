@@ -16,7 +16,7 @@ class ActionGrid(QWidget):
                    Action("CHECK"), 
                    Action("CALL"), 
                    Action("RAISE", 2), 
-                   Action("ALL IN", None)]
+                   Action("ALL IN")]
 
         for i, action in enumerate(actions):
             button = ActionButton(action)
