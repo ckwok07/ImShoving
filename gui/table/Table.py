@@ -14,6 +14,9 @@ class Table(QWidget):
     def __init__(self, controller) -> None:
         super().__init__()
         self.controller = controller
+        self.dealer = QLabel("D", self)
+        self.dealer.setStyleSheet("background: black; color: white;")
+        self.dealer.resize(24, 24)
 
         layout = QVBoxLayout(self)
 
@@ -49,12 +52,12 @@ class Table(QWidget):
         layout.addWidget(self.actions, alignment=Qt.AlignmentFlag.AlignHCenter)
         layout.addStretch()
     
-    def on_action(self, action):
+    def on_action(self, action) -> None:
         if self.controller.state.hand_over:
             return
         self.controller.handle_action(action)
 
-    def on_state_change(self, state):
+    def on_state_change(self, state) -> None:
         self.pot_label.set_pot(state.pot)
         self.board.set_board(state.board)
         self.hero_hand.set_hand(state.hero_hand)
@@ -62,12 +65,22 @@ class Table(QWidget):
         self.villain_stack.set_villain_stack(state.villain_stack)
         self.villain_hand.set_hand(state.villain_hand)
 
+        if state.button_index == 0:
+            self.hero_button_pos()
+        else:
+            self.villain_button_pos()
+
         self.hero_hand.set_active(state.to_act_index == 0)
         self.villain_hand.set_active(state.to_act_index == 1)
 
         recent_actions = state.actions[-5:]
         self.action_history.set_actions(recent_actions)
 
+    def hero_button_pos(self) -> None: 
+        position = self.hero_hand.mapTo(self, self.hero_hand.rect().topLeft())
+        self.dealer.move(position)
 
-        
+    def villain_button_pos(self) -> None: 
+        position = self.villain_hand.mapTo(self, self.villain_hand.rect().topLeft())
+        self.dealer.move(position)
 
