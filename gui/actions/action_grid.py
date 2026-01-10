@@ -12,9 +12,9 @@ class ActionGrid(QWidget):
         layout = QGridLayout(self)
         layout.setSpacing(12)
 
-        actions = [Action("FOLD", None),
-                   Action("CHECK", None), 
-                   Action("CALL", 1), 
+        actions = [Action("FOLD"),
+                   Action("CHECK"), 
+                   Action("CALL"), 
                    Action("RAISE", 2), 
                    Action("ALL IN", None)]
 

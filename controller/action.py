@@ -4,4 +4,4 @@ from typing import Optional
 @dataclass
 class Action:
     name: str
-    size: Optional[float]
+    size: Optional[float] = None

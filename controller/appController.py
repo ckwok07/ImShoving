@@ -15,6 +15,9 @@ class AppController:
         if self.state.hand_over:
             return
         
+        if action.name == "CHECK" and self.state.current_bet > self.state.hero_amt:
+            return
+        
         self.apply_action(action)
 
         self.state.actions.append(action)
@@ -27,10 +30,13 @@ class AppController:
         if self.round_complete():
             self.advance_street()
 
+        self.state.to_act_index = 1 - self.state.to_act_index
+
+        if self.state.to_act_index == 1 and not self.state.hand_over:
+            self.villain_act()
+
         if self.state_change:
             self.state_change(self.state)
-        
-        self.state.to_act_index = 1 - self.state.to_act_index
 
 
     def advance_street(self) -> None:
@@ -162,5 +168,14 @@ class AppController:
         self.state.pot = bb
         self.state.current_bet = bb
         print("bb:", self.state.pot, self.state.hero_amt, self.state.villain_amt)
+    
+    def villain_act(self):
+        if self.state.current_bet == self.state.villain_amt:
+            action = Action("CHECK")
+        else:
+            action = Action("CALL")
+
+        self.apply_action(action)
+
 
     
