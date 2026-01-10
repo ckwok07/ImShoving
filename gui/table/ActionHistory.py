@@ -36,5 +36,5 @@ class ActionHistory(QWidget):
     
     def formatAction(self, action) -> str:
         if action.size is None:
-            return action.name
-        return f"{action.name} {action.size}"
+            return f"{action.name}:{action.player}"
+        return f"{action.name} {action.size} {action.player}"

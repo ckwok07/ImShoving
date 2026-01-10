@@ -13,6 +13,8 @@ class AppController:
         self.new_hand()
     
     def handle_action(self, action: Action) -> None:
+        self.debug_state("HERO_ACTION_START")
+
         if self.state.hand_over:
             return
         elif self.state.to_act_index != 0:
@@ -20,10 +22,13 @@ class AppController:
         elif action.name == "CHECK" and self.state.current_bet > self.state.hero_amt:
             return
         elif action.name == "CALL" and self.state.current_bet == self.state.hero_amt:
-            action = Action("CHECK")
+            action = Action("CHECK", "hero")
         
         self.apply_action(action)
         self.state.actions.append(action)
+        self.debug_state("HERO_ACTION_APPLIED")
+
+
 
         if self.state.hand_over:
             self.state.button_index = (self.state.button_index + 1) % 2
@@ -46,30 +51,39 @@ class AppController:
             self.state_change(self.state)
 
     def villain_act(self) -> None:
+        self.debug_state("VILLAIN_ACTION_START")
+
+        if self.state.hand_over or self.state.street == "SHOWDOWN" or self.state.to_act_index != 1:
+            return
+
         if self.state.hand_over or self.state.to_act_index != 1:
             return
         
         if self.state.current_bet > self.state.villain_amt:
-            action = Action("CALL")
+            action = Action("CALL", "villain")
         else:
-            action = Action("CHECK")
+            action = Action("CHECK", "villain")
         
         self.apply_action(action, hero=False)
         self.state.actions.append(action)
         
         self.state.to_act_index = 0
 
+        if self.state_change:
+            self.state_change(self.state)
+
 
     def advance_street(self) -> None:
-        current = self.state.street
-        index = STREETS.index(current)
-
-        if index >= len(STREETS) - 1:
+        if self.state.street == "RIVER":
+            self.state.street = "SHOWDOWN"
             self.evaluate_showdown()
             return
-        
-        nxt = STREETS[index+1]
+
+        index = STREETS.index(self.state.street)
+        nxt = STREETS[index + 1]
         self.state.street = nxt
+        self.state.actions.clear()
+
 
         if nxt == "FLOP":
             self.state.board.extend(self.deck.deal(3))
@@ -94,18 +108,29 @@ class AppController:
                 self.villain_act()
 
         
-
     def round_complete(self) -> bool:
+        print(f"[ROUND_COMPLETE_CHECK] street={self.state.street}, actions={len(self.state.actions)}, hero_amt={self.state.hero_amt}, villain_amt={self.state.villain_amt}, current_bet={self.state.current_bet}")
+
         if self.state.hand_over:
+            print("[ROUND_COMPLETE] TRUE")
             return True
         
         if self.state.hero_all_in and self.state.villain_all_in:
             return True
+        
+        # Count actions this street (actions get cleared in advance_street)
+        action_count = len(self.state.actions)
+        
+        # Need at least one action from each player
+        if action_count < 2:
+            return False
 
         if (self.state.hero_amt == self.state.villain_amt and 
             self.state.hero_amt == self.state.current_bet):
             return True
         
+        print("[ROUND_COMPLETE] FALSE")
+
         return False
     
     def apply_action(self, action: Action, hero: bool = True) -> None:
@@ -237,16 +262,20 @@ class AppController:
             self.state.hero_stack -= bb
             self.state.hero_amt = bb
             self.state.to_act_index = 1
+            self.state.pot = bb
+            self.state.current_bet = bb
             self.villain_act()
         else:
             self.state.villain_stack -= bb
             self.state.villain_amt = bb
             self.state.to_act_index = 0
-
-        self.state.pot = bb
-        self.state.current_bet = bb
+            self.state.pot = bb
+            self.state.current_bet = bb
+        
 
     def evaluate_showdown(self) -> None:
+        print(">>> SHOWDOWN TRIGGERED <<<")
+
         hero_cards = self.state.hero_hand + self.state.board
         villain_cards = self.state.villain_hand + self.state.board
 
@@ -267,5 +296,16 @@ class AppController:
         
         if self.state_change:
             self.state_change(self.state)
+
+    def debug_state(self, tag=""):
+        print(
+            f"[{tag}] "
+            f"street={self.state.street} | "
+            f"actions={len(self.state.actions)} | "
+            f"hero_amt={self.state.hero_amt} | "
+            f"villain_amt={self.state.villain_amt} | "
+            f"current_bet={self.state.current_bet} | "
+            f"to_act={self.state.to_act_index}"
+        )
 
     
