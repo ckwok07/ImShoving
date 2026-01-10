@@ -1,6 +1,7 @@
 from main.model.Deck import Deck
 from .gameState import GameState, STREETS
 from .action import Action
+from main.model.Evaluator import Evaluator
 
 
 class AppController:
@@ -64,6 +65,7 @@ class AppController:
         index = STREETS.index(current)
 
         if index >= len(STREETS) - 1:
+            self.evaluate_showdown()
             return
         
         nxt = STREETS[index+1]
@@ -243,5 +245,27 @@ class AppController:
 
         self.state.pot = bb
         self.state.current_bet = bb
+
+    def evaluate_showdown(self) -> None:
+        hero_cards = self.state.hero_hand + self.state.board
+        villain_cards = self.state.villain_hand + self.state.board
+
+        hero_best = Evaluator.best_hand(hero_cards)
+        villain_best = Evaluator.best_hand(villain_cards)
+        result = Evaluator.compare_hands(hero_best, villain_best)
+
+        if result == 1:  # hero wins
+            self.state.hero_stack += self.state.pot
+        elif result == -1:  # villain wins
+            self.state.villain_stack += self.state.pot
+        else:  # tie
+            half_pot = self.state.pot / 2
+            self.state.hero_stack += half_pot
+            self.state.villain_stack += half_pot
+        
+        self.state.hand_over = True
+        
+        if self.state_change:
+            self.state_change(self.state)
 
     
