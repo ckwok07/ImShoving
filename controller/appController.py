@@ -27,9 +27,6 @@ class AppController:
             self.new_hand()
             return
 
-        if self.round_complete():
-            self.advance_street()
-
         self.state.to_act_index = 1 - self.state.to_act_index
 
         if self.state.to_act_index == 1 and not self.state.hand_over:
@@ -150,6 +147,10 @@ class AppController:
 
         if self.state_change:
             self.state_change(self.state)
+        
+        if self.state.to_act_index == 1:
+            self.villain_act()
+
 
     def post_big_blind(self):
         bb = 1
@@ -175,7 +176,37 @@ class AppController:
         else:
             action = Action("CALL")
 
-        self.apply_action(action)
+        self.apply_villain_action(action)
+        self.state.actions.append(action)
+
+        if self.round_complete():
+            self.advance_street()
+        
+        self.state.to_act_index = 0
+
+        if self.state_change:
+            self.state_change(self.state)
+    
+    def apply_villain_action(self, action: Action) -> None:
+        if action.name == "CHECK":
+            return
+        
+        if action.name == "CALL":
+            amount = self.state.current_bet - self.state.villain_amt
+            if amount <= 0:
+                return
+
+            amount = min(amount, self.state.villain_stack)
+
+            self.state.villain_amt += amount
+            self.state.pot += amount
+            self.state.villain_stack -= amount
+
+            if self.state.villain_stack == 0:
+                self.state.villain_all_in = True
+        elif action.name == "FOLD":
+            self.state.hand_over = True
+            self.state.street = "SHOWDOWN"
 
 
     
