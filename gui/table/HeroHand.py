@@ -38,5 +38,5 @@ class HeroHand(QWidget):
         if active:
             self.setStyleSheet("QWidget {border: 3px solid orange; border-radius: 8px;} ")
         else:
-            self.setStyleSheet("QWidget {border: 3px solid transparent; border-radidus: 8px;}")
+            self.setStyleSheet("QWidget {border: 3px solid transparent; border-radius: 8px;}")
 
