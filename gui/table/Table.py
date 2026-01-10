@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QHBoxLayout
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, QTimer
 from .Board import Board
 from gui.actions.action_grid import ActionGrid
 from .pot import PotLabel
@@ -14,9 +14,6 @@ class Table(QWidget):
     def __init__(self, controller) -> None:
         super().__init__()
         self.controller = controller
-        self.dealer = QLabel("D", self)
-        self.dealer.setStyleSheet("background: black; color: white;")
-        self.dealer.resize(24, 24)
 
         layout = QVBoxLayout(self)
 
@@ -33,10 +30,21 @@ class Table(QWidget):
         self.hero_stack = HeroStack()
         self.villain_stack = VillainStack()
         self.villain_hand = VillainHand()
+        self.dealer = QLabel("D", self.hero_hand)
+        self.dealer.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.dealer.setStyleSheet("""QLabel {background: #191919;
+                                   color: white;
+                                   border-radius: 15px;
+                                   border: none;
+                                   font-size: 14px;
+                                   font-weight: bold;}""")
+        self.dealer.setFixedSize(30, 30)
+        self.dealer.raise_()
 
         self.pot_label.set_pot(controller.state.pot)
         self.controller.state_change = self.on_state_change
-        self.on_state_change(self.controller.state)
+        #self.on_state_change(self.controller.state)
+        QTimer.singleShot(0, self.init_positions)
 
         self.actions = ActionGrid()
         self.actions.action_clicked.connect(self.on_action)
@@ -56,6 +64,9 @@ class Table(QWidget):
         if self.controller.state.hand_over:
             return
         self.controller.handle_action(action)
+    
+    def init_positions(self):
+        self.on_state_change(self.controller.state)
 
     def on_state_change(self, state) -> None:
         self.pot_label.set_pot(state.pot)
@@ -77,10 +88,12 @@ class Table(QWidget):
         self.action_history.set_actions(recent_actions)
 
     def hero_button_pos(self) -> None: 
-        position = self.hero_hand.mapTo(self, self.hero_hand.rect().topLeft())
-        self.dealer.move(position)
+        self.dealer.setParent(self.hero_hand)
+        self.dealer.move(0,0)
+        self.dealer.show()
 
     def villain_button_pos(self) -> None: 
-        position = self.villain_hand.mapTo(self, self.villain_hand.rect().topLeft())
-        self.dealer.move(position)
+        self.dealer.setParent(self.villain_hand)
+        self.dealer.move(0,0)
+        self.dealer.show()
 
