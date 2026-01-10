@@ -72,10 +72,15 @@ class AppController:
 
         if amount <= 0:
             return
+        
+        amount = min(amount, self.state.hero_stack)
 
         self.state.hero_amt += amount
         self.state.pot += amount
         self.state.hero_stack -= amount
+
+        if self.state.hero_stack == 0:
+            self.state.hero_all_in = True
     
     def apply_raise(self, size: float) -> None:
         if self.state.current_bet == 0:
@@ -100,6 +105,8 @@ class AppController:
         self.state.street = "SHOWDOWN"
 
     def new_hand(self) -> None:
+        self.state.button_index = 1 - self.state.button_index
+
         self.state.hand_over = False
         self.deck = Deck()
         self.deck.shuffle()
@@ -116,4 +123,19 @@ class AppController:
 
         if self.state_change:
             self.state_change(self.state)
+
+    def post_big_blind(self):
+        bb = 1
+        bb_player = 1 - self.state.button_index
+
+        if bb_player == 0:
+            self.state.hero_stack -= bb
+            self.state.hero_amt = bb
+        else:
+            self.state.villain_stack -= bb
+            self.state.villain_amt = bb
+
+        self.state.pot = bb
+        self.state.current_bet = bb
+
     

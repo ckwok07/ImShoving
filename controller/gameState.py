@@ -25,4 +25,6 @@ class GameState:
     hero_stack: int = 100
     villain_stack: int = 100
 
+    button_index: int = 0 #0 for player, 1 for villain
+
     hand_over: bool = False
