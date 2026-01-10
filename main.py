@@ -31,7 +31,7 @@ def main() -> None:
                       hero_stack = 100,
                       villain_stack = 100,
                       hero_all_in = False,
-                      villain_all_in = False)
+                      villain_all_in = False,)
     controller = AppController(state)
     table = Table(controller)
 

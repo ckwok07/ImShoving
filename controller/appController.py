@@ -8,8 +8,8 @@ class AppController:
         self.state = state
         self.deck = Deck()
         self.deck.shuffle()
-        self.state.hero_hand = self.deck.deal(2)
         self.state_change = None
+        self.new_hand()
     
     def handle_action(self, action: Action) -> None:
         if self.state.hand_over:
@@ -20,6 +20,7 @@ class AppController:
         self.state.actions.append(action)
 
         if self.state.hand_over:
+            self.state.button_index = 1 - self.state.button_index
             self.new_hand()
             return
 
@@ -120,13 +121,11 @@ class AppController:
         self.state.street = "SHOWDOWN"
 
     def new_hand(self) -> None:
-        self.state.button_index = 1 - self.state.button_index
         self.state.to_act_index = self.state.button_index
 
         self.state.hand_over = False
         self.deck = Deck()
         self.deck.shuffle()
-        self.state.hero_hand = self.deck.deal(2)
 
         self.state.street = "PREFLOP"
         self.state.board.clear()
@@ -134,8 +133,14 @@ class AppController:
         self.state.current_bet = 0
         self.state.hero_amt = 0
         self.state.villain_amt = 0
+        self.state.pot = 0
 
         self.state.actions.clear()
+
+        self.state.hero_hand = self.deck.deal(2)
+        self.state.villain_hand = self.deck.deal(2)
+
+        self.post_big_blind()
 
         if self.state_change:
             self.state_change(self.state)
@@ -143,6 +148,9 @@ class AppController:
     def post_big_blind(self):
         bb = 1
         bb_player = 1 - self.state.button_index
+
+        self.state.hero_amt = 0
+        self.state.villain_amt = 0
 
         if bb_player == 0:
             self.state.hero_stack -= bb
@@ -153,5 +161,6 @@ class AppController:
 
         self.state.pot = bb
         self.state.current_bet = bb
+        print("bb:", self.state.pot, self.state.hero_amt, self.state.villain_amt)
 
     
