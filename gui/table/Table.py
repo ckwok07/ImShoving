@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QHBoxLayout
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QHBoxLayout, QScrollArea, QSizePolicy
 from PyQt6.QtCore import Qt, QTimer
 from .Board import Board
 from gui.actions.action_grid import ActionGrid
@@ -27,6 +27,18 @@ class Table(QWidget):
         self.board = Board()
         self.pot_label = PotLabel()
         self.action_history = ActionHistory()
+
+        self.action_scroll = QScrollArea()
+        self.action_scroll.setWidgetResizable(True)
+        self.action_scroll.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.action_scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
+        self.action_scroll.setWidget(self.action_history)
+        self.action_scroll.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
+        self.action_scroll.setMinimumHeight(36)
+        self.action_scroll.setFrameShape(QScrollArea.Shape.NoFrame)
+        self.action_scroll.setWidgetResizable(False)
+
+
         self.hero_hand = HeroHand()
         self.hero_stack = HeroStack()
         self.villain_stack = VillainStack()
@@ -53,7 +65,7 @@ class Table(QWidget):
         self.next_hand.clicked.connect(self.on_next_hand_clicked)
 
         layout.addWidget(title)
-        layout.addWidget(self.action_history, alignment=Qt.AlignmentFlag.AlignCenter)
+        layout.addWidget(self.action_scroll)
         layout.addWidget(self.villain_hand, alignment=Qt.AlignmentFlag.AlignHCenter)
         layout.addWidget(self.villain_stack, alignment=Qt.AlignmentFlag.AlignHCenter)
         layout.addWidget(self.board, alignment=Qt.AlignmentFlag.AlignHCenter)
@@ -95,6 +107,8 @@ class Table(QWidget):
 
         recent_actions = state.actions_list
         self.action_history.set_actions(recent_actions)
+        QTimer.singleShot(0, self.scroll_actions_to_end)
+
 
     def hero_button_pos(self) -> None: 
         self.dealer.setParent(self.hero_hand)
@@ -109,5 +123,11 @@ class Table(QWidget):
     def on_next_hand_clicked(self):
         self.controller.state.button_index = (self.controller.state.button_index + 1) % 2
         self.controller.new_hand()
+
+    def scroll_actions_to_end(self):
+        bar = self.action_scroll.horizontalScrollBar()
+        bar.setValue(bar.maximum())
+
+
 
 

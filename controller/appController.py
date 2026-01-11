@@ -89,7 +89,6 @@ class AppController:
         if self.state_change:
             self.state_change(self.state)
 
-
     def advance_street(self) -> None:
         if self.state.street == "RIVER":
             self.state.street = "SHOWDOWN"
@@ -298,6 +297,7 @@ class AppController:
             self.state.to_act_index = 1
             self.state.pot = bb
             self.state.current_bet = bb
+            self.state.actions_list.append(Action(f"Post Blind", bb, "hero"))
             self.villain_act()
         else:
             self.state.villain_stack -= bb
@@ -305,6 +305,7 @@ class AppController:
             self.state.to_act_index = 0
             self.state.pot = bb
             self.state.current_bet = bb
+            self.state.actions_list.append(Action(f"Post Blind", bb, "villain"))
         
     def evaluate_showdown(self) -> None:
         hero_cards = self.state.hero_hand + self.state.board
