@@ -26,6 +26,7 @@ class AppController:
         
         self.apply_action(action)
         self.state.actions.append(action)
+        self.state.actions_list.append(action)
         self.debug_state("HERO_ACTION_APPLIED")
 
 
@@ -66,6 +67,7 @@ class AppController:
         
         self.apply_action(action, hero=False)
         self.state.actions.append(action)
+        self.state.actions_list.append(action)
         
         self.state.to_act_index = 0
 
@@ -240,6 +242,7 @@ class AppController:
         self.state.pot = 0
         self.state.hero_all_in = False
         self.state.villain_all_in = False
+        self.state.actions_list = []
 
         self.state.actions.clear()
 

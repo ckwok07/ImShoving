@@ -18,6 +18,7 @@ class GameState:
     hero_hand: Optional[List[str]] = None
     villain_hand: Optional[List[str]] = None
     actions: List[Action] = field(default_factory=list)
+    actions_list: List[Action] = field(default_factory=list)
 
     hero_all_in: bool = False
     villain_all_in: bool = False

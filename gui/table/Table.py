@@ -8,6 +8,7 @@ from .HeroHand import HeroHand
 from .HeroStack import HeroStack
 from .VillainStack import VillainStack
 from .VillainHand import VillainHand
+from .NextHand import NextHand
 
 
 class Table(QWidget):
@@ -48,6 +49,8 @@ class Table(QWidget):
 
         self.actions = ActionGrid()
         self.actions.action_clicked.connect(self.on_action)
+        self.next_hand = NextHand()
+        self.next_hand.clicked.connect(self.on_next_hand_clicked)
 
         layout.addWidget(title)
         layout.addWidget(self.action_history, alignment=Qt.AlignmentFlag.AlignCenter)
@@ -58,6 +61,7 @@ class Table(QWidget):
         layout.addWidget(self.hero_hand, alignment=Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.hero_stack, alignment=Qt.AlignmentFlag.AlignHCenter)
         layout.addWidget(self.actions, alignment=Qt.AlignmentFlag.AlignHCenter)
+        layout.addWidget(self.next_hand, alignment=Qt.AlignmentFlag.AlignHCenter)
         layout.addStretch()
     
     def on_action(self, action) -> None:
@@ -83,8 +87,9 @@ class Table(QWidget):
 
         self.hero_hand.set_active(state.to_act_index == 0)
         self.villain_hand.set_active(state.to_act_index == 1)
+        self.next_hand.setEnabled(state.hand_over)
 
-        recent_actions = state.actions[-5:]
+        recent_actions = state.actions_list
         self.action_history.set_actions(recent_actions)
 
     def hero_button_pos(self) -> None: 
@@ -96,4 +101,8 @@ class Table(QWidget):
         self.dealer.setParent(self.villain_hand)
         self.dealer.move(0,0)
         self.dealer.show()
+
+    def on_next_hand_clicked(self):
+        self.controller.new_hand()
+
 
