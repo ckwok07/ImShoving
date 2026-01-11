@@ -62,6 +62,11 @@ class AppController:
             return
         
         
+        # if self.state.current_bet > self.state.villain_amt:
+        #     action = Action("CALL", "villain")
+        # else:
+        #     action = Action("CHECK", "villain")
+        
         
         if self.state.current_bet > self.state.villain_amt:
             choice = random.choice([1,2])
@@ -86,6 +91,10 @@ class AppController:
 
 
     def advance_street(self) -> None:
+        if self.state.street == "RIVER":
+            self.state.street = "SHOWDOWN"
+            self.evaluate_showdown()
+            return
 
         index = STREETS.index(self.state.street)
         nxt = STREETS[index + 1]
@@ -114,8 +123,7 @@ class AppController:
         else:
             if self.state.to_act_index == 1:
                 self.villain_act()
-
-        
+    
     def round_complete(self) -> bool:
         print(f"[ROUND_COMPLETE_CHECK] street={self.state.street}, actions={len(self.state.actions)}, hero_amt={self.state.hero_amt}, villain_amt={self.state.villain_amt}, current_bet={self.state.current_bet}")
 
@@ -143,8 +151,19 @@ class AppController:
     
     def apply_action(self, action: Action, hero: bool = True) -> None:
         if action.name == "FOLD":
+            # award pot
+            if hero:
+                self.state.villain_stack += self.state.pot
+            else:
+                self.state.hero_stack += self.state.pot
+
+            self.state.pot = 0
             self.state.hand_over = True
             self.state.street = "SHOWDOWN"
+
+            if self.state_change:
+                self.state_change(self.state)
+
             return
         
         if action.name == "CHECK":
@@ -266,7 +285,7 @@ class AppController:
         if self.state_change:
             self.state_change(self.state)
 
-    def post_big_blind(self):
+    def post_big_blind(self) -> None:
         bb = 1
         bb_player = 1 - self.state.button_index
 
