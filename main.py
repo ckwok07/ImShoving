@@ -36,6 +36,7 @@ def main() -> None:
     table = Table(controller)
 
     layout.addWidget(left_panel)
+
     layout.addWidget(table, 1)
     layout.addWidget(right_panel)
 

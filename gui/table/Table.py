@@ -66,12 +66,33 @@ class Table(QWidget):
 
         layout.addWidget(title)
         layout.addWidget(self.action_scroll)
-        layout.addWidget(self.villain_hand, alignment=Qt.AlignmentFlag.AlignHCenter)
-        layout.addWidget(self.villain_stack, alignment=Qt.AlignmentFlag.AlignHCenter)
+
+        villain_row = QWidget()
+        villain_row.setStyleSheet("background: transparent;")
+
+        villain_layout = QHBoxLayout(villain_row)
+        villain_layout.setContentsMargins(0, 0, 0, 0)
+        villain_layout.setSpacing(10)
+
+        villain_layout.addWidget(self.villain_stack)
+        villain_layout.addWidget(self.villain_hand)
+
+        layout.addWidget(villain_row, alignment=Qt.AlignmentFlag.AlignHCenter)
+
         layout.addWidget(self.board, alignment=Qt.AlignmentFlag.AlignHCenter)
         layout.addWidget(self.pot_label, alignment=Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(self.hero_hand, alignment=Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(self.hero_stack, alignment=Qt.AlignmentFlag.AlignHCenter)
+
+        hero_row = QWidget()
+        hero_row.setStyleSheet("background: transparent;")
+        hero_layout = QHBoxLayout(hero_row)
+        hero_layout.setContentsMargins(0, 0, 0, 0)
+        hero_layout.setSpacing(10)
+
+        hero_layout.addWidget(self.hero_stack)
+        hero_layout.addWidget(self.hero_hand)
+
+        layout.addWidget(hero_row, alignment=Qt.AlignmentFlag.AlignHCenter)
+
         layout.addWidget(self.actions, alignment=Qt.AlignmentFlag.AlignHCenter)
         layout.addWidget(self.next_hand, alignment=Qt.AlignmentFlag.AlignHCenter)
         layout.addStretch()

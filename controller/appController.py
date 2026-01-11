@@ -124,10 +124,8 @@ class AppController:
                 self.villain_act()
     
     def round_complete(self) -> bool:
-        print(f"[ROUND_COMPLETE_CHECK] street={self.state.street}, actions={len(self.state.actions)}, hero_amt={self.state.hero_amt}, villain_amt={self.state.villain_amt}, current_bet={self.state.current_bet}")
 
         if self.state.hand_over:
-            print("[ROUND_COMPLETE] TRUE")
             return True
         
         if self.state.hero_all_in and self.state.villain_all_in:
@@ -143,8 +141,7 @@ class AppController:
         if (self.state.hero_amt == self.state.villain_amt and 
             self.state.hero_amt == self.state.current_bet):
             return True
-        
-        print("[ROUND_COMPLETE] FALSE")
+
 
         return False
     
@@ -256,7 +253,6 @@ class AppController:
             self.state.villain_all_in = True
 
     def new_hand(self) -> None:
-        print("NEW HAND, button =", self.state.button_index)
         self.state.to_act_index = self.state.button_index
 
         self.state.hand_over = False
