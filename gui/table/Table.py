@@ -79,8 +79,8 @@ class Table(QWidget):
 
         layout.addWidget(villain_row, alignment=Qt.AlignmentFlag.AlignHCenter)
 
-        layout.addWidget(self.board, alignment=Qt.AlignmentFlag.AlignHCenter)
         layout.addWidget(self.pot_label, alignment=Qt.AlignmentFlag.AlignCenter)
+        layout.addWidget(self.board, alignment=Qt.AlignmentFlag.AlignHCenter)
 
         hero_row = QWidget()
         hero_row.setStyleSheet("background: transparent;")

@@ -37,6 +37,8 @@ class ActionHistory(QWidget):
     def set_actions(self, actions: list[Action]) -> None:
             self.clear_actions()
             self.add_actions(actions)
+            self.adjustSize() 
+            self.updateGeometry()
 
             scroll = self.parent()
             if scroll:
