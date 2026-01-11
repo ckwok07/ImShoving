@@ -80,6 +80,10 @@ class Table(QWidget):
         self.villain_stack.set_villain_stack(state.villain_stack)
         self.villain_hand.set_hand(state.villain_hand)
 
+        actions = self.controller.get_hero_legal_actions()
+        self.actions.set_actionGrid(actions)
+
+
         if state.button_index == 0:
             self.hero_button_pos()
         else:
@@ -103,6 +107,7 @@ class Table(QWidget):
         self.dealer.show()
 
     def on_next_hand_clicked(self):
+        self.controller.state.button_index = (self.controller.state.button_index + 1) % 2
         self.controller.new_hand()
 
 

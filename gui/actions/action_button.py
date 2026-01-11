@@ -21,6 +21,8 @@ class ActionButton(QPushButton):
                            }""")
     
     def _label(self, action: Action) -> str:
-        if action.size is None:
+          if action.size is None:
             return action.name
-        return f"{action.name} {action.size}"
+          elif action.name == "RAISE":
+               return f"{action.name} TO {action.size}"
+          return f"{action.name} {action.size}"
