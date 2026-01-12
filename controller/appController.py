@@ -2,6 +2,7 @@ from main.model.Deck import Deck
 from .gameState import GameState, STREETS
 from .action import Action
 from main.model.Evaluator import Evaluator
+from main.model.Simulator import Simulator
 import random
 
 
@@ -12,6 +13,7 @@ class AppController:
         self.deck.shuffle()
         self.state_change = None
         self.new_hand()
+        self.cached_hero_equity = None
     
     def handle_action(self, action: Action) -> None:
 
@@ -52,6 +54,8 @@ class AppController:
 
         if self.state_change:
             self.state_change(self.state)
+        
+        self.cached_hero_equity = None
 
     def villain_act(self) -> None:
 
@@ -122,6 +126,8 @@ class AppController:
         else:
             if self.state.to_act_index == 1:
                 self.villain_act()
+        
+        self.cached_hero_equity = None
     
     def round_complete(self) -> bool:
 
@@ -258,6 +264,7 @@ class AppController:
         self.state.hand_over = False
         self.deck = Deck()
         self.deck.shuffle()
+        self.cached_hero_equity = None
 
         self.state.street = "PREFLOP"
         self.state.board.clear()
@@ -361,6 +368,14 @@ class AppController:
         
         if self.state.hero_stack > 0 and not self.state.hero_all_in:
             actions.append(Action("ALL IN", "hero"))
+
+        numTrials = 5000 if self.state.street == "PREFLOP" else 12000
+        if self.cached_hero_equity is None:
+            self.cached_hero_equity = Simulator.simulate_equity(hand = self.state.hero_hand, 
+                                                            board = self.state.board,
+                                                            players = 2,
+                                                            trials = numTrials)
+        print(f"hero_equity = {self.cached_hero_equity}")
         
         return actions
 

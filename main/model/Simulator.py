@@ -13,7 +13,7 @@ class Simulator:
     def simulate_equity(hand: list[Card], 
                         board: list[Card] | None = None,
                         players: int = 2, 
-                        trials: int = 100000) -> Iterator[tuple[int, float, float, float]]:
+                        trials: int = 100000) -> float: #Iterator[tuple[int, float, float, float]]
         assert 2 <= players <= 6
         assert len(hand) == 2
 
@@ -57,7 +57,8 @@ class Simulator:
             stderr = math.sqrt((equity_sum / (trial + 1)) * (1 - (equity_sum / (trial + 1))) / (trial + 1))
             ci95 = 1.96 * stderr
 
-            yield trial + 1, equity_sum / (trial + 1), stderr, ci95
+            #yield trial + 1, equity_sum / (trial + 1), stderr, ci95
+        return equity_sum / trials
 
     # given a hand, board, num players, list of ranges and x trials, 
     # return percentage of showdowns won after x simulations with players with given ranges
@@ -66,7 +67,7 @@ class Simulator:
                                 board: list[Card] | None = None,
                                 players: int = 2,
                                 villianRanges: list[Range] | None = None,
-                                trials: int = 100000) -> Iterator[tuple[int, float, float, float]]:
+                                trials: int = 100000) -> float: #Iterator[tuple[int, float, float, float]]
         if villianRanges is None:
             villianRanges = []
 
@@ -121,8 +122,11 @@ class Simulator:
 
             stderr = math.sqrt((equity_sum / (trial + 1)) * (1 - (equity_sum / (trial + 1))) / (trial + 1))
             ci95 = 1.96 * stderr
+            if trial > 2000 and ci95 < 0.01:
+                break
 
-            yield trial + 1, equity_sum / (trial + 1), stderr, ci95
+            #yield trial + 1, equity_sum / (trial + 1), stderr, ci95
+        return equity_sum / trials
     
     @staticmethod
     def simulate_call_ev(pot: int, call_amount: int, equity: int) -> float:
