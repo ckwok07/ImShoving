@@ -87,8 +87,13 @@ class AppController:
                 action = Action("BET", "villain", 2)
         
         self.apply_action(action, hero=False)
-        self.state.actions.append(action)
         self.state.actions_list.append(action)
+
+        if self.state.hand_over:
+
+            return
+
+        self.state.actions.append(action)
         
         self.state.to_act_index = 0
 
@@ -100,6 +105,9 @@ class AppController:
             self.state.street = "SHOWDOWN"
             self.evaluate_showdown()
             return
+        elif self.state.street == "SHOWDOWN":
+            return
+
 
         index = STREETS.index(self.state.street)
         nxt = STREETS[index + 1]
@@ -373,6 +381,9 @@ class AppController:
 
         self.compute_hero_equity()
         self.compute_action_EVs(actions)
+
+        for action in actions:
+            print(f"{action.name}, {action.size}, {action.ev: .2f}")
         
         return actions
     
@@ -391,27 +402,60 @@ class AppController:
             if action.name == "FOLD":
                 action.ev = 0
             elif action.name == "CHECK":
-                action.ev = self.cached_hero_equity * self.state.pot
+                ev_villain_checks = 0.5 * (self.cached_hero_equity * self.state.pot)
+                final_pot_if_bet = self.state.pot + 2 + 2
+                ev_villain_bets = 0.5 * (self.cached_hero_equity * final_pot_if_bet - 2)
+            
+                action.ev = ev_villain_checks + ev_villain_bets
+
             elif action.name == "CALL":
-                cost = self.state.current_bet - self.state.hero_amt
-                cost = max(cost, 0)
+                cost = max(self.state.current_bet - self.state.hero_amt, 0)
                 final_pot = self.state.pot + cost
                 action.ev = self.cached_hero_equity * final_pot - cost
+
             elif action.name == "BET":
-                cost = action.size
-                cost = max(cost, 0)
-                final_pot = self.state.pot + cost
-                action.ev = self.cached_hero_equity * final_pot - cost
+                fold_prob = 1/3
+                call_prob = 1/3
+                raise_prob = 1/3
+
+                cost = max(action.size, 0)
+                ev_fold = fold_prob * self.state.pot
+                ev_call = call_prob * (self.cached_hero_equity * (self.state.pot + 2 * cost) - cost)
+
+                if 2 * cost - cost <= self.state.hero_stack:
+                    ev_raise = raise_prob * max(self.cached_hero_equity * (self.state.pot + cost + 2 * cost + (2 * cost - cost)) - (cost + (2 * cost - cost)), 0)
+                else:
+                    ev_raise = 0
+    
+                action.ev = ev_fold + ev_call + ev_raise
             elif action.name == "RAISE":
-                cost = action.size - self.state.hero_amt
-                cost = max(cost, 0)
-                final_pot = self.state.pot + cost
-                action.ev = self.cached_hero_equity * final_pot - cost
+                fold_prob = 1/3
+                call_prob = 1/3
+                raise_prob = 1/3
+
+                cost = max(action.size - self.state.hero_amt, 0)
+                
+                ev_fold = fold_prob * self.state.pot
+                
+                ev_call = call_prob * (self.cached_hero_equity * (self.state.pot + 2 * cost) - cost)
+                
+                if 2 * action.size - action.size <= self.state.hero_stack - cost:
+                    ev_raise = raise_prob * max(self.cached_hero_equity * (self.state.pot + cost + 2 * action.size + (2 * action.size - action.size)) - (cost + (2 * action.size - action.size)), 0)
+                else:
+                    ev_raise = 0
+                
+                action.ev = ev_fold + ev_call + ev_raise
             elif action.name == "ALL IN":
-                cost = self.state.hero_stack
-                cost = max(cost, 0)
-                final_pot = self.state.pot + cost
-                action.ev = self.cached_hero_equity * final_pot - cost
+                cost = max(self.state.hero_stack, 0)
+                fold_prob = 1/3
+                call_prob = 2/3
+
+                ev_fold = fold_prob * self.state.pot
+                final_pot = self.state.pot + cost + min(cost, self.state.villain_stack)
+                ev_call = call_prob * (self.cached_hero_equity * final_pot - cost)
+                
+                action.ev = ev_fold + ev_call
+
         return actions
 
     
