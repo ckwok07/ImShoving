@@ -6,3 +6,4 @@ class Action:
     name: str
     player: str
     size: Optional[float] = None
+    ev: float | None = None

@@ -18,12 +18,18 @@ def main() -> None:
     #         print(card.display())
 
     #hand = deck.deal(2)
-    hand = [Card(2,Suit.SPADES), Card(7, Suit.HEARTS)]
-    #board = deck.deal(3)
-    board = [Card(12,Suit.SPADES), Card(10,Suit.SPADES), Card(9,Suit.DIAMONDS)]
+    hand = [Card(2,Suit.SPADES), Card(5, Suit.CLUBS)]
+    board = []
+    #board = [Card(12,Suit.SPADES), Card(10,Suit.SPADES), Card(9,Suit.DIAMONDS)]
 
     print("hand:", " ".join(card.display() for card in hand))
     print("board:", " ".join(card.display() for card in board))
+
+    equity = Simulator.simulate_equity(hand,board,2,20000)
+    print(equity)
+    ev = Simulator.simulate_call_ev(1,1,equity)
+    print(ev)
+
 
 
     # finalEquity = 0

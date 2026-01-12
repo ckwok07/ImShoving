@@ -73,11 +73,13 @@ class AppController:
         
         
         if self.state.current_bet > self.state.villain_amt:
-            choice = random.choice([1,2])
+            choice = random.choice([1,2,3])
             if choice == 1:
                 action = Action("CALL", "villain")
-            else:
+            elif choice == 2:
                 action = Action("RAISE", "villain", 2 * self.state.current_bet)
+            else:
+                action = Action("FOLD", "villain")
         else:
             if random.choice([True, False]):
                 action = Action("CHECK", "villain")
@@ -369,14 +371,47 @@ class AppController:
         if self.state.hero_stack > 0 and not self.state.hero_all_in:
             actions.append(Action("ALL IN", "hero"))
 
-        numTrials = 5000 if self.state.street == "PREFLOP" else 12000
+        self.compute_hero_equity()
+        self.compute_action_EVs(actions)
+        
+        return actions
+    
+    def compute_hero_equity(self) -> float:
         if self.cached_hero_equity is None:
+            numTrials = 5000 if self.state.street == "PREFLOP" else 12000
             self.cached_hero_equity = Simulator.simulate_equity(hand = self.state.hero_hand, 
                                                             board = self.state.board,
                                                             players = 2,
                                                             trials = numTrials)
-        print(f"hero_equity = {self.cached_hero_equity}")
         
+        return self.cached_hero_equity
+    
+    def compute_action_EVs(self, actions: list[Action]) -> list[Action]:
+        for action in actions:
+            if action.name == "FOLD":
+                action.ev = 0
+            elif action.name == "CHECK":
+                action.ev = self.cached_hero_equity * self.state.pot
+            elif action.name == "CALL":
+                cost = self.state.current_bet - self.state.hero_amt
+                cost = max(cost, 0)
+                final_pot = self.state.pot + cost
+                action.ev = self.cached_hero_equity * final_pot - cost
+            elif action.name == "BET":
+                cost = action.size
+                cost = max(cost, 0)
+                final_pot = self.state.pot + cost
+                action.ev = self.cached_hero_equity * final_pot - cost
+            elif action.name == "RAISE":
+                cost = action.size - self.state.hero_amt
+                cost = max(cost, 0)
+                final_pot = self.state.pot + cost
+                action.ev = self.cached_hero_equity * final_pot - cost
+            elif action.name == "ALL IN":
+                cost = self.state.hero_stack
+                cost = max(cost, 0)
+                final_pot = self.state.pot + cost
+                action.ev = self.cached_hero_equity * final_pot - cost
         return actions
 
     
