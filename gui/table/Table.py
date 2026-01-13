@@ -36,7 +36,7 @@ class Table(QWidget):
         self.action_scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.action_scroll.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
-        self.action_scroll.setFixedHeight(65)
+        self.action_scroll.setFixedHeight(45)
 
 
         self.hero_hand = HeroHand()

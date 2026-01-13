@@ -7,6 +7,7 @@ from controller.action import Action
 class ActionHistory(QWidget):
     def __init__(self) -> None:
         super().__init__()
+        self.pot = 0
 
         self.layout = QHBoxLayout(self)
         self.items: list[QLabel] = []
@@ -24,9 +25,10 @@ class ActionHistory(QWidget):
         self.layout.setSpacing(6)
 
     def add_action(self, action: Action) -> None:
-        text = self.formatAction(action)
+        left_text, action_text = self.formatAction(action)
+        chip = ActionHistoryBox(left_text, action_text)
 
-        chip = ActionHistoryBox(text)
+
         chip.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
         chip.setMinimumWidth(chip.sizeHint().width())
         self.layout.addWidget(chip)
@@ -44,6 +46,7 @@ class ActionHistory(QWidget):
 
     def set_actions(self, actions: list[Action]) -> None:
             self.clear_actions()
+            self.pot = 0
             self.add_actions(actions)
             self.adjustSize() 
             self.updateGeometry()
@@ -61,8 +64,19 @@ class ActionHistory(QWidget):
                 bar.setValue(bar.maximum())
     
     def formatAction(self, action) -> str:
-        if action.size is None:
-            return f"{action.player}:{action.name}"
-        elif action.name == "Post Blind":
-            return f"{action.player}: Post Blind 1"
-        return f"{action.player}: {action.name} {action.size}"
+        if action.name == "Post Blind":
+            self.pot += 1
+            action_name = "BLIND"
+        else:
+            action_name = action.name.upper()
+
+        if action.size is not None and action.name != "Post Blind":
+            self.pot += action.size
+
+        if action.player == "villain":
+            player = "VILLAIN"
+        else:
+            player = "HERO"
+
+        left_text = f"{player}  {self.pot}"
+        return left_text, action_name
