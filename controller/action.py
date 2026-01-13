@@ -5,5 +5,6 @@ from typing import Optional
 class Action:
     name: str
     player: str
-    size: Optional[float] = None
+    size: float
     ev: float | None = None
+    pot_after = 0

@@ -33,6 +33,7 @@ class AppController:
             self.analyze_decision(action)
 
         self.apply_action(action)
+        action.pot_after = self.state.pot
         self.state.actions.append(action)
         self.state.actions_list.append(action)
 
@@ -72,27 +73,28 @@ class AppController:
             return
         
         
-        if self.state.current_bet > self.state.villain_amt:
-            action = Action("CALL", "villain")
-        else:
-            action = Action("CHECK", "villain")
-        
-        
         # if self.state.current_bet > self.state.villain_amt:
-        #     choice = random.choice([1,2,3])
-        #     if choice == 1:
-        #         action = Action("CALL", "villain")
-        #     elif choice == 2:
-        #         action = Action("RAISE", "villain", 2 * self.state.current_bet)
-        #     else:
-        #         action = Action("FOLD", "villain")
+        #     action = Action("CALL", "villain")
         # else:
-        #     if random.choice([True, False]):
-        #         action = Action("CHECK", "villain")
-        #     else:
-        #         action = Action("BET", "villain", 2)
+        #     action = Action("CHECK", "villain")
+        
+        
+        if self.state.current_bet > self.state.villain_amt:
+            choice = random.choice([1,2,3])
+            if choice == 1:
+                action = Action("CALL", "villain", self.state.current_bet - self.state.villain_amt)
+            elif choice == 2:
+                action = Action("RAISE", "villain", 2 * self.state.current_bet)
+            else:
+                action = Action("FOLD", "villain", 0)
+        else:
+            if random.choice([True, False]):
+                action = Action("CHECK", "villain", 0)
+            else:
+                action = Action("BET", "villain", 2)
         
         self.apply_action(action, hero=False)
+        action.pot_after = self.state.pot
         self.state.actions_list.append(action)
 
         if self.state.hand_over:
@@ -190,7 +192,7 @@ class AppController:
         elif action.name == "CALL":
             self.apply_call(hero)
 
-        elif action.name == "RAISE" or action.name == "BET" and action.size is not None:
+        elif action.name in ("RAISE", "BET"):
             self.apply_raise(action.size, hero)
 
         elif action.name == "ALL IN":
@@ -316,7 +318,9 @@ class AppController:
             self.state.to_act_index = 1
             self.state.pot = bb
             self.state.current_bet = bb
-            self.state.actions_list.append(Action(name = "Post Blind", player = "hero", size = bb))
+            action = Action(name = "Post Blind", player = "hero", size = bb)
+            action.pot_after = self.state.pot
+            self.state.actions_list.append(action)
             self.villain_act()
         else:
             self.state.villain_stack -= bb
@@ -324,7 +328,9 @@ class AppController:
             self.state.to_act_index = 0
             self.state.pot = bb
             self.state.current_bet = bb
-            self.state.actions_list.append(Action(name = "Post Blind", player = "villain", size = bb))
+            action = Action(name = "Post Blind", player = "villain", size = bb)
+            action.pot_after = self.state.pot
+            self.state.actions_list.append(action)
         
     def evaluate_showdown(self) -> None:
         hero_cards = self.state.hero_hand + self.state.board
@@ -359,31 +365,31 @@ class AppController:
 
 
         if facing_bet:
-            actions.append(Action("FOLD", "hero"))
-            actions.append(Action("CALL", "hero"))
+            actions.append(Action("FOLD", "hero", 0))
+            actions.append(Action("CALL", "hero", self.state.current_bet - self.state.hero_amt))
 
             for new_bet in (self.state.current_bet * 2, self.state.current_bet * 4):
                 raise_cost = new_bet - self.state.hero_amt
                 if raise_cost > 0 and self.state.hero_stack >= raise_cost:
                     actions.append(Action("RAISE", "hero", size = new_bet))
         elif bet_exists:
-            actions.append(Action("FOLD", "hero"))
-            actions.append(Action("CHECK", "hero"))
+            actions.append(Action("FOLD", "hero", 0))
+            actions.append(Action("CHECK", "hero", 0))
 
             for new_bet in (self.state.current_bet * 2, self.state.current_bet * 4):
                 cost = new_bet - self.state.hero_amt
                 if cost > 0 and self.state.hero_stack >= cost:
                     actions.append(Action("RAISE", "hero", size=new_bet))
         else:
-            actions.append(Action("FOLD", "hero"))
-            actions.append(Action("CHECK", "hero"))
+            actions.append(Action("FOLD", "hero", 0))
+            actions.append(Action("CHECK", "hero",0 ))
 
             for bet in (1, 2, 4):
                 if self.state.hero_stack >= bet:
                     actions.append(Action("BET", "hero", size = bet))
         
         if self.state.hero_stack > 0 and not self.state.hero_all_in:
-            actions.append(Action("ALL IN", "hero"))
+            actions.append(Action("ALL IN", "hero", self.state.hero_stack))
 
         self.compute_hero_equity()
         self.compute_action_EVs(actions)
@@ -469,7 +475,9 @@ class AppController:
         actions = self.last_hero_actions
 
         best_ev = max(action.ev for action in actions)
-        chosen_ev = hero_action.ev
+        chosen_action = next(a for a in self.last_hero_actions 
+                      if a.name == hero_action.name and a.size == hero_action.size)
+        chosen_ev = chosen_action.ev
 
         pot = max(self.state.pot, 1)
 
