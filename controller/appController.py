@@ -471,7 +471,11 @@ class AppController:
         best_ev = max(action.ev for action in actions)
         chosen_ev = hero_action.ev
 
-        accuracy = max(0, 100 - 50 * (best_ev - chosen_ev))
+        pot = max(self.state.pot, 1)
+
+        normalized_ev_loss = (best_ev - chosen_ev) / pot
+
+        accuracy = max(0, 100 - 50 * normalized_ev_loss)
 
         decision_label = self.label_accuracy(accuracy)
 
