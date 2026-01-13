@@ -1,3 +1,4 @@
+from controller.decisionAccuracy import DecisionQuality, ACCURACY_LABELS
 from main.model.Deck import Deck
 from .gameState import GameState, STREETS
 from .action import Action
@@ -14,6 +15,8 @@ class AppController:
         self.state_change = None
         self.new_hand()
         self.cached_hero_equity = None
+        self.decision_quality = []
+        self.last_hero_actions = []
     
     def handle_action(self, action: Action) -> None:
 
@@ -26,6 +29,9 @@ class AppController:
         elif action.name == "CALL" and self.state.current_bet == self.state.hero_amt:
             action = Action("CHECK", "hero")
         
+        if action.player == "hero":
+            self.analyze_decision(action)
+
         self.apply_action(action)
         self.state.actions.append(action)
         self.state.actions_list.append(action)
@@ -385,6 +391,7 @@ class AppController:
         for action in actions:
             print(f"{action.name}, {action.size}, {action.ev: .2f}")
         
+        self.last_hero_actions = actions
         return actions
     
     def compute_hero_equity(self) -> float:
@@ -457,5 +464,35 @@ class AppController:
                 action.ev = ev_fold + ev_call
 
         return actions
+    
+    def analyze_decision(self, hero_action: Action) -> None:
+        actions = self.last_hero_actions
+
+        best_ev = max(action.ev for action in actions)
+        chosen_ev = hero_action.ev
+
+        accuracy = max(0, 100 - 50 * (best_ev - chosen_ev))
+
+        decision_label = self.label_accuracy(accuracy)
+
+        # if hero_action.ev < 0 and best_ev > 0:
+        #     decision_label = "Mistake"
+
+
+        decisionQuality = DecisionQuality(action_index = len(self.decision_quality), 
+                                          action_name = hero_action.name,
+                                          ev_chosen = chosen_ev,
+                                          ev_best = best_ev,
+                                          equity_before = self.cached_hero_equity,
+                                          accuracy = accuracy,
+                                          label = decision_label)
+        
+        self.decision_quality.append(decisionQuality)
+        print(f"label = {decision_label}, accuracy = {accuracy}")
+    
+    def label_accuracy(self, accuracy: float) -> str:
+        for threshold in sorted(ACCURACY_LABELS.keys(), reverse=True):
+            if accuracy >= threshold:
+                return ACCURACY_LABELS[threshold]
 
     
