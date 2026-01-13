@@ -1,5 +1,6 @@
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QHBoxLayout, QSizePolicy
 from .ActionHistoryBox import ActionHistoryBox
+from PyQt6.QtCore import Qt
 
 from controller.action import Action
 
@@ -9,18 +10,25 @@ class ActionHistory(QWidget):
 
         self.layout = QHBoxLayout(self)
         self.items: list[QLabel] = []
+        self.setFixedHeight(65)
 
         title = QLabel("actions")
-        title.setStyleSheet("color: white;")
+        title.setStyleSheet("""QLabel {color: white;
+                            font-weight: bold;
+                            padding: 8px;}""")
         self.layout.addWidget(title)
 
-        self.setSizePolicy(QSizePolicy.Policy.Maximum, QSizePolicy.Policy.Fixed)
+        self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         self.layout.setSizeConstraint(QHBoxLayout.SizeConstraint.SetMinimumSize)
+        self.layout.setContentsMargins(0, 0, 0, 0)
+        self.layout.setSpacing(6)
 
     def add_action(self, action: Action) -> None:
         text = self.formatAction(action)
 
         chip = ActionHistoryBox(text)
+        chip.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
+        chip.setMinimumWidth(chip.sizeHint().width())
         self.layout.addWidget(chip)
         self.items.append(chip)
     
@@ -55,4 +63,6 @@ class ActionHistory(QWidget):
     def formatAction(self, action) -> str:
         if action.size is None:
             return f"{action.player}:{action.name}"
-        return f"{action.player} {action.name} {action.size}"
+        elif action.name == "Post Blind":
+            return f"{action.player}: Post Blind 1"
+        return f"{action.player}: {action.name} {action.size}"

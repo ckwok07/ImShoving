@@ -29,14 +29,14 @@ class Table(QWidget):
         self.action_history = ActionHistory()
 
         self.action_scroll = QScrollArea()
-        self.action_scroll.setWidgetResizable(True)
-        self.action_scroll.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.action_scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
         self.action_scroll.setWidget(self.action_history)
-        self.action_scroll.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
-        self.action_scroll.setMinimumHeight(36)
+        self.action_scroll.setWidgetResizable(True)
         self.action_scroll.setFrameShape(QScrollArea.Shape.NoFrame)
-        self.action_scroll.setWidgetResizable(False)
+        self.action_scroll.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
+        self.action_scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.action_scroll.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+
+        self.action_scroll.setFixedHeight(65)
 
 
         self.hero_hand = HeroHand()

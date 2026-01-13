@@ -11,6 +11,8 @@ def main() -> None:
     window = QMainWindow()
     window.setWindowTitle("ImAllIn")
     window.resize(1200,800)
+    # window.setFixedHeight(900)
+    # window.setFixedWidth(1500)
     window.setStyleSheet("background-color: #121212;")
 
 

@@ -66,25 +66,25 @@ class AppController:
             return
         
         
-        # if self.state.current_bet > self.state.villain_amt:
-        #     action = Action("CALL", "villain")
-        # else:
-        #     action = Action("CHECK", "villain")
-        
-        
         if self.state.current_bet > self.state.villain_amt:
-            choice = random.choice([1,2,3])
-            if choice == 1:
-                action = Action("CALL", "villain")
-            elif choice == 2:
-                action = Action("RAISE", "villain", 2 * self.state.current_bet)
-            else:
-                action = Action("FOLD", "villain")
+            action = Action("CALL", "villain")
         else:
-            if random.choice([True, False]):
-                action = Action("CHECK", "villain")
-            else:
-                action = Action("BET", "villain", 2)
+            action = Action("CHECK", "villain")
+        
+        
+        # if self.state.current_bet > self.state.villain_amt:
+        #     choice = random.choice([1,2,3])
+        #     if choice == 1:
+        #         action = Action("CALL", "villain")
+        #     elif choice == 2:
+        #         action = Action("RAISE", "villain", 2 * self.state.current_bet)
+        #     else:
+        #         action = Action("FOLD", "villain")
+        # else:
+        #     if random.choice([True, False]):
+        #         action = Action("CHECK", "villain")
+        #     else:
+        #         action = Action("BET", "villain", 2)
         
         self.apply_action(action, hero=False)
         self.state.actions_list.append(action)
@@ -310,7 +310,7 @@ class AppController:
             self.state.to_act_index = 1
             self.state.pot = bb
             self.state.current_bet = bb
-            self.state.actions_list.append(Action(f"Post Blind", bb, "hero"))
+            self.state.actions_list.append(Action(name = "Post Blind", player = "hero", size = bb))
             self.villain_act()
         else:
             self.state.villain_stack -= bb
@@ -318,7 +318,7 @@ class AppController:
             self.state.to_act_index = 0
             self.state.pot = bb
             self.state.current_bet = bb
-            self.state.actions_list.append(Action(f"Post Blind", bb, "villain"))
+            self.state.actions_list.append(Action(name = "Post Blind", player = "villain", size = bb))
         
     def evaluate_showdown(self) -> None:
         hero_cards = self.state.hero_hand + self.state.board
