@@ -11,6 +11,7 @@ class ActionGrid(QWidget):
 
         self.layout = QGridLayout(self)
         self.layout.setSpacing(12)
+        self.setMinimumHeight(90) 
 
         # actions = [Action(name = "FOLD", player = "hero"),
         #            Action(name = "CHECK",player = "hero"), 

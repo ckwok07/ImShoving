@@ -256,8 +256,8 @@ class AppController:
     
     def apply_all_in(self, hero: bool = True) -> None:
         if hero:
-            all_in_amt = self.state.hero_stack
-            self.state.hero_stack = 0
+            all_in_amt = min(self.state.hero_stack, self.state.villain_stack)
+            self.state.hero_stack -= all_in_amt 
             self.state.hero_amt += all_in_amt
             self.state.pot += all_in_amt
             
@@ -266,8 +266,8 @@ class AppController:
             
             self.state.hero_all_in = True
         else:
-            all_in_amt = self.state.villain_stack
-            self.state.villain_stack = 0
+            all_in_amt = min(self.state.hero_stack, self.state.villain_stack)
+            self.state.villain_stack -= all_in_amt
             self.state.villain_amt += all_in_amt
             self.state.pot += all_in_amt
             
