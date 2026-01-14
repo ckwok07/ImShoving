@@ -497,7 +497,8 @@ class AppController:
                                           ev_best = best_ev,
                                           equity_before = self.cached_hero_equity,
                                           accuracy = accuracy,
-                                          label = decision_label)
+                                          label = decision_label,
+                                          street = self.state.street)
         
         self.decision_quality.append(decisionQuality)
         print(f"label = {decision_label}, accuracy = {accuracy}")

@@ -1,5 +1,7 @@
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QHBoxLayout, QScrollArea, QSizePolicy
 from PyQt6.QtCore import Qt, QTimer
+
+from controller.gameState import GameState
 from .Board import Board
 from gui.actions.action_grid import ActionGrid
 from .pot import PotLabel
@@ -15,12 +17,11 @@ class Table(QWidget):
     def __init__(self, controller) -> None:
         super().__init__()
         self.controller = controller
+        
 
         layout = QVBoxLayout(self)
-
-        title = QLabel("table")
-        title.setStyleSheet("color: white; font-size: 24px;")
-        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(0)
 
         self.setStyleSheet("background: #191919;")
 
@@ -55,7 +56,7 @@ class Table(QWidget):
         self.dealer.raise_()
 
         self.pot_label.set_pot(controller.state.pot)
-        self.controller.state_change = self.on_state_change
+        #self.controller.state_change = self.on_state_change
         #self.on_state_change(self.controller.state)
         QTimer.singleShot(0, self.init_positions)
 
@@ -64,7 +65,6 @@ class Table(QWidget):
         self.next_hand = NextHand()
         self.next_hand.clicked.connect(self.on_next_hand_clicked)
 
-        layout.addWidget(title)
         layout.addWidget(self.action_scroll)
 
         villain_row = QWidget()
@@ -105,7 +105,7 @@ class Table(QWidget):
     def init_positions(self):
         self.on_state_change(self.controller.state)
 
-    def on_state_change(self, state) -> None:
+    def on_state_change(self, state: GameState) -> None:
         self.pot_label.set_pot(state.pot)
         self.board.set_board(state.board)
         self.hero_hand.set_hand(state.hero_hand)

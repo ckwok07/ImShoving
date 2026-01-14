@@ -4,6 +4,7 @@ import sys
 from controller.appController import AppController
 from controller.gameState import GameState
 from gui.table.Table import Table
+from gui.accuracy_panel.Panel import Panel
 
 def main() -> None:
     app = QApplication(sys.argv)
@@ -36,9 +37,15 @@ def main() -> None:
                       villain_all_in = False,)
     controller = AppController(state)
     table = Table(controller)
+    panel = Panel(controller)
 
-    layout.addWidget(left_panel)
+    def on_state_change(state):
+        table.on_state_change(state)
+        panel.on_state_change(state)
 
+    controller.state_change = on_state_change
+
+    layout.addWidget(panel)
     layout.addWidget(table, 1)
     layout.addWidget(right_panel)
 
@@ -46,6 +53,8 @@ def main() -> None:
     window.show()
 
     sys.exit(app.exec())
+
+    
 
 if __name__ == "__main__":
     main()

@@ -19,3 +19,5 @@ class DecisionQuality:
 
     accuracy: float
     label: str
+
+    street:str
