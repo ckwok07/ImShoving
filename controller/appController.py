@@ -78,27 +78,31 @@ class AppController:
         # else:
         #     action = Action("CHECK", "villain")
         
-        
-        if self.state.current_bet > self.state.villain_amt:
+        if self.state.villain_all_in == True:
+            self.state.to_act_index = 0
+            return
+        elif self.state.current_bet > self.state.villain_amt:
             choice = random.choice([1,2,3])
             if choice == 1:
-                action = Action("CALL", "villain", self.state.current_bet - self.state.villain_amt)
+                action = Action("CALL", "villain", min(self.state.current_bet - self.state.villain_amt, self.state.villain_stack))
             elif choice == 2:
-                action = Action("RAISE", "villain", 2 * self.state.current_bet)
+                action = Action("RAISE", "villain", min(2 * self.state.current_bet, self.state.villain_amt + self.state.villain_stack))
             else:
                 action = Action("FOLD", "villain", 0)
         else:
             if random.choice([True, False]):
                 action = Action("CHECK", "villain", 0)
             else:
-                action = Action("BET", "villain", 2)
-        
+                action = Action("BET", "villain", min(2, self.state.villain_stack))
+
+        if self.state.villain_stack <= 0:
+            self.state.villain_all_in = True
+
         self.apply_action(action, hero=False)
         action.pot_after = self.state.pot
         self.state.actions_list.append(action)
 
         if self.state.hand_over:
-
             return
 
         self.state.actions.append(action)
@@ -199,6 +203,8 @@ class AppController:
             self.apply_all_in(hero)
 
     def apply_call(self, hero: bool = True) -> None:
+        if hero and self.state.hero_stack == 0:
+            return
         if hero:
             amount = self.state.current_bet - self.state.hero_amt
             if amount <= 0:
@@ -356,6 +362,9 @@ class AppController:
     
     def get_hero_legal_actions(self) -> list[Action]:
         actions = []
+
+        if self.state.hero_all_in or self.state.hero_stack == 0:
+            return actions
 
         if self.state.hand_over or self.state.to_act_index != 0:
             return actions
