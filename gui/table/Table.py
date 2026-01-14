@@ -30,6 +30,7 @@ class Table(QWidget):
         self.action_history = ActionHistory()
 
         self.action_scroll = QScrollArea()
+        self.action_scroll.viewport().installEventFilter(self)
         self.action_scroll.setWidget(self.action_history)
         self.action_scroll.setWidgetResizable(True)
         self.action_scroll.setFrameShape(QScrollArea.Shape.NoFrame)
@@ -148,6 +149,14 @@ class Table(QWidget):
     def scroll_actions_to_end(self):
         bar = self.action_scroll.horizontalScrollBar()
         bar.setValue(bar.maximum())
+
+    def eventFilter(self, obj, event):
+        if obj == self.action_scroll.viewport() and event.type() == event.Type.Wheel:
+            bar = self.action_scroll.horizontalScrollBar()
+            bar.setValue(bar.value() - event.angleDelta().y())
+            return True
+        return super().eventFilter(obj, event)
+
 
 
 
