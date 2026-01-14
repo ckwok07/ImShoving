@@ -14,7 +14,8 @@ def main() -> None:
     window.resize(1200,800)
     # window.setFixedHeight(900)
     # window.setFixedWidth(1500)
-    window.setStyleSheet("background-color: #121212;")
+    window.setStyleSheet("""background-color: #121212;
+                         border-radius: 6px;""")
 
 
     central = QWidget()

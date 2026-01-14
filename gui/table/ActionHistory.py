@@ -12,7 +12,7 @@ class ActionHistory(QWidget):
         self.items: list[QLabel] = []
         self.setFixedHeight(65)
 
-        title = QLabel("actions")
+        title = QLabel("ACTIONS")
         title.setStyleSheet("""QLabel {color: white; 
                             font-weight: bold;
                             padding: 8px; }""")

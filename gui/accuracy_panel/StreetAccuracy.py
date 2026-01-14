@@ -10,28 +10,31 @@ class StreetAccuracy(QWidget):
 
         layout = QHBoxLayout(self)
         self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
-        self.setStyleSheet("QWidget {background: red;}")
+        self.setStyleSheet("QWidget {background: #2b2b2b;}")
 
+        self.labels = {}
+        
+        for street in ["PREFLOP", "FLOP", "TURN", "RIVER"]:
+            col = self.create_street_column(street)
+            layout.addLayout(col, 1)
+    
+    def create_street_column(self, street: str) -> QVBoxLayout:
+        layout = QVBoxLayout()
+        layout.setSpacing(2)
 
-        self.preflop = QLabel("PreFlop: --")
-        self.flop = QLabel("Flop: --")
-        self.turn = QLabel("Turn: --")
-        self.river = QLabel("River: --")
+        title = QLabel(street.upper())
+        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        title.setStyleSheet("color: #bbbbbb; font-size: 12px; font-weight: 700;")
 
-        for label in (self.preflop, self.flop, self.turn, self.river):
-            layout.addWidget(label)
-            label.setStyleSheet("background: transparent; color: white; font-weight: bold;")
+        value = QLabel("--")
+        value.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        value.setStyleSheet("color: white; font-weight: bold; font-size: 14px;")
 
-        self.labels = {
-            "PREFLOP": self.preflop,
-            "FLOP": self.flop,
-            "TURN": self.turn,
-            "RIVER": self.river,
-        }
+        layout.addWidget(title)
+        layout.addWidget(value)
 
-        layout.addStretch()
-        label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        label.setStyleSheet("color: white; font-weight: bold; font-size: 13px;")
+        self.labels[street] = value
+        return layout
 
     def update_stats(self, decisions: list[DecisionQuality]) -> None:
         buckets = {"PREFLOP": [], "FLOP": [], "TURN":[], "RIVER":[]}
@@ -43,8 +46,8 @@ class StreetAccuracy(QWidget):
         for street, accuracy in buckets.items():
             if accuracy:
                 avg = sum(accuracy) / len(accuracy)
-                text = f"{street.title()[:4]}: {avg:.0f}%"
+                text = f"{avg:.0f}%"
             else:
-                text = f"{street.title()[:4]}: --"
+                text = "--"
 
             self.labels[street].setText(text)
