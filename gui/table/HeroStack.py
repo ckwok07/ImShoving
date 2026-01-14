@@ -46,7 +46,6 @@ class HeroStack(QLabel):
 
         self._anim.start()
 
-
     def update_text(self):
         self.setText(f"<div style='line-height:1.1; text-align:center;'>BB<br>{self.stack_value:.1f}</div>")
         self.setTextFormat(Qt.TextFormat.RichText)
