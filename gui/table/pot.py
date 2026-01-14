@@ -18,7 +18,7 @@ class PotLabel(QLabel):
                            border: 1.5px solid #8b5cf6 }""")
 
         self._anim = QPropertyAnimation(self, b"potValue")
-        self._anim.setDuration(500)
+        self._anim.setDuration(1000)
 
         self.update_text()
     

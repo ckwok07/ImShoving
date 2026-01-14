@@ -19,7 +19,7 @@ class HeroStack(QLabel):
         self.setFixedSize(70, 70)
 
         self._anim = QPropertyAnimation(self, b"stackValue")
-        self._anim.setDuration(500)
+        self._anim.setDuration(1000)
         
         self.update_text()
     

@@ -19,6 +19,7 @@ class AppController:
         self.cached_hero_equity = None
         self.decision_quality = []
         self.last_hero_actions = []
+        self._equity_thread: Optional[threading.Thread] = None
     
     def handle_action(self, action: Action) -> None:
 
@@ -152,6 +153,7 @@ class AppController:
                 self.villain_act()
         
         self.cached_hero_equity = None
+        self.compute_hero_equity()
     
     def round_complete(self) -> bool:
 
@@ -336,9 +338,13 @@ class AppController:
             self.state.to_act_index = 0
             self.state.pot = bb
             self.state.current_bet = bb
+            if self.state.villain_stack == 0:
+                self.state.villain_all_in = True
+
             action = Action(name = "Post Blind", player = "villain", size = bb)
             action.pot_after = self.state.pot
             self.state.actions_list.append(action)
+        
         
     def evaluate_showdown(self) -> None:
         hero_cards = self.state.hero_hand + self.state.board
@@ -403,6 +409,9 @@ class AppController:
             actions.append(Action("ALL IN", "hero", self.state.hero_stack))
 
         self.compute_hero_equity()
+        if self._equity_thread and self._equity_thread.is_alive():
+            self._equity_thread.join()
+
         self.compute_action_EVs(actions)
 
         for action in actions:
@@ -413,11 +422,15 @@ class AppController:
     
     def compute_hero_equity(self) -> float:
         if self.cached_hero_equity is None:
-            numTrials = 5000 if self.state.street == "PREFLOP" else 12000
-            self.cached_hero_equity = Simulator.simulate_equity(hand = self.state.hero_hand, 
-                                                            board = self.state.board,
-                                                            players = 2,
-                                                            trials = numTrials)
+            if self._equity_thread is None or not self._equity_thread.is_alive():
+                def calculate():
+                    numTrials = 5000 if self.state.street == "PREFLOP" else 12000
+                    self.cached_hero_equity = Simulator.simulate_equity(hand = self.state.hero_hand, 
+                                                                    board = self.state.board,
+                                                                    players = 2,
+                                                                    trials = numTrials)
+                self._equity_thread = threading.Thread(target = calculate, daemon = True)
+                self._equity_thread.start()
         
         return self.cached_hero_equity
     
