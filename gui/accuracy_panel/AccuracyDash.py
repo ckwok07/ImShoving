@@ -10,6 +10,8 @@ class AccuracyDash(QWidget):
         super().__init__()
 
         layout = QVBoxLayout(self)
+        layout.setContentsMargins(12, 8, 12, 8)
+        layout.setSpacing(8)
         self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         self.setStyleSheet("QWidget {background: #191919;}")
 
@@ -21,3 +23,10 @@ class AccuracyDash(QWidget):
 
     def update(self, state: GameState, decision_quality_list: list[DecisionQuality]):
         self.street_accuracy.update_stats(decision_quality_list)
+
+        values = []
+        total = 0.0
+        for i, d in enumerate(decision_quality_list, 1):
+            total += d.accuracy
+            values.append(total / i)
+        self.graph.set_data(values)
