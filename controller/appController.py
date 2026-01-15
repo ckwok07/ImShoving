@@ -46,7 +46,8 @@ class AppController:
 
         if self.state.hand_over:
             self.state.button_index = (self.state.button_index + 1) % 2
-            self.new_hand()
+            if self.state_change:
+                self.state_change(self.state)
             return
 
         if self.round_complete():
