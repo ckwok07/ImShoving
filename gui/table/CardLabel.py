@@ -39,5 +39,9 @@ class CardLabel(QLabel):
             return
         
         filename = f"assets/cards/image.png"
-        self.setPixmap(QPixmap(filename))
+        pixmap = QPixmap(filename)
+        scaled = pixmap.scaled(self.size(), 
+                               Qt.AspectRatioMode.KeepAspectRatio, 
+                               Qt.TransformationMode.SmoothTransformation)
+        self.setPixmap(scaled)
 
