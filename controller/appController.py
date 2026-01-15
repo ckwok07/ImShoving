@@ -84,8 +84,9 @@ class AppController:
         #     action = Action("CHECK", "villain")
         def do_villain_action():
             if self.state.villain_all_in == True:
-                self.state.villain_all_in = True
-                self.state.to_act_index = 0
+                if not self.round_complete():
+                    self.state.to_act_index = 0
+
                 return
             elif self.state.current_bet > self.state.villain_amt:
                 choice = random.choice([1,2,3])
@@ -109,11 +110,21 @@ class AppController:
             action.pot_after = self.state.pot
 
             if self.state.hand_over:
+                self.state.animating = False
+                if self.state_change:
+                    self.state_change(self.state)
                 return
 
             self.state.actions.append(action)
             
-            self.state.to_act_index = 0
+            if self.round_complete():
+                if self.state.street == "RIVER":
+                    self.state.street = "SHOWDOWN"
+                    self.evaluate_showdown()
+                else:
+                    self.advance_street()
+            else:
+                self.state.to_act_index = 0
 
             self.state.animating = False
 
