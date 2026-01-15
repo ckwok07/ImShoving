@@ -42,7 +42,7 @@ class VillainStack(QLabel):
         self._anim.setEndValue(stack)
 
         self.stack_value = stack
-
+        
         self._anim.start()
 
     def update_text(self):

@@ -31,3 +31,4 @@ class GameState:
     to_act_index: int = 1
 
     hand_over: bool = False
+    animating: bool = False

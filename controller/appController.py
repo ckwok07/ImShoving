@@ -7,6 +7,7 @@ from main.model.Simulator import Simulator
 import random
 import threading
 from typing import Optional, Callable
+from PyQt6.QtCore import Qt, QTimer
 
 
 class AppController:
@@ -22,8 +23,9 @@ class AppController:
         self._equity_thread: Optional[threading.Thread] = None
     
     def handle_action(self, action: Action) -> None:
-
-        if self.state.hand_over:
+        if self.state.animating:
+            return
+        elif self.state.hand_over:
             return
         elif self.state.to_act_index != 0:
             return
@@ -75,45 +77,50 @@ class AppController:
         if self.state.hand_over or self.state.to_act_index != 1:
             return
         
-        
+        self.state.animating = True
         # if self.state.current_bet > self.state.villain_amt:
         #     action = Action("CALL", "villain")
         # else:
         #     action = Action("CHECK", "villain")
-        
-        if self.state.villain_all_in == True:
+        def do_villain_action():
+            if self.state.villain_all_in == True:
+                self.state.villain_all_in = True
+                self.state.to_act_index = 0
+                return
+            elif self.state.current_bet > self.state.villain_amt:
+                choice = random.choice([1,2,3])
+                if choice == 1:
+                    action = Action("CALL", "villain", min(self.state.current_bet - self.state.villain_amt, self.state.villain_stack))
+                elif choice == 2:
+                    action = Action("RAISE", "villain", min(2 * self.state.current_bet, self.state.villain_amt + self.state.villain_stack))
+                else:
+                    action = Action("FOLD", "villain", 0)
+            else:
+                if random.choice([True, False]):
+                    action = Action("CHECK", "villain", 0)
+                else:
+                    action = Action("BET", "villain", min(2, self.state.villain_stack))
+
+            if self.state.villain_stack <= 0:
+                self.state.villain_all_in = True
+
+            self.state.actions_list.append(action)
+            self.apply_action(action, hero=False)
+            action.pot_after = self.state.pot
+
+            if self.state.hand_over:
+                return
+
+            self.state.actions.append(action)
+            
             self.state.to_act_index = 0
-            return
-        elif self.state.current_bet > self.state.villain_amt:
-            choice = random.choice([1,2,3])
-            if choice == 1:
-                action = Action("CALL", "villain", min(self.state.current_bet - self.state.villain_amt, self.state.villain_stack))
-            elif choice == 2:
-                action = Action("RAISE", "villain", min(2 * self.state.current_bet, self.state.villain_amt + self.state.villain_stack))
-            else:
-                action = Action("FOLD", "villain", 0)
-        else:
-            if random.choice([True, False]):
-                action = Action("CHECK", "villain", 0)
-            else:
-                action = Action("BET", "villain", min(2, self.state.villain_stack))
 
-        if self.state.villain_stack <= 0:
-            self.state.villain_all_in = True
+            self.state.animating = False
 
-        self.apply_action(action, hero=False)
-        action.pot_after = self.state.pot
-        self.state.actions_list.append(action)
+            if self.state_change:
+                self.state_change(self.state)
 
-        if self.state.hand_over:
-            return
-
-        self.state.actions.append(action)
-        
-        self.state.to_act_index = 0
-
-        if self.state_change:
-            self.state_change(self.state)
+        QTimer.singleShot(2000, do_villain_action)
 
     def advance_street(self) -> None:
         if self.state.street == "RIVER":
@@ -370,6 +377,10 @@ class AppController:
     
     def get_hero_legal_actions(self) -> list[Action]:
         actions = []
+
+        if self.state.animating:
+            return actions
+
 
         if self.state.hero_all_in or self.state.hero_stack == 0:
             return actions
