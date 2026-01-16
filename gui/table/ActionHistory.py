@@ -167,6 +167,23 @@ class ActionHistory(QWidget):
         if action.name in ("FLOP", "TURN", "RIVER"):
                 cards_str = " ".join(str(c) for c in action.cards) if action.cards else ""
                 return action.name, cards_str
+        
+        if action.name == "SHOWDOWN":
+            if action.player == "hero":
+                winning_hand = " ".join(str(c) for c in action.cards) if action.cards else ""
+                losing_hand = " ".join(str(c) for c in action.cards2) if action.cards2 else ""
+                right_side = f"{winning_hand} > {losing_hand}"
+                return "HERO WINS", right_side
+            elif action.player == "villain":
+                winning_hand = " ".join(str(c) for c in action.cards) if action.cards else ""
+                losing_hand = " ".join(str(c) for c in action.cards2) if action.cards2 else ""
+                right_side = f"{winning_hand} > {losing_hand}"
+                return f"VILLAIN WINS", right_side
+            else:
+                winning_hand = " ".join(str(c) for c in action.cards) if action.cards else ""
+                losing_hand = " ".join(str(c) for c in action.cards2) if action.cards2 else ""
+                right_side = f"{winning_hand} = {losing_hand}"
+                return "TIE", right_side
 
 
 

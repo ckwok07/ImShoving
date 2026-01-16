@@ -10,4 +10,5 @@ class Action:
     size: float
     ev: float | None = None
     cards: list[Card] | None = None
+    cards2: list[Card] | None = None
     pot_after = 0

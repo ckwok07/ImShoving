@@ -390,12 +390,15 @@ class AppController:
 
         if result == 1:  # hero wins
             self.state.hero_stack += self.state.pot
+            self.state.actions_list.append(Action("SHOWDOWN", "hero", size = 0, cards = hero_best, cards2 = villain_best))
         elif result == -1:  # villain wins
             self.state.villain_stack += self.state.pot
+            self.state.actions_list.append(Action("SHOWDOWN", "villain", size = 0, cards = villain_best, cards2 = hero_best))
         else:  # tie
             half_pot = self.state.pot / 2
             self.state.hero_stack += half_pot
             self.state.villain_stack += half_pot
+            self.state.actions_list.append(Action("SHOWDOWN", "tie", size = 0, cards = hero_best, cards2 = villain_best))
         
         self.state.hand_over = True
         
