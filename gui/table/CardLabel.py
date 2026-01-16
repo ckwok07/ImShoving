@@ -15,7 +15,7 @@ class CardLabel(QLabel):
         self.setStyleSheet("""QLabel {background-color: #2b2b2b;
                            border-radius: 6px;}""")
         
-        self.setFixedSize(65, 100)
+        self.setFixedSize(75, 105)
         
         self.card = None
         self.face_up = True
@@ -33,15 +33,28 @@ class CardLabel(QLabel):
         self.card = None
         self.setPixmap(QPixmap())
 
+
     def update(self):
         if not self.card:
             self.clear()
             return
-        
-        filename = f"assets/cards/image.png"
-        pixmap = QPixmap(filename)
-        scaled = pixmap.scaled(self.size(), 
-                               Qt.AspectRatioMode.KeepAspectRatio, 
-                               Qt.TransformationMode.SmoothTransformation)
-        self.setPixmap(scaled)
 
+        if self.face_up:
+            filename = f"assets/cards/{self.card}.png"
+        else:
+            filename = "assets/cards/back.png"
+
+        pixmap = QPixmap(filename)
+
+        dpr = self.devicePixelRatioF()
+
+        target_size = self.size() * dpr
+
+        scaled = pixmap.scaled(
+            target_size,
+            Qt.AspectRatioMode.KeepAspectRatio,
+            Qt.TransformationMode.SmoothTransformation
+        )
+
+        scaled.setDevicePixelRatio(dpr)
+        self.setPixmap(scaled)
