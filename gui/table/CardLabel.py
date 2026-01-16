@@ -23,7 +23,7 @@ class CardLabel(QLabel):
     def set_card(self, card: Card):
         self.card = card
         self.face_up = True
-        self.update()
+        self.refresh()
 
     def hide_card(self):
         self.face_up = False
@@ -34,7 +34,7 @@ class CardLabel(QLabel):
         self.setPixmap(QPixmap())
 
 
-    def update(self):
+    def refresh(self):
         if not self.card:
             self.clear()
             return
