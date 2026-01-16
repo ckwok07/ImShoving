@@ -113,7 +113,7 @@ class Table(QWidget):
         self.hero_hand.set_hand(state.hero_hand)
         self.hero_stack.set_hero_stack(state.hero_stack)
         self.villain_stack.set_villain_stack(state.villain_stack)
-        self.villain_hand.set_hand(state.villain_hand)
+        self.villain_hand.set_hand(state.villain_hand, state.show_villain_cards)
         state.animating = False
 
         actions = self.controller.get_hero_legal_actions()

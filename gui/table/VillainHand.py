@@ -17,7 +17,7 @@ class VillainHand(QWidget):
             self.cards.append(cardLabel)
             self.mainLayout.addWidget(cardLabel)
         
-    def set_hand(self, cards: list[Card] | None) -> None:
+    def set_hand(self, cards: list[Card] | None, reveal = False) -> None:
         for cardLabel in self.cards:
             cardLabel.clear()
 
@@ -25,10 +25,14 @@ class VillainHand(QWidget):
             return
 
         for cardLabel, card in zip(self.cards, cards):
-            cardLabel.set_card(card)
+            cardLabel.set_card(card, face_up = reveal)
 
     def set_active(self, active: bool):
         if active:
             self.setStyleSheet("QWidget { border: 3px solid orange; border-radius: 8px; } ")
         else:
             self.setStyleSheet("QWidget { border: 3px solid transparent; border-radius: 8px; }")
+
+    def reveal(self):
+        for cardLabel in self.cards:
+            cardLabel.show_card()

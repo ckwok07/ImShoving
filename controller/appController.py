@@ -21,6 +21,7 @@ class AppController:
         self.decision_quality = []
         self.last_hero_actions = []
         self._equity_thread: Optional[threading.Thread] = None
+        self.show_villain_cards = False
     
     def handle_action(self, action: Action) -> None:
         if self.state.animating:
@@ -62,9 +63,6 @@ class AppController:
         self.state.to_act_index = 1
         self.villain_act()
 
-        if self.state.hero_all_in:
-            return
-
         if self.round_complete():
             self.advance_street()
 
@@ -88,10 +86,19 @@ class AppController:
         #     action = Action("CHECK", "villain")
         def do_villain_action():
             if self.state.villain_all_in:
-                    if self.state.current_bet > self.state.villain_amt:
-                        action = Action("CALL", "villain", 0)
+                if self.round_complete():
+                    if self.state.street == "RIVER":
+                        self.state.street = "SHOWDOWN"
+                        self.evaluate_showdown()
                     else:
-                        action = Action("CHECK", "villain", 0)
+                        self.advance_street()
+                else:
+                    self.state.to_act_index = 0
+                self.state.animating = False
+                if self.state_change:
+                    self.state_change(self.state)
+                return
+
             elif self.state.current_bet > self.state.villain_amt:
                 choice = random.choice([1,2,3])
                 if choice == 1:
@@ -318,11 +325,13 @@ class AppController:
 
     def new_hand(self) -> None:
         self.state.to_act_index = self.state.button_index
+        self.state.show_villain_cards = False
 
         self.state.hand_over = False
         self.deck = Deck()
         self.deck.shuffle()
         self.cached_hero_equity = None
+        
 
         self.state.street = "PREFLOP"
         self.state.board.clear()
@@ -367,7 +376,7 @@ class AppController:
         else:
             self.state.villain_stack -= bb
             if self.state.villain_stack == 0:
-                self.state.villain_allin = True
+                self.state.villain_all_in = True
             self.state.villain_amt = bb
             self.state.to_act_index = 0
             self.state.pot = bb
@@ -381,6 +390,8 @@ class AppController:
         
         
     def evaluate_showdown(self) -> None:
+        self.state.show_villain_cards = True
+
         hero_cards = self.state.hero_hand + self.state.board
         villain_cards = self.state.villain_hand + self.state.board
 

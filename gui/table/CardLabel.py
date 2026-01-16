@@ -20,14 +20,18 @@ class CardLabel(QLabel):
         self.card = None
         self.face_up = True
         
-    def set_card(self, card: Card):
+    def set_card(self, card: Card, face_up = True):
         self.card = card
-        self.face_up = True
+        self.face_up = face_up
         self.refresh()
 
     def hide_card(self):
         self.face_up = False
-        self.setPixmap(QPixmap())
+        self.refresh()
+
+    def show_card(self):
+        self.face_up = True
+        self.refresh()
 
     def clear(self):
         self.card = None
