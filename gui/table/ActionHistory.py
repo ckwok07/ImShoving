@@ -1,7 +1,8 @@
-from PyQt6.QtWidgets import QWidget, QLabel, QHBoxLayout, QSizePolicy
-from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import QWidget, QLabel, QHBoxLayout, QSizePolicy, QGraphicsOpacityEffect
+from PyQt6.QtCore import Qt, QPropertyAnimation, QEasingCurve, QPoint, QTimer
 from .ActionHistoryBox import ActionHistoryBox
 from controller.action import Action
+
 
 
 class ActionHistory(QWidget):
@@ -27,11 +28,23 @@ class ActionHistory(QWidget):
         left_text, action_text = self.formatAction(action)
         chip = ActionHistoryBox(left_text, action_text)
 
-        chip.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
-        chip.setMinimumWidth(chip.sizeHint().width())
+        wrapper = QWidget()
+        wrapper.setFixedHeight(chip.sizeHint().height() + 10)  # Add padding
+        wrapper.setFixedWidth(chip.sizeHint().width() + 10)    # Add padding
+        wrapper.setStyleSheet("background: transparent;")       # Make sure it's transparent
 
-        self.layout.addWidget(chip)
-        self.items.append(chip)
+        wlay = QHBoxLayout(wrapper)
+        wlay.setContentsMargins(0, 0, 0, 0)
+        wlay.setSpacing(0)
+        wlay.addWidget(chip)
+
+        self.layout.addWidget(wrapper)
+        self.items.append(wrapper)
+
+        QTimer.singleShot(0, lambda: self._animate_chip_in_wrapper(wrapper, chip))
+        self._scroll_to_end()
+
+
 
     def add_actions(self, actions: list[Action]) -> None:
         for action in actions:
@@ -44,8 +57,50 @@ class ActionHistory(QWidget):
         self.items.clear()
 
     def set_actions(self, actions: list[Action]) -> None:
-        self.clear_actions()
-        self.add_actions(actions)
+        if len(actions) == len(self.items):
+            return
+        
+        if len(actions) > len(self.items):
+            new_actions = actions[len(self.items):]
+            for action in new_actions:
+                left_text, action_text = self.formatAction(action)
+                chip = ActionHistoryBox(left_text, action_text)
+
+                wrapper = QWidget()
+                wrapper.setFixedHeight(chip.sizeHint().height() + 10)
+                wrapper.setFixedWidth(chip.sizeHint().width() + 10)
+                wrapper.setStyleSheet("background: transparent;")
+
+                wlay = QHBoxLayout(wrapper)
+                wlay.setContentsMargins(0, 0, 0, 0)
+                wlay.setSpacing(0)
+                wlay.addWidget(chip)
+
+                self.layout.addWidget(wrapper)
+                self.items.append(wrapper)
+
+                QTimer.singleShot(0, lambda w=wrapper, c=chip: self._animate_chip_in_wrapper(w, c))
+        else:
+            self.clear_actions()
+            for action in actions:
+                left_text, action_text = self.formatAction(action)
+                chip = ActionHistoryBox(left_text, action_text)
+
+                wrapper = QWidget()
+                wrapper.setFixedHeight(chip.sizeHint().height() + 10)
+                wrapper.setFixedWidth(chip.sizeHint().width() + 10)
+                wrapper.setStyleSheet("background: transparent;")
+
+                wlay = QHBoxLayout(wrapper)
+                wlay.setContentsMargins(0, 0, 0, 0)
+                wlay.setSpacing(0)
+                wlay.addWidget(chip)
+
+                self.layout.addWidget(wrapper)
+                self.items.append(wrapper)
+                chip.show()
+                wrapper.show()
+        
         self.adjustSize()
         self.updateGeometry()
 
@@ -71,3 +126,82 @@ class ActionHistory(QWidget):
         left_text = f"{player}  {action.pot_after}"
 
         return left_text, action_name
+
+    def _animate_chip_in(self, widget: QWidget):
+        self.layout.activate()
+        self.updateGeometry()
+
+        widget.show()
+        widget.raise_()
+
+        end_pos = widget.pos()
+        start_pos = QPoint(end_pos.x() + 120, end_pos.y())
+        widget.move(start_pos)
+
+        slide = QPropertyAnimation(widget, b"pos", self)
+        slide.setDuration(500)
+        slide.setStartValue(start_pos)
+        slide.setEndValue(end_pos)
+        slide.setEasingCurve(QEasingCurve.Type.OutCubic)
+
+        effect = QGraphicsOpacityEffect(widget)
+        widget.setGraphicsEffect(effect)
+
+        fade = QPropertyAnimation(effect, b"opacity", self)
+        fade.setDuration(200)
+        fade.setStartValue(0.0)
+        fade.setEndValue(1.0)
+
+        slide.start()
+        fade.start()
+
+        widget._slide_anim = slide
+        widget._fade_anim = fade
+
+    def _scroll_to_end(self):
+        scroll = self.parentWidget()
+        while scroll and not hasattr(scroll, "horizontalScrollBar"):
+            scroll = scroll.parentWidget()
+
+        if scroll:
+            bar = scroll.horizontalScrollBar()
+            bar.setValue(bar.maximum())
+
+    def _animate_chip_in_wrapper(self, wrapper: QWidget, chip: QWidget):
+        if hasattr(chip, '_animated'):
+            return
+        chip._animated = True
+        
+        wrapper.show()
+        chip.show()
+        chip.raise_()
+        
+        original_width = chip.sizeHint().width()
+        
+        start_pos = QPoint(120, 0)
+        end_pos = QPoint(0, 0)
+        chip.move(start_pos)
+
+        slide = QPropertyAnimation(chip, b"pos", self)
+        slide.setDuration(220)
+        slide.setStartValue(start_pos)
+        slide.setEndValue(end_pos)
+        slide.setEasingCurve(QEasingCurve.Type.OutCubic)
+
+        effect = QGraphicsOpacityEffect(chip)
+        chip.setGraphicsEffect(effect)
+
+        fade = QPropertyAnimation(effect, b"opacity", self)
+        fade.setDuration(200)
+        fade.setStartValue(0.0)
+        fade.setEndValue(1.0)
+        
+        slide.finished.connect(lambda: wrapper.setFixedWidth(chip.sizeHint().width()))
+
+        slide.start()
+        fade.start()
+
+        chip._slide_anim = slide
+        chip._fade_anim = fade
+
+
