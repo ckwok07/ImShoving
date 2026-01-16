@@ -62,6 +62,9 @@ class ActionHistory(QWidget):
         
         if len(actions) > len(self.items):
             new_actions = actions[len(self.items):]
+            
+            # Create all widgets first but don't animate yet
+            new_widgets = []
             for action in new_actions:
                 left_text, action_text = self.formatAction(action)
                 chip = ActionHistoryBox(left_text, action_text)
@@ -78,8 +81,15 @@ class ActionHistory(QWidget):
 
                 self.layout.addWidget(wrapper)
                 self.items.append(wrapper)
-
-                QTimer.singleShot(0, lambda w=wrapper, c=chip: self._animate_chip_in_wrapper(w, c))
+                
+                wrapper.hide()
+                chip.hide()
+                
+                new_widgets.append((wrapper, chip))
+            
+            # Start animating the first widget
+            if new_widgets:
+                self._animate_sequence(new_widgets, 0)
         else:
             self.clear_actions()
             for action in actions:
@@ -112,7 +122,54 @@ class ActionHistory(QWidget):
             bar = scroll.horizontalScrollBar()
             bar.setValue(bar.maximum())
 
+    def _animate_sequence(self, widgets_list, index):
+        """Animate widgets one at a time in sequence"""
+        if index >= len(widgets_list):
+            return
+        
+        wrapper, chip = widgets_list[index]
+        
+        wrapper.show()
+        chip.show()
+        chip.raise_()
+        
+        start_pos = QPoint(120, 0)
+        end_pos = QPoint(0, 0)
+        chip.move(start_pos)
+
+        slide = QPropertyAnimation(chip, b"pos", self)
+        slide.setDuration(220)
+        slide.setStartValue(start_pos)
+        slide.setEndValue(end_pos)
+        slide.setEasingCurve(QEasingCurve.Type.OutCubic)
+
+        effect = QGraphicsOpacityEffect(chip)
+        chip.setGraphicsEffect(effect)
+
+        fade = QPropertyAnimation(effect, b"opacity", self)
+        fade.setDuration(200)
+        fade.setStartValue(0.0)
+        fade.setEndValue(1.0)
+        
+        slide.finished.connect(lambda: [
+            wrapper.setFixedWidth(chip.sizeHint().width() + 10),
+            QTimer.singleShot(500, lambda: self._animate_sequence(widgets_list, index + 1))
+        ])
+
+        slide.start()
+        fade.start()
+
+        chip._slide_anim = slide
+        chip._fade_anim = fade
+        self._scroll_to_end()
+
     def formatAction(self, action: Action):
+        if action.name in ("FLOP", "TURN", "RIVER"):
+                cards_str = " ".join(str(c) for c in action.cards) if action.cards else ""
+                return action.name, cards_str
+
+
+
         if action.name == "Post Blind":
             action_name = "BLIND"
         else:

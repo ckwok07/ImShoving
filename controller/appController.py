@@ -153,9 +153,17 @@ class AppController:
 
 
         if nxt == "FLOP":
-            self.state.board.extend(self.deck.deal(3))
-        elif nxt == "TURN" or nxt == "RIVER":
-            self.state.board.extend(self.deck.deal(1))
+            flop = self.deck.deal(3)
+            self.state.actions_list.append(Action(name = "FLOP", player = "hero", size = 0, cards = flop))
+            self.state.board.extend(flop)
+        elif nxt == "TURN":
+            turn = (self.deck.deal(1))
+            self.state.actions_list.append(Action(name = "TURN", player = "hero", size = 0, cards = turn))
+            self.state.board.extend(turn)
+        elif nxt == "RIVER":
+            river = (self.deck.deal(1))
+            self.state.actions_list.append(Action(name = "RIVER", player = "hero", size = 0, cards = river))
+            self.state.board.extend(river)
 
         self.state.current_bet = 0
         self.state.hero_amt = 0
