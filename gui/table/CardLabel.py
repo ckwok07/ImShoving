@@ -57,8 +57,7 @@ class CardLabel(QLabel):
         scaled = pixmap.scaled(
             target_size,
             Qt.AspectRatioMode.KeepAspectRatio,
-            Qt.TransformationMode.SmoothTransformation
-        )
+            Qt.TransformationMode.SmoothTransformation)
 
         scaled.setDevicePixelRatio(dpr)
         self.setPixmap(scaled)

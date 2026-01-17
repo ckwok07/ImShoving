@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+from main.model.Card import Card
+
 ACCURACY_LABELS = {95: "Brilliant", 
                   85: "Excellent", 
                   70: "Good",
@@ -19,5 +21,8 @@ class DecisionQuality:
 
     accuracy: float
     label: str
+
+    hand: list[Card]
+    board: list[Card]
 
     street:str

@@ -575,9 +575,15 @@ class AppController:
                                           equity_before = self.cached_hero_equity,
                                           accuracy = accuracy,
                                           label = decision_label,
+                                          hand = self.state.hero_hand,
+                                          board = self.state.board,
                                           street = self.state.street)
         
         self.decision_quality.append(decisionQuality)
+
+        if hasattr(self, 'accuracy_panel') and self.accuracy_panel:
+            self.accuracy_panel.on_decision_made()
+        
         print(f"label = {decision_label}, accuracy = {accuracy}")
     
     def label_accuracy(self, accuracy: float) -> str:

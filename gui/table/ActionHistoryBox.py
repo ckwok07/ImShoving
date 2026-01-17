@@ -26,8 +26,8 @@ class ActionHistoryBox(QWidget):
         action_label.setStyleSheet(""" QLabel {
                                    background: #3a3a3a; 
                                    color: white; 
-                                   border-radius: 
-                                   6px; padding: 4px 6px; 
+                                   border-radius: 6px;
+                                   padding: 4px 6px; 
                                    font-weight: bold; }""")
 
         left_layout.addWidget(left_label)

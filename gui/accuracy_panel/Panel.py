@@ -10,6 +10,7 @@ class Panel(QWidget):
     def __init__(self, controller) -> None:
         super().__init__()
         self.controller = controller
+        self.controller.accuracy_panel = self
         self.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Expanding)
         self.setFixedWidth(320)
 
@@ -56,4 +57,6 @@ class Panel(QWidget):
 
     def on_state_change(self, state: GameState):
         self.dash.update(state, self.controller.decision_quality)
+
+    def on_decision_made(self):
         self.move_list.set_decisions(self.controller.decision_quality)
