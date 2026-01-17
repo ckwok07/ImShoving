@@ -15,7 +15,7 @@ class AccuracyGraph(QWidget):
 
         self.values: list[float] = []
         self.setStyleSheet("background: #0b0b0b; border-radius: 6px;")
-        self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         self.setFixedHeight(260)
         
 

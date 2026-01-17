@@ -2,8 +2,8 @@ from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QHBoxLayout, QScrollAr
 from PyQt6.QtCore import Qt, QTimer
 
 from controller.gameState import GameState
+from gui.accuracy_panel.MoveList import MoveList
 from .AccuracyDash import AccuracyDash
-from .DecisionList import DecisionList
 
 class Panel(QWidget):
 
@@ -21,7 +21,7 @@ class Panel(QWidget):
     
         title = QLabel("ACCURACY")
         title.setStyleSheet("""QLabel {background-color: #191919;
-                             color: white;
+                             color: #bbbbbb;
                              font-size: 24px;
                              font-weight: 600;
                              padding: 8px}""")
@@ -30,10 +30,30 @@ class Panel(QWidget):
         layout.addWidget(title)
         
         self.dash = AccuracyDash()
-        self.decisions = DecisionList()
-
         layout.addWidget(self.dash)
-        layout.addWidget(self.decisions)
+
+        title2 = QLabel("DECISION ANALYSIS")
+        title2.setStyleSheet("""QLabel {background-color: #191919;
+                             color: #bbbbbb;
+                             font-size: 24px;
+                             font-weight: 600;
+                             padding: 4px}""")
+        title2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        layout.addWidget(title2)
+
+        self.move_list = MoveList()
+
+        self.scroll = QScrollArea()
+        self.scroll.setWidget(self.move_list)
+        self.scroll.setWidgetResizable(True)
+        self.scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.scroll.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.scroll.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+
+        layout.addWidget(self.scroll)
+
+
 
     def on_state_change(self, state: GameState):
         self.dash.update(state, self.controller.decision_quality)
+        self.move_list.set_decisions(self.controller.decision_quality)

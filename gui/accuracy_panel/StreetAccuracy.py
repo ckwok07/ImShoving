@@ -28,7 +28,7 @@ class StreetAccuracy(QWidget):
 
         value = QLabel("--")
         value.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        value.setStyleSheet("color: white; font-weight: bold; font-size: 14px;")
+        value.setStyleSheet("color: #bbbbbb; font-weight: bold; font-size: 14px;")
 
         layout.addWidget(title)
         layout.addWidget(value)
