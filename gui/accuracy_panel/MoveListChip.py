@@ -11,7 +11,13 @@ LABEL_COLOUR = {95: "#26c2a3",
                   0: "#fa412d" }
 
 class MoveListChip(QWidget):
-    def __init__(self, quality: str = "", accuracy: float = 0.0, equity: float  = 0.0, hand: list[Card] | None = None, board: list[Card] | None = None):
+    def __init__(self, quality: str = "",
+                  accuracy: float = 0.0, 
+                  action_name: str = "",
+                  action_size: str = "",
+                  equity: float  = 0.0, 
+                  hand: list[Card] | None = None, 
+                  board: list[Card] | None = None):
         super().__init__()
 
         hand = hand or []
@@ -89,13 +95,16 @@ class MoveListChip(QWidget):
                 font-weight: bold;
             }""")
 
-        self.set_data(quality, accuracy, equity, hand, board)
+        self.set_data(quality, accuracy,action_name, action_size, equity, hand, board)
 
-    def set_data(self, quality: str, accuracy: float, equity: float, hand: list[Card], board: list[Card]):
+    def set_data(self, quality: str,accuracy: float, action_name : str, action_size: str, equity: float, hand: list[Card], board: list[Card]):
         self._hand = list(hand)
         self._board = list(board)
 
-        self.quality_label.setText(quality.upper())
+        if action_size == "0.00":
+            self.quality_label.setText(f"{quality.upper()}: {action_name.upper()}")
+        else:
+            self.quality_label.setText(f"{quality.upper()}: {action_name.upper()} {action_size}")
         self.accuracy_label.setText(f"ACCURACY: {accuracy:.1f}%")
 
         self._clear_layout(self.hand_cards_layout)

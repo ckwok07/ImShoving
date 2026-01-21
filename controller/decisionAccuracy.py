@@ -13,6 +13,7 @@ ACCURACY_LABELS = {95: "Brilliant",
 class DecisionQuality:
     action_index: int
     action_name: str
+    action_amount: str
 
     ev_chosen: float
     ev_best: float

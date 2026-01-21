@@ -570,6 +570,7 @@ class AppController:
 
         decisionQuality = DecisionQuality(action_index = len(self.decision_quality), 
                                           action_name = hero_action.name,
+                                          action_amount = f"{hero_action.size:.2f}",
                                           ev_chosen = chosen_ev,
                                           ev_best = best_ev,
                                           equity_before = self.cached_hero_equity,
