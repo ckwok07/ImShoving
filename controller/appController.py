@@ -552,6 +552,9 @@ class AppController:
         actions = self.last_hero_actions
 
         best_ev = max(action.ev for action in actions)
+        best_action = max(actions, key=lambda a: a.ev)
+        best_action_name = f"{best_action.name} {best_action.size:.2f}"
+
         chosen_action = next(a for a in self.last_hero_actions 
                       if a.name == hero_action.name and a.size == hero_action.size)
         chosen_ev = chosen_action.ev
@@ -573,6 +576,7 @@ class AppController:
                                           action_amount = f"{hero_action.size:.2f}",
                                           ev_chosen = chosen_ev,
                                           ev_best = best_ev,
+                                          best_action = best_action_name,
                                           equity_before = self.cached_hero_equity,
                                           accuracy = accuracy,
                                           label = decision_label,

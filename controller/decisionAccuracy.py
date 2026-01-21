@@ -17,6 +17,7 @@ class DecisionQuality:
 
     ev_chosen: float
     ev_best: float
+    best_action: str
 
     equity_before: float
 

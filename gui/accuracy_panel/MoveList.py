@@ -29,7 +29,16 @@ class MoveList(QWidget):
             self.clear()
 
         for d in decisions[self._rendered_count:]:
-            chip = MoveListChip(d.label,d.accuracy, d.action_name, d.action_amount,d.equity_before,d.hand,d.board)
+            chip = MoveListChip(d.label,
+                                d.accuracy, 
+                                d.ev_chosen,
+                                d.action_name, 
+                                d.action_amount,
+                                d.best_action,
+                                d.ev_best,
+                                d.equity_before,
+                                d.hand,
+                                d.board)
 
             self.layout.insertWidget(0, chip)
             self.chips.insert(0, chip)

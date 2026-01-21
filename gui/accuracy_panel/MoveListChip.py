@@ -13,12 +13,16 @@ LABEL_COLOUR = {95: "#26c2a3",
 class MoveListChip(QWidget):
     def __init__(self, quality: str = "",
                   accuracy: float = 0.0, 
+                  ev_chosen: float = 0.0,
                   action_name: str = "",
                   action_size: str = "",
+                  best_action: str = "",
+                  ev_best: float = 0.0,
                   equity: float  = 0.0, 
                   hand: list[Card] | None = None, 
                   board: list[Card] | None = None):
         super().__init__()
+
 
         hand = hand or []
         board = board or []
@@ -33,13 +37,20 @@ class MoveListChip(QWidget):
         chip_layout.setSpacing(4)
 
         top_row = QHBoxLayout()
+        second_row = QHBoxLayout()
+        second_row.setSpacing(2)
+        top_row.setContentsMargins(0, 0, 0, 0)
+        second_row.setContentsMargins(0, 0, 0, 0)
         top_row.setSpacing(6)
+        second_row.setSpacing(2)
 
         self.quality_label = QLabel()
+        self.ev_label = QLabel()
         self.accuracy_label = QLabel()
 
         top_row.addWidget(self.quality_label)
         top_row.addWidget(self.accuracy_label)
+        second_row.addWidget(self.ev_label)
 
         self.equity = QWidget()
         equity_layout = QVBoxLayout(self.equity)
@@ -79,7 +90,11 @@ class MoveListChip(QWidget):
         equity_layout.addWidget(self.equity_label)
 
         chip_layout.addLayout(top_row)
+        chip_layout.addLayout(second_row)
         chip_layout.addWidget(self.equity)
+
+        self.best_choice = QLabel(f"BEST: {best_action} - EV: {ev_best:.2f}")
+        chip_layout.addWidget(self.best_choice)
 
         layout.addWidget(self.chip)
 
@@ -94,10 +109,30 @@ class MoveListChip(QWidget):
                 font-size: 12px;
                 font-weight: bold;
             }""")
+            
 
-        self.set_data(quality, accuracy,action_name, action_size, equity, hand, board)
+        self.set_data(quality, 
+                      accuracy, 
+                      ev_chosen, 
+                      action_name, 
+                      action_size, 
+                      best_action,
+                      ev_best,
+                      equity, 
+                      hand, 
+                      board)
 
-    def set_data(self, quality: str,accuracy: float, action_name : str, action_size: str, equity: float, hand: list[Card], board: list[Card]):
+    def set_data(self, quality: str, 
+                 accuracy: float, 
+                 ev_chosen: float,
+                 action_name : str, 
+                 action_size: str, 
+                 best_action: str,
+                 ev_best: float,
+                 equity: float, 
+                 hand: list[Card], 
+                 board: list[Card]):
+        
         self._hand = list(hand)
         self._board = list(board)
 
@@ -105,7 +140,9 @@ class MoveListChip(QWidget):
             self.quality_label.setText(f"{quality.upper()}: {action_name.upper()}")
         else:
             self.quality_label.setText(f"{quality.upper()}: {action_name.upper()} {action_size}")
+        self.ev_label.setText(f"EV: {ev_chosen:.2f}")
         self.accuracy_label.setText(f"ACCURACY: {accuracy:.1f}%")
+        self.best_choice.setText(f"BEST: {best_action} - EV: {ev_best:.2f}")
 
         self._clear_layout(self.hand_cards_layout)
         self._clear_layout(self.board_cards_layout)
