@@ -13,7 +13,7 @@ class AccuracyGraph(QWidget):
         # self.setStyleSheet("""QWidget {background: #191919;
         #                    color: white;}""")
 
-        self.values: list[float] = []
+        self.values: list[list[float]] = []
         self.setStyleSheet("background: #0b0b0b; border-radius: 6px;")
         self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         self.setFixedHeight(260)
@@ -24,7 +24,7 @@ class AccuracyGraph(QWidget):
         self.margin_top = 10
         self.margin_right = 10
     
-    def set_data(self, values: list[float]):
+    def set_data(self, values: list[list[float]]):
         self.values = values
         self.update()
 
@@ -79,23 +79,6 @@ class AccuracyGraph(QWidget):
     def draw_curve(self, painter):
         if len(self.values) == 0:
             return
-        
-        if len(self.values) == 1:
-            v = self.values[0]
-            w = self.width() - self.margin_left - self.margin_right
-            h = self.height() - self.margin_top - self.margin_bottom
-
-            min_val = 0
-            span = 100
-
-            y = self.margin_top + (1 - v / span) * h
-            x = self.margin_left + w / 2
-
-            painter.drawEllipse(QPointF(x, y), 3, 3)
-            return
-
-        pen = QPen(QColor("#ffa500"), 1.6)
-        painter.setPen(pen)
 
         w = self.width() - self.margin_left - self.margin_right
         h = self.height() - self.margin_top - self.margin_bottom
@@ -103,12 +86,27 @@ class AccuracyGraph(QWidget):
         min_val = 0
         span = 100
 
-        points = []
+        colors = [QColor("#ffa500"), QColor("#7ce7e1"), QColor("#d6d6d6")]
 
-        for i, v in enumerate(self.values):
-            x = self.margin_left + (i / (len(self.values) - 1)) * w
-            y = self.margin_top + (1 - (v - min_val) / span) * h
-            points.append(QPointF(x, y))
+        for series_index, series in enumerate(self.values):
+            if len(series) == 0:
+                continue
 
-        for i in range(len(points) - 1):
-            painter.drawLine(points[i], points[i + 1])
+            pen = QPen(colors[series_index % len(colors)], 1.5)
+            painter.setPen(pen)
+
+            if len(series) == 1:
+                v = series[0]
+                x = self.margin_left + w / 2
+                y = self.margin_top + (1 - v / span) * h
+                painter.drawEllipse(QPointF(x, y), 3, 3)
+                continue
+
+            points = []
+            for i, v in enumerate(series):
+                x = self.margin_left + (i / (len(series) - 1)) * w
+                y = self.margin_top + (1 - (v - min_val) / span) * h
+                points.append(QPointF(x, y))
+
+            for i in range(len(points) - 1):
+                painter.drawLine(points[i], points[i + 1])

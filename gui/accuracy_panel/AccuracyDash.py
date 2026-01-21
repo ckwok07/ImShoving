@@ -24,9 +24,17 @@ class AccuracyDash(QWidget):
     def update(self, state: GameState, decision_quality_list: list[DecisionQuality]):
         self.street_accuracy.update_stats(decision_quality_list)
 
-        values = []
+        avg_accuracy = []
+        raw_accuracy = []
+        rolling5_accuracy = []
+        
         total = 0.0
         for i, d in enumerate(decision_quality_list, 1):
             total += d.accuracy
-            values.append(total / i)
-        self.graph.set_data(values)
+            avg_accuracy.append(total / i)
+            raw_accuracy.append(d.accuracy)
+
+            start = max(0, len(raw_accuracy) - 5)
+            rolling5_list = raw_accuracy[start:]
+            rolling5_accuracy.append(sum(rolling5_list) / len(rolling5_list))
+        self.graph.set_data([avg_accuracy, raw_accuracy, rolling5_accuracy])
