@@ -4,6 +4,7 @@ from controller.decisionAccuracy import DecisionQuality
 from controller.gameState import GameState
 from .StreetAccuracy import StreetAccuracy
 from .AccuracyGraph import AccuracyGraph
+from .AccuracyGraph import LegendWidget
 
 class AccuracyDash(QWidget):
     def __init__(self) -> None:
@@ -18,8 +19,22 @@ class AccuracyDash(QWidget):
         self.street_accuracy = StreetAccuracy()
         layout.addWidget(self.street_accuracy)
 
+        container = QWidget()
+        container_layout = QVBoxLayout(container)
+        container_layout.setContentsMargins(0, 0, 0, 0)
+        container_layout.setSpacing(5)
+
+        # Add legend
+        legend = LegendWidget(
+            labels=["Average", "Raw", "5 Turn"],
+            colors=["#ffa500", "#7ce7e1", "#d6d6d6"]
+        )
+        container_layout.addWidget(legend)
+
         self.graph = AccuracyGraph()
-        layout.addWidget(self.graph)
+        container_layout.addWidget(self.graph)
+
+        layout.addWidget(container)
 
     def update(self, state: GameState, decision_quality_list: list[DecisionQuality]):
         self.street_accuracy.update_stats(decision_quality_list)
