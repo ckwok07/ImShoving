@@ -595,7 +595,7 @@ class AppController:
 
         best_ev = max(action.ev for action in actions)
         best_action = max(actions, key=lambda a: a.ev)
-        best_action_name = f"{best_action.name} {best_action.size:.2f}"
+        best_action_name = f"{best_action.name} {best_action.size:.1f}"
 
         chosen_action = next(a for a in self.last_hero_actions 
                       if a.name == hero_action.name and a.size == hero_action.size)
@@ -615,7 +615,7 @@ class AppController:
 
         decisionQuality = DecisionQuality(action_index = len(self.decision_quality), 
                                           action_name = hero_action.name,
-                                          action_amount = f"{hero_action.size:.2f}",
+                                          action_amount = f"{hero_action.size:.1f}",
                                           ev_chosen = chosen_ev,
                                           ev_best = best_ev,
                                           best_action = best_action_name,

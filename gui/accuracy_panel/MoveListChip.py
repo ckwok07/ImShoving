@@ -93,7 +93,7 @@ class MoveListChip(QWidget):
         chip_layout.addLayout(second_row)
         chip_layout.addWidget(self.equity)
 
-        self.best_choice = QLabel(f"BEST: {best_action} - EV: {ev_best:.2f}")
+        self.best_choice = QLabel(f"BEST: {best_action} - EV: {ev_best:.1f}")
         chip_layout.addWidget(self.best_choice)
 
         layout.addWidget(self.chip)
@@ -140,9 +140,9 @@ class MoveListChip(QWidget):
             self.quality_label.setText(f"{quality.upper()}: {action_name.upper()}")
         else:
             self.quality_label.setText(f"{quality.upper()}: {action_name.upper()} {action_size}")
-        self.ev_label.setText(f"EV: {ev_chosen:.2f}")
-        self.accuracy_label.setText(f"ACCURACY: {accuracy:.1f}%")
-        self.best_choice.setText(f"BEST: {best_action} - EV: {ev_best:.2f}")
+        self.ev_label.setText(f"EV: {ev_chosen:.1f}")
+        self.accuracy_label.setText(f"ACCURACY: {accuracy:.0f}%")
+        self.best_choice.setText(f"BEST: {best_action} - EV: {ev_best:.1f}")
 
         self._clear_layout(self.hand_cards_layout)
         self._clear_layout(self.board_cards_layout)
@@ -166,7 +166,7 @@ class MoveListChip(QWidget):
             self.board_cards_layout.addWidget(lbl)
 
 
-        equity_label_text = f"EQUITY: {equity * 100:.1f}%,"
+        equity_label_text = f"EQUITY: {equity * 100:.1f}%"
         self.equity_label.setText(equity_label_text)
 
         color = self.get_color(accuracy)
