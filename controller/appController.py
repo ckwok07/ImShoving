@@ -43,8 +43,6 @@ class AppController:
         self.state.actions.append(action)
         self.state.actions_list.append(action)
 
-
-
         if self.state.hand_over:
             self.state.button_index = (self.state.button_index + 1) % 2
             if self.state_change:
@@ -219,8 +217,12 @@ class AppController:
             # award pot
             if hero:
                 self.state.villain_stack += self.state.pot
+                self.state.hero_action_count += 1
+                self.state.hero_fold_count += 1
             else:
                 self.state.hero_stack += self.state.pot
+                self.state.villain_action_count += 1
+                self.state.villain_fold_count += 1
 
             self.state.pot = 0
             self.state.hand_over = True
@@ -232,6 +234,12 @@ class AppController:
             return
         
         if action.name == "CHECK":
+            if hero:
+                self.state.hero_action_count += 1
+                self.state.hero_check_count += 1
+            else:
+                self.state.villain_action_count += 1
+                self.state.villain_check_count += 1
             pass
 
         elif action.name == "CALL":
@@ -255,9 +263,13 @@ class AppController:
             self.state.hero_amt += amount
             self.state.pot += amount
             self.state.hero_stack -= amount
+            self.state.hero_action_count += 1
 
             if self.state.hero_stack == 0:
+                self.state.hero_all_in_count += 1
                 self.state.hero_all_in = True
+            else:
+                self.state.hero_call_count += 1
         else:
             amount = self.state.current_bet - self.state.villain_amt
             if amount <= 0:
@@ -267,9 +279,13 @@ class AppController:
             self.state.villain_amt += amount
             self.state.pot += amount
             self.state.villain_stack -= amount
+            self.state.villain_action_count += 1
 
             if self.state.villain_stack == 0:
+                self.state.villain_all_in_count += 1
                 self.state.villain_all_in = True
+            else:
+                self.state.villain_call_count += 1
     
     def apply_raise(self, new_bet: float, hero: bool = True) -> None:
         if hero:
@@ -283,9 +299,13 @@ class AppController:
             self.state.hero_amt += raise_amt
             self.state.pot += raise_amt
             self.state.hero_stack -= raise_amt
+            self.state.hero_action_count += 1
 
             if self.state.hero_stack == 0:
+                self.state.hero_all_in_count += 1
                 self.state.hero_all_in = True
+            else:
+                self.state.hero_raise_count += 1
         else:
             raise_amt = new_bet - self.state.villain_amt
             if raise_amt <= 0:
@@ -297,9 +317,13 @@ class AppController:
             self.state.villain_amt += raise_amt
             self.state.pot += raise_amt
             self.state.villain_stack -= raise_amt
+            self.state.villain_action_count += 1
 
             if self.state.villain_stack == 0:
+                self.state.villain_all_in_count += 1
                 self.state.villain_all_in = True
+            else:
+                self.state.villain_raise_count += 1
     
     def apply_all_in(self, hero: bool = True) -> None:
         if hero:
@@ -311,6 +335,8 @@ class AppController:
             if self.state.hero_amt > self.state.current_bet:
                 self.state.current_bet = self.state.hero_amt
             
+            self.state.hero_action_count += 1
+            self.state.hero_all_in_count += 1
             self.state.hero_all_in = True
         else:
             all_in_amt = min(self.state.hero_stack, self.state.villain_stack)
@@ -321,9 +347,25 @@ class AppController:
             if self.state.villain_amt > self.state.current_bet:
                 self.state.current_bet = self.state.villain_amt
             
+            self.state.villain_action_count += 1
+            self.state.villain_all_in_count += 1
             self.state.villain_all_in = True
 
     def new_hand(self) -> None:
+        assert self.state.hero_action_count == (
+        self.state.hero_check_count + 
+        self.state.hero_fold_count + 
+        self.state.hero_call_count + 
+        self.state.hero_raise_count + 
+        self.state.hero_all_in_count)
+
+        assert self.state.villain_action_count == (
+        self.state.villain_check_count + 
+        self.state.villain_fold_count + 
+        self.state.villain_call_count + 
+        self.state.villain_raise_count + 
+        self.state.villain_all_in_count)
+
         self.state.to_act_index = self.state.button_index
         self.state.show_villain_cards = False
 
