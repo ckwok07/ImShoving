@@ -30,5 +30,17 @@ class GameState:
     button_index: int = 0 #0 for player, 1 for villain
     to_act_index: int = 1
 
+    hero_action_count: int = 0
+    hero_check_count: int = 0
+    hero_fold_count: int = 0
+    hero_call_count: int = 0
+    hero_raise_count: int = 0
+
+    villain_action_count: int = 0
+    villain_check_count: int = 0
+    villain_fold_count: int = 0
+    villain_call_count: int = 0
+    villain_raise_count: int = 0
+
     hand_over: bool = False
     animating: bool = False
