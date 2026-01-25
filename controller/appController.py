@@ -269,7 +269,7 @@ class AppController:
             self.apply_raise(action.size, hero)
 
         elif action.name == "ALL IN":
-            self.apply_all_in(hero)
+            self.apply_all_in(action.size, hero)
 
     def apply_call(self, hero: bool = True) -> None:
         if hero and self.state.hero_stack == 0:
@@ -335,9 +335,9 @@ class AppController:
             if self.state.villain_stack == 0:
                 self.state.villain_all_in = True
     
-    def apply_all_in(self, hero: bool = True) -> None:
+    def apply_all_in(self, size: int, hero: bool = True) -> None:
         if hero:
-            all_in_amt = self.state.hero_stack
+            all_in_amt = size
             old_current_bet = self.state.current_bet
             
             self.state.hero_stack -= all_in_amt 
@@ -528,7 +528,9 @@ class AppController:
                     actions.append(Action("BET", "hero", size = bet))
         
         if self.state.hero_stack > 0 and not self.state.hero_all_in:
-            actions.append(Action("ALL IN", "hero", self.state.hero_stack))
+            max_effective_all_in = min(self.state.hero_stack, 
+                                        self.state.villain_stack + self.state.villain_amt - self.state.hero_amt)
+            actions.append(Action("ALL IN", "hero", max_effective_all_in))
 
         self.compute_hero_equity()
         if self._equity_thread and self._equity_thread.is_alive():
