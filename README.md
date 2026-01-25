@@ -16,14 +16,14 @@ Given a hand `list[Card]`, a board of 0 to 5 cards `list[Card]`, number of playe
 
 The function keeps track of an `equity_sum` essentially how many times the hand has won on $x$ runouts.
 
-for each trial, the function generates a new deck, shuffles it, and removes cards in hand and board. Within the trial, the function generates fake opposing players (villains) determined by how many players, for which the function deals a 2 cards to each villain.
+for each trial, the function generates a new deck, shuffles it, and removes cards in hand and board. Within the trial, the function generates fake opposing players (villains) determined by how many players, for which the function deals 2 cards to each villain.
 
-The function then evalautes all the player's best 5 card hand, if the hero is the lone winner, `equity_sum` is incremented by one. If there is a tie, `equity_sum += 1/w` where `w` is how many players tied. If the hero loses, equity_sum does not change.
+The function then evaluates all the player's best 5 card hand, if the hero is the lone winner, `equity_sum` is incremented by one. If there is a tie, `equity_sum += 1/w` where `w` is how many players tied. If the hero loses, `equity_sum` does not change.
 
 After the simulation is completed, the function calculates `equity` ($E$)
 
 $$
-E = \frac{\text{How many times Hero has won}}{\text{Total games played}} = \frac{equity_sum}{trials}
+E = \frac{\text{How many times Hero has won}}{\text{Total games played}} = \frac{\text{equity_sum}}{\text{trials}}
 $$
 
 ### `Simulator.simulate_equity_in_range`
@@ -43,7 +43,7 @@ Take a random hand (As Ks) which has a pre-flop equity of ~0.6705. Say the pot i
 Using the equation,
 
 $$
-EV = 0.6705 \times (10 + 5) - 5 = 5.0575 \; \text{BBs}
+EV = 0.6705 \times (10 + 5) - 5 = 5.0575 \text{BBs}
 $$
 
 Thus, on average, you earn 5.0575 BBs if you make this call.
