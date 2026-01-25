@@ -6,12 +6,35 @@ The engine supports both deck-based random opponents and explicit opponent range
 
 Still in development
 
+#### Equity Calculation
+Equity calculation in this engine is done through a Monte Carlo simulation rather than a full enumeration simulation, as there are too many enumerations (especially pre-flop) to simulate $\binom{50}{2} \times \binom{48}{5}$.
+
+the two simulator functions, `Simulator.simulate_equity` and `Simulate.simulate_equity_in_range` in `main\model\Simulator.py` both follow a similar algorithm.
+
+##### `Simulator.simulate_equity`
+
+##### `Simulator.simulate_equity_in_range`
+
 #### Expected Value Calculation
-Given an `equity` ($E$), pot ($P$), and call amount ($C_{amount}$) we can calculate the expected value ($EV$) with the following equation.
+A general expected value calculation is as follows.
+Given an `equity` ($E$), `pot` ($P$), and `call_amount` ($C_{amount}$) we can calculate the expected value ($EV$) with the following equation.
 
 $$
-EV = E \times (pot + C_{amount}) - C_{amount}
+EV = E \times ($P$ + C_{amount}) - C_{amount}
 $$
+
+This equation calculates, "if I make this call, how much can I expect to earn/lose on average?" Once you make the call, $P += C_{amount}$, then multiply by the equity, giving what percentage of the pot you win on average. From there subtract the $C_{amount}$ to get 'profit'
+
+Take a random hand (As Ks) which has a pre-flop equity of ~0.6705. Say the pot is currently 10 Big blinds (inclusive of the outstanding bet) and the bet is 5 BBs. Should you call? 
+
+Using the equation,
+
+$$
+EV = 0.6705 \times (10 + 5) - 5 = 5.0575 \; \text{BBs}
+$$
+
+Thus, on average, you earn 5.0575 BBs if you make this call.
+
 
 #### Accuracy Calculation
 Given `best_ev` ($EV_{best}$) and `chosen_ev` ($EV_{chosen}$) we calculate the players accuracy for that turn by creating a range [0,100] for which the `chosen_ev` will fall between.
