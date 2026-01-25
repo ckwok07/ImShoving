@@ -12,7 +12,7 @@ Equity calculation in this engine is done through a Monte Carlo simulation rathe
 the two simulator functions, `Simulator.simulate_equity` and `Simulate.simulate_equity_in_range` in `main\model\Simulator.py` both follow a similar algorithm.
 
 ### `Simulator.simulate_equity`
-Given a hand `list[Card]`, a board of 0 to 5 cards `list[Card]`, number of players `int`, and number of trials `int`:
+Given a `hand` `list[Card]`, a `board` of 0 to 5 cards `list[Card]`, number of `players` `int`, and number of `trials` `int`:
 
 The function keeps track of an `equity_sum` essentially how many times the hand has won on $x$ runouts.
 
@@ -23,10 +23,13 @@ The function then evaluates all the player's best 5 card hand, if the hero is th
 After the simulation is completed, the function calculates `equity` ($E$)
 
 $$
-E = \frac{\text{How many times Hero has won}}{\text{Total games played}} = \frac{\text{equity_sum}}{\text{trials}}
+E = \frac{\text{How many times Hero has won}}{\text{Total games played}} = \frac{\text{equity sum}}{\text{trials}}
 $$
 
 ### `Simulator.simulate_equity_in_range`
+This function is essentially the same as `Simulator.simulate_equity`, however takes in a new parameter `villainRanges` `list[Range]`. Where each indexed range corresponds to players in `players`. Thus `len(villianRanges) <= players - 1`.
+
+This `Range` dictates which hands a villain will actually play. Thus hands dealt to the villain will only be from their `Range`
 
 ## Expected Value Calculation
 A general expected value calculation is as follows.
@@ -43,7 +46,7 @@ Take a random hand (As Ks) which has a pre-flop equity of ~0.6705. Say the pot i
 Using the equation,
 
 $$
-EV = 0.6705 \times (10 + 5) - 5 = 5.0575 \text{BBs}
+EV = 0.6705 \times (10 + 5) - 5 = 5.0575 \text{ BBs}
 $$
 
 Thus, on average, you earn 5.0575 BBs if you make this call.
