@@ -54,8 +54,8 @@ class Simulator:
                 tied = sum(1 for e in all_evals if e == best_eval)
                 equity_sum += 1.0 / tied
 
-            stderr = math.sqrt((equity_sum / (trial + 1)) * (1 - (equity_sum / (trial + 1))) / (trial + 1))
-            ci95 = 1.96 * stderr
+            #stderr = math.sqrt((equity_sum / (trial + 1)) * (1 - (equity_sum / (trial + 1))) / (trial + 1))
+            #ci95 = 1.96 * stderr
 
             #yield trial + 1, equity_sum / (trial + 1), stderr, ci95
         return equity_sum / trials
