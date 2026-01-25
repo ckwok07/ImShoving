@@ -35,14 +35,14 @@ class GameState:
     hero_fold_count: int = 0
     hero_call_count: int = 0
     hero_raise_count: int = 0
-    hero_all_in_count: int = 0
+    hero_bet_count: int = 0
 
     villain_action_count: int = 0
     villain_check_count: int = 0
     villain_fold_count: int = 0
     villain_call_count: int = 0
     villain_raise_count: int = 0
-    villain_all_in_count: int = 0
+    villain_bet_count: int = 0
 
     hand_over: bool = False
     animating: bool = False
