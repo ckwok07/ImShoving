@@ -9,7 +9,38 @@ Still in development
 ## The Villain
 The villain makes decisions based on hero and GTO.
 
-Controller -> Villain -> Analyzer -> DecisionChooser
+The pipeline of each villain is as follows.
+Controller -> Villain -> DecisionChooser (uses Analyzer, GTOModel, ExploitativeModel) -> Villain -> Controller
+
+Villain
+- Strategizes the weights of GTO/Explotative
+- Manages early, mid, late game
+
+DecisionChooser
+- finds all legal moves for the villain
+- uses `Analyzer` `GTOModel` and `ExploitativeModel` to generate strategies
+- calculates strategy weights based on `Analyzer` and `GameState`
+- handles equity and EV calculations
+
+Analyzer
+- tracks hero actions with context (street, board-texture, stack-depth... etc)
+- returns stats (frequency distributions, confidence, variance)
+- handles orginization of data (still deciding on how to do this)
+
+GTOModel
+- returns a list of actions with GTO calculated expected values
+
+ExplotativeModel
+- returns a list of exploitative actions generated through hero behavior
+
+Currently the villain is expected to be modeled as such
+Early-Game (GTO) -> Mid-Game (exploitative and GTO) -> Late-Game (exploitative and GTO)
+
+There are other things we must consider as well, such as weighting of models
+- When to trust decisions based off exploitative/hero behavior/GTO?
+    Depends on hero's variance in play
+- How do we deal with street bluffs? continuous betting? stack-depth? board texture? bet sizing?
+
 
 ## Equity Calculation
 Equity calculation in this engine is done through a Monte Carlo simulation rather than a full enumeration simulation, as there are too many enumerations (especially pre-flop) to simulate $\binom{50}{2} \times \binom{48}{5}$.
