@@ -25,7 +25,7 @@ DecisionChooser
 Analyzer
 - tracks hero actions with context (street, board-texture, stack-depth... etc)
 - returns stats (frequency distributions, confidence, variance)
-- handles orginization of data (still deciding on how to do this)
+- handles orginization of data (still deciding on how to do this possibly pandas dataframe.)
 
 GTOModel
 - returns a list of actions with GTO calculated expected values

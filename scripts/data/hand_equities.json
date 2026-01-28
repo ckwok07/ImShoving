@@ -1,0 +1,9284 @@
+{
+  "3d2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 0,
+    "equity": 0.36395
+  },
+  "4d2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 0,
+    "equity": 0.3692
+  },
+  "5d2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 0,
+    "equity": 0.376625
+  },
+  "6d2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 0,
+    "equity": 0.37636
+  },
+  "7d2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 0,
+    "equity": 0.382495
+  },
+  "8d2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 0,
+    "equity": 0.402545
+  },
+  "9d2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 0,
+    "equity": 0.425195
+  },
+  "Td2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 0,
+    "equity": 0.449765
+  },
+  "Jd2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 0,
+    "equity": 0.47483
+  },
+  "Qd2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 0,
+    "equity": 0.501375
+  },
+  "Kd2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 0,
+    "equity": 0.533075
+  },
+  "Ad2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 0,
+    "equity": 0.571375
+  },
+  "2c2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 1,
+    "equity": 0.503365
+  },
+  "3c2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.32222
+  },
+  "4c2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.332335
+  },
+  "5c2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.342205
+  },
+  "6c2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.339435
+  },
+  "7c2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.34391
+  },
+  "8c2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.36642
+  },
+  "9c2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.392225
+  },
+  "Tc2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.41904
+  },
+  "Jc2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.440485
+  },
+  "Qc2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.472975
+  },
+  "Kc2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.50544
+  },
+  "Ac2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.547875
+  },
+  "2h2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.50241
+  },
+  "3h2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.32001
+  },
+  "4h2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.33165
+  },
+  "5h2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.342125
+  },
+  "6h2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.34065
+  },
+  "7h2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.34376
+  },
+  "8h2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.368915
+  },
+  "9h2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.38958
+  },
+  "Th2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.419655
+  },
+  "Jh2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.44503
+  },
+  "Qh2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.473705
+  },
+  "Kh2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.502935
+  },
+  "Ah2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.548995
+  },
+  "2s2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.50244
+  },
+  "3s2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.32334
+  },
+  "4s2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.33425
+  },
+  "5s2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.34506
+  },
+  "6s2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.33969
+  },
+  "7s2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.346075
+  },
+  "8s2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.369455
+  },
+  "9s2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.390515
+  },
+  "Ts2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.41623
+  },
+  "Js2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.444145
+  },
+  "Qs2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.472635
+  },
+  "Ks2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.50673
+  },
+  "As2d": {
+    "card1Rank": 2,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.550975
+  },
+  "4d3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 0,
+    "equity": 0.386025
+  },
+  "5d3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 0,
+    "equity": 0.399865
+  },
+  "6d3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 0,
+    "equity": 0.396385
+  },
+  "7d3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 0,
+    "equity": 0.39942
+  },
+  "8d3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 0,
+    "equity": 0.40743
+  },
+  "9d3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 0,
+    "equity": 0.4336
+  },
+  "Td3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 0,
+    "equity": 0.459075
+  },
+  "Jd3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 0,
+    "equity": 0.482365
+  },
+  "Qd3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 0,
+    "equity": 0.509615
+  },
+  "Kd3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 0,
+    "equity": 0.53917
+  },
+  "Ad3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 0,
+    "equity": 0.580805
+  },
+  "3d2c": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 1,
+    "equity": 0.32098
+  },
+  "3c3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.537705
+  },
+  "4c3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.351185
+  },
+  "5c3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.36309
+  },
+  "6c3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.36126
+  },
+  "7c3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.36863
+  },
+  "8c3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.37698
+  },
+  "9c3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.40259
+  },
+  "Tc3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.42864
+  },
+  "Jc3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.453335
+  },
+  "Qc3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.479015
+  },
+  "Kc3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.513225
+  },
+  "Ac3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.557395
+  },
+  "3d2h": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.324355
+  },
+  "3h3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.53639
+  },
+  "4h3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.35101
+  },
+  "5h3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.364195
+  },
+  "6h3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.35783
+  },
+  "7h3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.366405
+  },
+  "8h3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.375885
+  },
+  "9h3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.40128
+  },
+  "Th3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.42748
+  },
+  "Jh3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.451565
+  },
+  "Qh3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.483005
+  },
+  "Kh3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.51402
+  },
+  "Ah3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.559815
+  },
+  "3d2s": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.32198
+  },
+  "3s3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.53712
+  },
+  "4s3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.352835
+  },
+  "5s3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.363735
+  },
+  "6s3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.36334
+  },
+  "7s3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.363815
+  },
+  "8s3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.37123
+  },
+  "9s3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.40123
+  },
+  "Ts3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.42523
+  },
+  "Js3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.453205
+  },
+  "Qs3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.481775
+  },
+  "Ks3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.51363
+  },
+  "As3d": {
+    "card1Rank": 3,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.557585
+  },
+  "5d4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 0,
+    "equity": 0.416985
+  },
+  "6d4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 0,
+    "equity": 0.41248
+  },
+  "7d4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 0,
+    "equity": 0.4178
+  },
+  "8d4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 0,
+    "equity": 0.427535
+  },
+  "9d4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 0,
+    "equity": 0.439655
+  },
+  "Td4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 0,
+    "equity": 0.467025
+  },
+  "Jd4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 0,
+    "equity": 0.49105
+  },
+  "Qd4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 0,
+    "equity": 0.51912
+  },
+  "Kd4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 0,
+    "equity": 0.54851
+  },
+  "Ad4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 0,
+    "equity": 0.590285
+  },
+  "4d2c": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 1,
+    "equity": 0.332865
+  },
+  "4d3c": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.35377
+  },
+  "4c4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.571145
+  },
+  "5c4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.38227
+  },
+  "6c4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.38059
+  },
+  "7c4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.38544
+  },
+  "8c4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.39491
+  },
+  "9c4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.408775
+  },
+  "Tc4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.433705
+  },
+  "Jc4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.46013
+  },
+  "Qc4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.492125
+  },
+  "Kc4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.523565
+  },
+  "Ac4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.566405
+  },
+  "4d2h": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.332235
+  },
+  "4d3h": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.35011
+  },
+  "4h4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.56884
+  },
+  "5h4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.37937
+  },
+  "6h4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.378475
+  },
+  "7h4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.383145
+  },
+  "8h4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.395415
+  },
+  "9h4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.407975
+  },
+  "Th4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.432895
+  },
+  "Jh4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.465055
+  },
+  "Qh4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.4933
+  },
+  "Kh4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.525355
+  },
+  "Ah4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.568
+  },
+  "4d2s": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.33096
+  },
+  "4d3s": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.35137
+  },
+  "4s4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.567975
+  },
+  "5s4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.384305
+  },
+  "6s4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.383705
+  },
+  "7s4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.38323
+  },
+  "8s4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.393475
+  },
+  "9s4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.40876
+  },
+  "Ts4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.435385
+  },
+  "Js4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.46088
+  },
+  "Qs4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.49445
+  },
+  "Ks4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.524015
+  },
+  "As4d": {
+    "card1Rank": 4,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.56848
+  },
+  "6d5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 0,
+    "equity": 0.434355
+  },
+  "7d5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 0,
+    "equity": 0.43732
+  },
+  "8d5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 0,
+    "equity": 0.44201
+  },
+  "9d5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 0,
+    "equity": 0.457605
+  },
+  "Td5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 0,
+    "equity": 0.473575
+  },
+  "Jd5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 0,
+    "equity": 0.49827
+  },
+  "Qd5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 0,
+    "equity": 0.528195
+  },
+  "Kd5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 0,
+    "equity": 0.555975
+  },
+  "Ad5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 0,
+    "equity": 0.596225
+  },
+  "5d2c": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 1,
+    "equity": 0.34204
+  },
+  "5d3c": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.36236
+  },
+  "5d4c": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.38501
+  },
+  "5c5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.60261
+  },
+  "6c5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.3968
+  },
+  "7c5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.40594
+  },
+  "8c5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.416865
+  },
+  "9c5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.426795
+  },
+  "Tc5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.44491
+  },
+  "Jc5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.470755
+  },
+  "Qc5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.501335
+  },
+  "Kc5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.53147
+  },
+  "Ac5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.577255
+  },
+  "5d2h": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.34202
+  },
+  "5d3h": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.363765
+  },
+  "5d4h": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.38178
+  },
+  "5h5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.60237
+  },
+  "6h5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.400655
+  },
+  "7h5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.40492
+  },
+  "8h5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.411425
+  },
+  "9h5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.426625
+  },
+  "Th5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.444155
+  },
+  "Jh5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.4731
+  },
+  "Qh5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.501585
+  },
+  "Kh5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.53492
+  },
+  "Ah5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.57655
+  },
+  "5d2s": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.340585
+  },
+  "5d3s": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.363675
+  },
+  "5d4s": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.38124
+  },
+  "5s5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.604655
+  },
+  "6s5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.397685
+  },
+  "7s5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.403445
+  },
+  "8s5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.414885
+  },
+  "9s5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.42523
+  },
+  "Ts5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.445715
+  },
+  "Js5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.470475
+  },
+  "Qs5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.49983
+  },
+  "Ks5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.5323
+  },
+  "As5d": {
+    "card1Rank": 5,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.57754
+  },
+  "7d6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 0,
+    "equity": 0.45342
+  },
+  "8d6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 0,
+    "equity": 0.462705
+  },
+  "9d6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 0,
+    "equity": 0.473135
+  },
+  "Td6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 0,
+    "equity": 0.48897
+  },
+  "Jd6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 0,
+    "equity": 0.50906
+  },
+  "Qd6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 0,
+    "equity": 0.536195
+  },
+  "Kd6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 0,
+    "equity": 0.564765
+  },
+  "Ad6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 0,
+    "equity": 0.599545
+  },
+  "6d2c": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 1,
+    "equity": 0.342195
+  },
+  "6d3c": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.36192
+  },
+  "6d4c": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.379925
+  },
+  "6d5c": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.3975
+  },
+  "6c6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.634135
+  },
+  "7c6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.422285
+  },
+  "8c6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.430675
+  },
+  "9c6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.44683
+  },
+  "Tc6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.46262
+  },
+  "Jc6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.47934
+  },
+  "Qc6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.507435
+  },
+  "Kc6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.540345
+  },
+  "Ac6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.57911
+  },
+  "6d2h": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.34283
+  },
+  "6d3h": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.359315
+  },
+  "6d4h": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.37888
+  },
+  "6d5h": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.40018
+  },
+  "6h6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.631255
+  },
+  "7h6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.420915
+  },
+  "8h6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.432235
+  },
+  "9h6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.44596
+  },
+  "Th6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.461355
+  },
+  "Jh6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.477965
+  },
+  "Qh6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.50605
+  },
+  "Kh6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.542335
+  },
+  "Ah6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.5776
+  },
+  "6d2s": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.337715
+  },
+  "6d3s": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.360945
+  },
+  "6d4s": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.380095
+  },
+  "6d5s": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.40173
+  },
+  "6s6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.63169
+  },
+  "7s6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.42184
+  },
+  "8s6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.432215
+  },
+  "9s6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.44437
+  },
+  "Ts6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.459765
+  },
+  "Js6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.4773
+  },
+  "Qs6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.50855
+  },
+  "Ks6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.53865
+  },
+  "As6d": {
+    "card1Rank": 6,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.574925
+  },
+  "8d7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 0,
+    "equity": 0.47909
+  },
+  "9d7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 0,
+    "equity": 0.489985
+  },
+  "Td7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 0,
+    "equity": 0.507
+  },
+  "Jd7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 0,
+    "equity": 0.52124
+  },
+  "Qd7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 0,
+    "equity": 0.54415
+  },
+  "Kd7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 0,
+    "equity": 0.574255
+  },
+  "Ad7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 0,
+    "equity": 0.608945
+  },
+  "7d2c": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 1,
+    "equity": 0.34545
+  },
+  "7d3c": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.36581
+  },
+  "7d4c": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.38627
+  },
+  "7d5c": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.407095
+  },
+  "7d6c": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.422675
+  },
+  "7c7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.66196
+  },
+  "8c7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.45047
+  },
+  "9c7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.46282
+  },
+  "Tc7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.48174
+  },
+  "Jc7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.494055
+  },
+  "Qc7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.517825
+  },
+  "Kc7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.549685
+  },
+  "Ac7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.590305
+  },
+  "7d2h": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.346855
+  },
+  "7d3h": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.370225
+  },
+  "7d4h": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.386015
+  },
+  "7d5h": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.404375
+  },
+  "7d6h": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.42465
+  },
+  "7h7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.66136
+  },
+  "8h7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.451095
+  },
+  "9h7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.46329
+  },
+  "Th7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.47937
+  },
+  "Jh7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.49653
+  },
+  "Qh7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.51652
+  },
+  "Kh7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.55584
+  },
+  "Ah7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.584765
+  },
+  "7d2s": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.345945
+  },
+  "7d3s": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.364515
+  },
+  "7d4s": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.38625
+  },
+  "7d5s": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.40381
+  },
+  "7d6s": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.421505
+  },
+  "7s7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.664575
+  },
+  "8s7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.44971
+  },
+  "9s7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.46095
+  },
+  "Ts7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.477315
+  },
+  "Js7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.49815
+  },
+  "Qs7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.5152
+  },
+  "Ks7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.554455
+  },
+  "As7d": {
+    "card1Rank": 7,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.58595
+  },
+  "9d8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 0,
+    "equity": 0.50768
+  },
+  "Td8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 0,
+    "equity": 0.522565
+  },
+  "Jd8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 0,
+    "equity": 0.537375
+  },
+  "Qd8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 0,
+    "equity": 0.559705
+  },
+  "Kd8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 0,
+    "equity": 0.58385
+  },
+  "Ad8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 0,
+    "equity": 0.618805
+  },
+  "8d2c": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 1,
+    "equity": 0.36892
+  },
+  "8d3c": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.376295
+  },
+  "8d4c": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.395355
+  },
+  "8d5c": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.413265
+  },
+  "8d6c": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.43289
+  },
+  "8d7c": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.449715
+  },
+  "8c8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.690385
+  },
+  "9c8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.48143
+  },
+  "Tc8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.49857
+  },
+  "Jc8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.517605
+  },
+  "Qc8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.53543
+  },
+  "Kc8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.563415
+  },
+  "Ac8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.597405
+  },
+  "8d2h": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.368535
+  },
+  "8d3h": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.373865
+  },
+  "8d4h": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.39551
+  },
+  "8d5h": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.41454
+  },
+  "8d6h": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.431685
+  },
+  "8d7h": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.447845
+  },
+  "8h8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.691125
+  },
+  "9h8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.48287
+  },
+  "Th8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.495345
+  },
+  "Jh8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.514855
+  },
+  "Qh8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.536255
+  },
+  "Kh8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.558575
+  },
+  "Ah8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.599095
+  },
+  "8d2s": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.369665
+  },
+  "8d3s": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.37313
+  },
+  "8d4s": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.39424
+  },
+  "8d5s": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.41378
+  },
+  "8d6s": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.430135
+  },
+  "8d7s": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.448705
+  },
+  "8s8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.690745
+  },
+  "9s8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.482045
+  },
+  "Ts8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.4989
+  },
+  "Js8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.51646
+  },
+  "Qs8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.53318
+  },
+  "Ks8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.5592
+  },
+  "As8d": {
+    "card1Rank": 8,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.597265
+  },
+  "Td9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 0,
+    "equity": 0.540355
+  },
+  "Jd9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 0,
+    "equity": 0.55492
+  },
+  "Qd9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 0,
+    "equity": 0.576205
+  },
+  "Kd9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 0,
+    "equity": 0.598695
+  },
+  "Ad9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 0,
+    "equity": 0.627775
+  },
+  "9d2c": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 1,
+    "equity": 0.38906
+  },
+  "9d3c": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.401705
+  },
+  "9d4c": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.40688
+  },
+  "9d5c": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.42826
+  },
+  "9d6c": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.443405
+  },
+  "9d7c": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.462845
+  },
+  "9d8c": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.479405
+  },
+  "9c9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.71796
+  },
+  "Tc9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.51677
+  },
+  "Jc9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.5317
+  },
+  "Qc9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.552495
+  },
+  "Kc9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.5768
+  },
+  "Ac9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.60908
+  },
+  "9d2h": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.39017
+  },
+  "9d3h": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.402215
+  },
+  "9d4h": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.40633
+  },
+  "9d5h": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.428445
+  },
+  "9d6h": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.446995
+  },
+  "9d7h": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.4612
+  },
+  "9d8h": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.482855
+  },
+  "9h9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.722445
+  },
+  "Th9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.51442
+  },
+  "Jh9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.53294
+  },
+  "Qh9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.5545
+  },
+  "Kh9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.57839
+  },
+  "Ah9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.606665
+  },
+  "9d2s": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.391535
+  },
+  "9d3s": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.400325
+  },
+  "9d4s": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.40957
+  },
+  "9d5s": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.42423
+  },
+  "9d6s": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.44531
+  },
+  "9d7s": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.463345
+  },
+  "9d8s": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.48255
+  },
+  "9s9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.719925
+  },
+  "Ts9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.512735
+  },
+  "Js9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.53291
+  },
+  "Qs9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.55344
+  },
+  "Ks9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.577935
+  },
+  "As9d": {
+    "card1Rank": 9,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.606325
+  },
+  "JdTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 0,
+    "equity": 0.575605
+  },
+  "QdTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 0,
+    "equity": 0.598475
+  },
+  "KdTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 0,
+    "equity": 0.618245
+  },
+  "AdTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 0,
+    "equity": 0.64404
+  },
+  "Td2c": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 1,
+    "equity": 0.416785
+  },
+  "Td3c": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.426625
+  },
+  "Td4c": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.435445
+  },
+  "Td5c": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.442555
+  },
+  "Td6c": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.460915
+  },
+  "Td7c": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.48206
+  },
+  "Td8c": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.497965
+  },
+  "Td9c": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.51383
+  },
+  "TcTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.751115
+  },
+  "JcTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.54935
+  },
+  "QcTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.574475
+  },
+  "KcTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.595935
+  },
+  "AcTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.627215
+  },
+  "Td2h": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.418165
+  },
+  "Td3h": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.427195
+  },
+  "Td4h": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.435625
+  },
+  "Td5h": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.44238
+  },
+  "Td6h": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.461045
+  },
+  "Td7h": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.478035
+  },
+  "Td8h": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.497395
+  },
+  "Td9h": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.51414
+  },
+  "ThTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.75036
+  },
+  "JhTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.55357
+  },
+  "QhTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.573025
+  },
+  "KhTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.59961
+  },
+  "AhTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.628685
+  },
+  "Td2s": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.418645
+  },
+  "Td3s": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.42408
+  },
+  "Td4s": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.43513
+  },
+  "Td5s": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.44244
+  },
+  "Td6s": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.461855
+  },
+  "Td7s": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.478825
+  },
+  "Td8s": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.496535
+  },
+  "Td9s": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.51355
+  },
+  "TsTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.750225
+  },
+  "JsTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.55354
+  },
+  "QsTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.575165
+  },
+  "KsTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.59791
+  },
+  "AsTd": {
+    "card1Rank": 10,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.62738
+  },
+  "QdJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 0,
+    "equity": 0.59865
+  },
+  "KdJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 0,
+    "equity": 0.6253
+  },
+  "AdJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 0,
+    "equity": 0.65277
+  },
+  "Jd2c": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 1,
+    "equity": 0.44271
+  },
+  "Jd3c": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.454175
+  },
+  "Jd4c": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.46341
+  },
+  "Jd5c": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.47358
+  },
+  "Jd6c": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.476975
+  },
+  "Jd7c": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.49538
+  },
+  "Jd8c": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.515845
+  },
+  "Jd9c": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.531595
+  },
+  "JdTc": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.55496
+  },
+  "JcJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.776915
+  },
+  "QcJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.58146
+  },
+  "KcJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.6045
+  },
+  "AcJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.63675
+  },
+  "Jd2h": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.44362
+  },
+  "Jd3h": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.45204
+  },
+  "Jd4h": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.46101
+  },
+  "Jd5h": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.469205
+  },
+  "Jd6h": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.478865
+  },
+  "Jd7h": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.498095
+  },
+  "Jd8h": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.514325
+  },
+  "Jd9h": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.53175
+  },
+  "JdTh": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.5515
+  },
+  "JhJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.774035
+  },
+  "QhJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.5815
+  },
+  "KhJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.603255
+  },
+  "AhJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.633735
+  },
+  "Jd2s": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.440855
+  },
+  "Jd3s": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.453285
+  },
+  "Jd4s": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.46524
+  },
+  "Jd5s": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.470475
+  },
+  "Jd6s": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.47782
+  },
+  "Jd7s": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.495335
+  },
+  "Jd8s": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.514905
+  },
+  "Jd9s": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.5345
+  },
+  "JdTs": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.5509
+  },
+  "JsJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.77447
+  },
+  "QsJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.57988
+  },
+  "KsJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.604425
+  },
+  "AsJd": {
+    "card1Rank": 11,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.6341
+  },
+  "KdQd": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 0,
+    "equity": 0.63253
+  },
+  "AdQd": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 0,
+    "equity": 0.662555
+  },
+  "Qd2c": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 1,
+    "equity": 0.47138
+  },
+  "Qd3c": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.48082
+  },
+  "Qd4c": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.49064
+  },
+  "Qd5c": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.50489
+  },
+  "Qd6c": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.51177
+  },
+  "Qd7c": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.516365
+  },
+  "Qd8c": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.53685
+  },
+  "Qd9c": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.556175
+  },
+  "QdTc": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.572125
+  },
+  "QdJc": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.5819
+  },
+  "QcQd": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.79843
+  },
+  "KcQd": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.61412
+  },
+  "AcQd": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.64573
+  },
+  "Qd2h": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.47345
+  },
+  "Qd3h": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.48205
+  },
+  "Qd4h": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.491515
+  },
+  "Qd5h": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.5007
+  },
+  "Qd6h": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.5099
+  },
+  "Qd7h": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.521105
+  },
+  "Qd8h": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.53394
+  },
+  "Qd9h": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.55358
+  },
+  "QdTh": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.572045
+  },
+  "QdJh": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.584435
+  },
+  "QhQd": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.800165
+  },
+  "KhQd": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.615525
+  },
+  "AhQd": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.64509
+  },
+  "Qd2s": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.47149
+  },
+  "Qd3s": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.481025
+  },
+  "Qd4s": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.490025
+  },
+  "Qd5s": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.499115
+  },
+  "Qd6s": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.511675
+  },
+  "Qd7s": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.52011
+  },
+  "Qd8s": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.534895
+  },
+  "Qd9s": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.55433
+  },
+  "QdTs": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.571065
+  },
+  "QdJs": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.5786
+  },
+  "QsQd": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.802055
+  },
+  "KsQd": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.61497
+  },
+  "AsQd": {
+    "card1Rank": 12,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.64354
+  },
+  "AdKd": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 0,
+    "equity": 0.66797
+  },
+  "Kd2c": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 1,
+    "equity": 0.504275
+  },
+  "Kd3c": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.514435
+  },
+  "Kd4c": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.525395
+  },
+  "Kd5c": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.53265
+  },
+  "Kd6c": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.541165
+  },
+  "Kd7c": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.5523
+  },
+  "Kd8c": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.55797
+  },
+  "Kd9c": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.57627
+  },
+  "KdTc": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.59659
+  },
+  "KdJc": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.60826
+  },
+  "KdQc": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.611795
+  },
+  "KcKd": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.82366
+  },
+  "AcKd": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.654525
+  },
+  "Kd2h": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.503385
+  },
+  "Kd3h": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.514455
+  },
+  "Kd4h": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.52532
+  },
+  "Kd5h": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.53216
+  },
+  "Kd6h": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.54402
+  },
+  "Kd7h": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.552525
+  },
+  "Kd8h": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.55919
+  },
+  "Kd9h": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.579285
+  },
+  "KdTh": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.597175
+  },
+  "KdJh": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.60587
+  },
+  "KdQh": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.614565
+  },
+  "KhKd": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.823885
+  },
+  "AhKd": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.653725
+  },
+  "Kd2s": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.505605
+  },
+  "Kd3s": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.51568
+  },
+  "Kd4s": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.521935
+  },
+  "Kd5s": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.53191
+  },
+  "Kd6s": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.54397
+  },
+  "Kd7s": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.55419
+  },
+  "Kd8s": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.558655
+  },
+  "Kd9s": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.576355
+  },
+  "KdTs": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.59876
+  },
+  "KdJs": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.605085
+  },
+  "KdQs": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.612825
+  },
+  "KsKd": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.823925
+  },
+  "AsKd": {
+    "card1Rank": 13,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.65361
+  },
+  "Ad2c": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 1,
+    "equity": 0.550795
+  },
+  "Ad3c": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.55642
+  },
+  "Ad4c": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.566145
+  },
+  "Ad5c": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.577385
+  },
+  "Ad6c": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.57774
+  },
+  "Ad7c": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.58956
+  },
+  "Ad8c": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.598325
+  },
+  "Ad9c": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.60806
+  },
+  "AdTc": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.629155
+  },
+  "AdJc": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.636785
+  },
+  "AdQc": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.644175
+  },
+  "AdKc": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.650615
+  },
+  "AcAd": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.85157
+  },
+  "Ad2h": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.551155
+  },
+  "Ad3h": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.55895
+  },
+  "Ad4h": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.56665
+  },
+  "Ad5h": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.57809
+  },
+  "Ad6h": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.57695
+  },
+  "Ad7h": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.589805
+  },
+  "Ad8h": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.59969
+  },
+  "Ad9h": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.60795
+  },
+  "AdTh": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.626175
+  },
+  "AdJh": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.63807
+  },
+  "AdQh": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.644165
+  },
+  "AdKh": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.651405
+  },
+  "AhAd": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.85014
+  },
+  "Ad2s": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.548795
+  },
+  "Ad3s": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.55651
+  },
+  "Ad4s": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.567515
+  },
+  "Ad5s": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.578395
+  },
+  "Ad6s": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.57896
+  },
+  "Ad7s": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.58883
+  },
+  "Ad8s": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.59626
+  },
+  "Ad9s": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.604225
+  },
+  "AdTs": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.623045
+  },
+  "AdJs": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.63533
+  },
+  "AdQs": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.64603
+  },
+  "AdKs": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.655845
+  },
+  "AsAd": {
+    "card1Rank": 14,
+    "card1Suit": 0,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.85146
+  },
+  "3c2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 1,
+    "equity": 0.359465
+  },
+  "4c2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.366825
+  },
+  "5c2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.378225
+  },
+  "6c2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.377135
+  },
+  "7c2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.3801
+  },
+  "8c2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.40419
+  },
+  "9c2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.42189
+  },
+  "Tc2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.450245
+  },
+  "Jc2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.473715
+  },
+  "Qc2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.49874
+  },
+  "Kc2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.53393
+  },
+  "Ac2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.573515
+  },
+  "2h2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.5012
+  },
+  "3h2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.32226
+  },
+  "4h2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.33213
+  },
+  "5h2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.3424
+  },
+  "6h2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.340245
+  },
+  "7h2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.347165
+  },
+  "8h2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.370535
+  },
+  "9h2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.387335
+  },
+  "Th2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.41634
+  },
+  "Jh2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.44459
+  },
+  "Qh2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.474705
+  },
+  "Kh2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.50744
+  },
+  "Ah2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.5506
+  },
+  "2s2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.504765
+  },
+  "3s2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.321965
+  },
+  "4s2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.330495
+  },
+  "5s2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.34346
+  },
+  "6s2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.340925
+  },
+  "7s2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.346205
+  },
+  "8s2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.36554
+  },
+  "9s2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.389355
+  },
+  "Ts2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.414235
+  },
+  "Js2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.44673
+  },
+  "Qs2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.47612
+  },
+  "Ks2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.506235
+  },
+  "As2c": {
+    "card1Rank": 2,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.549915
+  },
+  "4c3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 1,
+    "equity": 0.385735
+  },
+  "5c3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.39657
+  },
+  "6c3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.393695
+  },
+  "7c3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.396795
+  },
+  "8c3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.40772
+  },
+  "9c3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.433195
+  },
+  "Tc3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.454575
+  },
+  "Jc3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.484305
+  },
+  "Qc3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.507175
+  },
+  "Kc3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.54268
+  },
+  "Ac3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.58095
+  },
+  "3c2h": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.323845
+  },
+  "3h3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.535955
+  },
+  "4h3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.354125
+  },
+  "5h3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.362245
+  },
+  "6h3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.35791
+  },
+  "7h3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.366905
+  },
+  "8h3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.37557
+  },
+  "9h3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.398085
+  },
+  "Th3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.4265
+  },
+  "Jh3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.45355
+  },
+  "Qh3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.48222
+  },
+  "Kh3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.512585
+  },
+  "Ah3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.557585
+  },
+  "3c2s": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.32166
+  },
+  "3s3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.53848
+  },
+  "4s3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.35475
+  },
+  "5s3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.363055
+  },
+  "6s3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.35999
+  },
+  "7s3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.36571
+  },
+  "8s3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.37467
+  },
+  "9s3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.400685
+  },
+  "Ts3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.425805
+  },
+  "Js3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.453675
+  },
+  "Qs3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.48274
+  },
+  "Ks3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.51509
+  },
+  "As3c": {
+    "card1Rank": 3,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.56065
+  },
+  "5c4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 1,
+    "equity": 0.41336
+  },
+  "6c4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.412185
+  },
+  "7c4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.418875
+  },
+  "8c4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.42847
+  },
+  "9c4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.43703
+  },
+  "Tc4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.465405
+  },
+  "Jc4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.491025
+  },
+  "Qc4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.517945
+  },
+  "Kc4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.548945
+  },
+  "Ac4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.59139
+  },
+  "4c2h": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.33173
+  },
+  "4c3h": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.35474
+  },
+  "4h4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.571965
+  },
+  "5h4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.381905
+  },
+  "6h4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.37914
+  },
+  "7h4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.38455
+  },
+  "8h4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.396225
+  },
+  "9h4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.40621
+  },
+  "Th4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.43496
+  },
+  "Jh4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.4616
+  },
+  "Qh4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.48883
+  },
+  "Kh4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.52329
+  },
+  "Ah4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.56697
+  },
+  "4c2s": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.330925
+  },
+  "4c3s": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.352855
+  },
+  "4s4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.568225
+  },
+  "5s4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.379115
+  },
+  "6s4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.38137
+  },
+  "7s4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.382375
+  },
+  "8s4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.39587
+  },
+  "9s4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.406565
+  },
+  "Ts4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.43505
+  },
+  "Js4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.461695
+  },
+  "Qs4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.48962
+  },
+  "Ks4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.52199
+  },
+  "As4c": {
+    "card1Rank": 4,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.568615
+  },
+  "6c5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 1,
+    "equity": 0.43142
+  },
+  "7c5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.437785
+  },
+  "8c5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.446
+  },
+  "9c5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.458385
+  },
+  "Tc5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.47192
+  },
+  "Jc5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.4968
+  },
+  "Qc5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.52455
+  },
+  "Kc5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.555215
+  },
+  "Ac5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.601685
+  },
+  "5c2h": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.3436
+  },
+  "5c3h": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.36028
+  },
+  "5c4h": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.384025
+  },
+  "5h5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.60346
+  },
+  "6h5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.40031
+  },
+  "7h5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.403715
+  },
+  "8h5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.414705
+  },
+  "9h5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.42639
+  },
+  "Th5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.442725
+  },
+  "Jh5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.470255
+  },
+  "Qh5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.500135
+  },
+  "Kh5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.533835
+  },
+  "Ah5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.578405
+  },
+  "5c2s": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.345255
+  },
+  "5c3s": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.361705
+  },
+  "5c4s": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.381325
+  },
+  "5s5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.60369
+  },
+  "6s5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.401525
+  },
+  "7s5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.40582
+  },
+  "8s5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.414605
+  },
+  "9s5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.428685
+  },
+  "Ts5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.44228
+  },
+  "Js5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.472885
+  },
+  "Qs5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.500595
+  },
+  "Ks5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.53389
+  },
+  "As5c": {
+    "card1Rank": 5,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.578865
+  },
+  "7c6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 1,
+    "equity": 0.45222
+  },
+  "8c6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.46163
+  },
+  "9c6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.47695
+  },
+  "Tc6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.49286
+  },
+  "Jc6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.505395
+  },
+  "Qc6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.534485
+  },
+  "Kc6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.56695
+  },
+  "Ac6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.598285
+  },
+  "6c2h": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.3424
+  },
+  "6c3h": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.36106
+  },
+  "6c4h": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.378205
+  },
+  "6c5h": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.398235
+  },
+  "6h6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.631085
+  },
+  "7h6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.425815
+  },
+  "8h6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.43112
+  },
+  "9h6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.44529
+  },
+  "Th6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.45975
+  },
+  "Jh6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.478045
+  },
+  "Qh6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.507025
+  },
+  "Kh6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.541735
+  },
+  "Ah6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.573875
+  },
+  "6c2s": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.343245
+  },
+  "6c3s": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.36016
+  },
+  "6c4s": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.378675
+  },
+  "6c5s": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.397875
+  },
+  "6s6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.632685
+  },
+  "7s6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.42668
+  },
+  "8s6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.43164
+  },
+  "9s6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.44328
+  },
+  "Ts6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.459135
+  },
+  "Js6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.47925
+  },
+  "Qs6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.5097
+  },
+  "Ks6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.54333
+  },
+  "As6c": {
+    "card1Rank": 6,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.576305
+  },
+  "8c7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 1,
+    "equity": 0.48055
+  },
+  "9c7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.491155
+  },
+  "Tc7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.50769
+  },
+  "Jc7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.52149
+  },
+  "Qc7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.544
+  },
+  "Kc7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.577825
+  },
+  "Ac7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.61056
+  },
+  "7c2h": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.345835
+  },
+  "7c3h": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.36689
+  },
+  "7c4h": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.385955
+  },
+  "7c5h": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.405305
+  },
+  "7c6h": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.42444
+  },
+  "7h7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.662725
+  },
+  "8h7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.450145
+  },
+  "9h7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.46425
+  },
+  "Th7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.477715
+  },
+  "Jh7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.49804
+  },
+  "Qh7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.515925
+  },
+  "Kh7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.5503
+  },
+  "Ah7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.588185
+  },
+  "7c2s": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.345715
+  },
+  "7c3s": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.367985
+  },
+  "7c4s": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.386725
+  },
+  "7c5s": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.40542
+  },
+  "7c6s": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.423975
+  },
+  "7s7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.663235
+  },
+  "8s7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.45015
+  },
+  "9s7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.461965
+  },
+  "Ts7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.478575
+  },
+  "Js7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.497845
+  },
+  "Qs7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.519485
+  },
+  "Ks7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.552505
+  },
+  "As7c": {
+    "card1Rank": 7,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.589045
+  },
+  "9c8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 1,
+    "equity": 0.50874
+  },
+  "Tc8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.52117
+  },
+  "Jc8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.54086
+  },
+  "Qc8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.557405
+  },
+  "Kc8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.58265
+  },
+  "Ac8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.620555
+  },
+  "8c2h": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.3679
+  },
+  "8c3h": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.373345
+  },
+  "8c4h": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.393545
+  },
+  "8c5h": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.416545
+  },
+  "8c6h": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.43056
+  },
+  "8c7h": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.45158
+  },
+  "8h8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.69042
+  },
+  "9h8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.483635
+  },
+  "Th8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.494735
+  },
+  "Jh8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.515115
+  },
+  "Qh8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.537565
+  },
+  "Kh8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.558495
+  },
+  "Ah8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.600185
+  },
+  "8c2s": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.366545
+  },
+  "8c3s": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.37369
+  },
+  "8c4s": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.392175
+  },
+  "8c5s": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.415895
+  },
+  "8c6s": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.42996
+  },
+  "8c7s": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.44952
+  },
+  "8s8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.690145
+  },
+  "9s8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.481855
+  },
+  "Ts8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.500875
+  },
+  "Js8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.51603
+  },
+  "Qs8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.533925
+  },
+  "Ks8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.561215
+  },
+  "As8c": {
+    "card1Rank": 8,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.599355
+  },
+  "Tc9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 1,
+    "equity": 0.537935
+  },
+  "Jc9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.5572
+  },
+  "Qc9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.577325
+  },
+  "Kc9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.603415
+  },
+  "Ac9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.626415
+  },
+  "9c2h": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.39151
+  },
+  "9c3h": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.399775
+  },
+  "9c4h": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.40674
+  },
+  "9c5h": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.42691
+  },
+  "9c6h": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.44491
+  },
+  "9c7h": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.461675
+  },
+  "9c8h": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.483075
+  },
+  "9h9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.721785
+  },
+  "Th9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.51469
+  },
+  "Jh9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.534175
+  },
+  "Qh9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.553675
+  },
+  "Kh9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.57635
+  },
+  "Ah9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.609655
+  },
+  "9c2s": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.39152
+  },
+  "9c3s": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.39946
+  },
+  "9c4s": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.40944
+  },
+  "9c5s": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.428355
+  },
+  "9c6s": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.44269
+  },
+  "9c7s": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.46303
+  },
+  "9c8s": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.48004
+  },
+  "9s9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.72046
+  },
+  "Ts9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.51502
+  },
+  "Js9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.53165
+  },
+  "Qs9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.55458
+  },
+  "Ks9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.579395
+  },
+  "As9c": {
+    "card1Rank": 9,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.60687
+  },
+  "JcTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 1,
+    "equity": 0.57571
+  },
+  "QcTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.593365
+  },
+  "KcTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.617815
+  },
+  "AcTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.645825
+  },
+  "Tc2h": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.416665
+  },
+  "Tc3h": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.424475
+  },
+  "Tc4h": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.434515
+  },
+  "Tc5h": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.444105
+  },
+  "Tc6h": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.465105
+  },
+  "Tc7h": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.48008
+  },
+  "Tc8h": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.499125
+  },
+  "Tc9h": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.515095
+  },
+  "ThTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.75112
+  },
+  "JhTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.54803
+  },
+  "QhTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.575205
+  },
+  "KhTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.59705
+  },
+  "AhTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.62416
+  },
+  "Tc2s": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.41911
+  },
+  "Tc3s": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.426845
+  },
+  "Tc4s": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.435635
+  },
+  "Tc5s": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.446465
+  },
+  "Tc6s": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.458315
+  },
+  "Tc7s": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.48088
+  },
+  "Tc8s": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.496315
+  },
+  "Tc9s": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.5159
+  },
+  "TsTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.750635
+  },
+  "JsTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.555555
+  },
+  "QsTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.572615
+  },
+  "KsTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.598985
+  },
+  "AsTc": {
+    "card1Rank": 10,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.62628
+  },
+  "QcJc": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 1,
+    "equity": 0.600585
+  },
+  "KcJc": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.62499
+  },
+  "AcJc": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.652675
+  },
+  "Jc2h": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.443445
+  },
+  "Jc3h": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.451235
+  },
+  "Jc4h": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.46064
+  },
+  "Jc5h": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.47156
+  },
+  "Jc6h": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.47965
+  },
+  "Jc7h": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.49573
+  },
+  "Jc8h": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.514445
+  },
+  "Jc9h": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.53454
+  },
+  "JcTh": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.551365
+  },
+  "JhJc": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.77449
+  },
+  "QhJc": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.579935
+  },
+  "KhJc": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.60771
+  },
+  "AhJc": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.636525
+  },
+  "Jc2s": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.43986
+  },
+  "Jc3s": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.45291
+  },
+  "Jc4s": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.46466
+  },
+  "Jc5s": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.47101
+  },
+  "Jc6s": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.48061
+  },
+  "Jc7s": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.49818
+  },
+  "Jc8s": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.51429
+  },
+  "Jc9s": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.53307
+  },
+  "JcTs": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.550445
+  },
+  "JsJc": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.776475
+  },
+  "QsJc": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.58014
+  },
+  "KsJc": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.60593
+  },
+  "AsJc": {
+    "card1Rank": 11,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.635385
+  },
+  "KcQc": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 1,
+    "equity": 0.63425
+  },
+  "AcQc": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.664325
+  },
+  "Qc2h": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.474165
+  },
+  "Qc3h": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.484165
+  },
+  "Qc4h": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.490855
+  },
+  "Qc5h": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.499735
+  },
+  "Qc6h": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.51047
+  },
+  "Qc7h": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.51819
+  },
+  "Qc8h": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.534675
+  },
+  "Qc9h": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.55069
+  },
+  "QcTh": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.573395
+  },
+  "QcJh": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.580745
+  },
+  "QhQc": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.798845
+  },
+  "KhQc": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.61292
+  },
+  "AhQc": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.64705
+  },
+  "Qc2s": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.47497
+  },
+  "Qc3s": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.48284
+  },
+  "Qc4s": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.49041
+  },
+  "Qc5s": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.501635
+  },
+  "Qc6s": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.508745
+  },
+  "Qc7s": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.519535
+  },
+  "Qc8s": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.537295
+  },
+  "Qc9s": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.553115
+  },
+  "QcTs": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.57317
+  },
+  "QcJs": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.58223
+  },
+  "QsQc": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.798515
+  },
+  "KsQc": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.61493
+  },
+  "AsQc": {
+    "card1Rank": 12,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.645505
+  },
+  "AcKc": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 1,
+    "equity": 0.67275
+  },
+  "Kc2h": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.50498
+  },
+  "Kc3h": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.51207
+  },
+  "Kc4h": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.52384
+  },
+  "Kc5h": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.53271
+  },
+  "Kc6h": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.542175
+  },
+  "Kc7h": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.548865
+  },
+  "Kc8h": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.561545
+  },
+  "Kc9h": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.57915
+  },
+  "KcTh": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.59799
+  },
+  "KcJh": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.609375
+  },
+  "KcQh": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.617415
+  },
+  "KhKc": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.825585
+  },
+  "AhKc": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.65299
+  },
+  "Kc2s": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.5041
+  },
+  "Kc3s": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.515795
+  },
+  "Kc4s": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.521355
+  },
+  "Kc5s": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.531255
+  },
+  "Kc6s": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.539785
+  },
+  "Kc7s": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.55321
+  },
+  "Kc8s": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.562265
+  },
+  "Kc9s": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.57518
+  },
+  "KcTs": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.595745
+  },
+  "KcJs": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.60554
+  },
+  "KcQs": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.61246
+  },
+  "KsKc": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.82191
+  },
+  "AsKc": {
+    "card1Rank": 13,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.6553
+  },
+  "Ac2h": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 2,
+    "equity": 0.55163
+  },
+  "Ac3h": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.561555
+  },
+  "Ac4h": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.567205
+  },
+  "Ac5h": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.57593
+  },
+  "Ac6h": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.578405
+  },
+  "Ac7h": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.587805
+  },
+  "Ac8h": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.60065
+  },
+  "Ac9h": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.60907
+  },
+  "AcTh": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.62715
+  },
+  "AcJh": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.63365
+  },
+  "AcQh": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.64449
+  },
+  "AcKh": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.6487
+  },
+  "AhAc": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.850355
+  },
+  "Ac2s": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.54907
+  },
+  "Ac3s": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.55646
+  },
+  "Ac4s": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.566945
+  },
+  "Ac5s": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.579915
+  },
+  "Ac6s": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.57714
+  },
+  "Ac7s": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.5882
+  },
+  "Ac8s": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.59757
+  },
+  "Ac9s": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.60611
+  },
+  "AcTs": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.62751
+  },
+  "AcJs": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.63758
+  },
+  "AcQs": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.642055
+  },
+  "AcKs": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.65208
+  },
+  "AsAc": {
+    "card1Rank": 14,
+    "card1Suit": 1,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.852035
+  },
+  "3h2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 2,
+    "equity": 0.35979
+  },
+  "4h2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.366485
+  },
+  "5h2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.37817
+  },
+  "6h2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.376675
+  },
+  "7h2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.380415
+  },
+  "8h2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.40496
+  },
+  "9h2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.425625
+  },
+  "Th2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.4499
+  },
+  "Jh2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.47047
+  },
+  "Qh2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.503825
+  },
+  "Kh2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.530825
+  },
+  "Ah2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.57162
+  },
+  "2s2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.50381
+  },
+  "3s2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.32177
+  },
+  "4s2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.330275
+  },
+  "5s2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.34474
+  },
+  "6s2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.33826
+  },
+  "7s2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.34451
+  },
+  "8s2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.366705
+  },
+  "9s2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.390705
+  },
+  "Ts2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.419585
+  },
+  "Js2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.44358
+  },
+  "Qs2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.471155
+  },
+  "Ks2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.505905
+  },
+  "As2h": {
+    "card1Rank": 2,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.54867
+  },
+  "4h3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 2,
+    "equity": 0.3848
+  },
+  "5h3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.393365
+  },
+  "6h3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.39649
+  },
+  "7h3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.398165
+  },
+  "8h3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.409025
+  },
+  "9h3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.43237
+  },
+  "Th3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.45403
+  },
+  "Jh3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.48288
+  },
+  "Qh3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.509255
+  },
+  "Kh3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.539675
+  },
+  "Ah3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.579235
+  },
+  "3h2s": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.325165
+  },
+  "3s3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.534035
+  },
+  "4s3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.350985
+  },
+  "5s3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.361615
+  },
+  "6s3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.359725
+  },
+  "7s3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.367235
+  },
+  "8s3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.37567
+  },
+  "9s3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.39873
+  },
+  "Ts3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.426495
+  },
+  "Js3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.4525
+  },
+  "Qs3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.481365
+  },
+  "Ks3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.51402
+  },
+  "As3h": {
+    "card1Rank": 3,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.558045
+  },
+  "5h4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 2,
+    "equity": 0.413195
+  },
+  "6h4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.411935
+  },
+  "7h4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.419205
+  },
+  "8h4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.429365
+  },
+  "9h4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.44007
+  },
+  "Th4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.4667
+  },
+  "Jh4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.4918
+  },
+  "Qh4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.51818
+  },
+  "Kh4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.55046
+  },
+  "Ah4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.58897
+  },
+  "4h2s": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.332405
+  },
+  "4h3s": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.34932
+  },
+  "4s4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.56801
+  },
+  "5s4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.38026
+  },
+  "6s4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.37877
+  },
+  "7s4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.38452
+  },
+  "8s4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.39429
+  },
+  "9s4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.410515
+  },
+  "Ts4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.43555
+  },
+  "Js4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.46278
+  },
+  "Qs4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.48914
+  },
+  "Ks4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.523915
+  },
+  "As4h": {
+    "card1Rank": 4,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.56917
+  },
+  "6h5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 2,
+    "equity": 0.43435
+  },
+  "7h5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.43437
+  },
+  "8h5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.445195
+  },
+  "9h5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.4584
+  },
+  "Th5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.472365
+  },
+  "Jh5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.500005
+  },
+  "Qh5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.52838
+  },
+  "Kh5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.556165
+  },
+  "Ah5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.598935
+  },
+  "5h2s": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.342885
+  },
+  "5h3s": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.361225
+  },
+  "5h4s": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.38377
+  },
+  "5s5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.60149
+  },
+  "6s5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.40068
+  },
+  "7s5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.40356
+  },
+  "8s5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.414915
+  },
+  "9s5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.42837
+  },
+  "Ts5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.44542
+  },
+  "Js5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.469415
+  },
+  "Qs5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.499915
+  },
+  "Ks5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.531465
+  },
+  "As5h": {
+    "card1Rank": 5,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.576895
+  },
+  "7h6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 2,
+    "equity": 0.45327
+  },
+  "8h6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.461955
+  },
+  "9h6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.472435
+  },
+  "Th6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.490565
+  },
+  "Jh6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.504475
+  },
+  "Qh6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.53652
+  },
+  "Kh6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.5664
+  },
+  "Ah6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.59725
+  },
+  "6h2s": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.33923
+  },
+  "6h3s": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.360985
+  },
+  "6h4s": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.379375
+  },
+  "6h5s": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.397285
+  },
+  "6s6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.63416
+  },
+  "7s6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.42388
+  },
+  "8s6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.43199
+  },
+  "9s6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.44807
+  },
+  "Ts6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.461315
+  },
+  "Js6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.479945
+  },
+  "Qs6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.51028
+  },
+  "Ks6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.541895
+  },
+  "As6h": {
+    "card1Rank": 6,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.574275
+  },
+  "8h7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 2,
+    "equity": 0.48001
+  },
+  "9h7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.489475
+  },
+  "Th7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.508075
+  },
+  "Jh7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.520885
+  },
+  "Qh7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.541875
+  },
+  "Kh7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.573685
+  },
+  "Ah7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.606785
+  },
+  "7h2s": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.34619
+  },
+  "7h3s": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.3666
+  },
+  "7h4s": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.38375
+  },
+  "7h5s": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.4053
+  },
+  "7h6s": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.42302
+  },
+  "7s7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.66299
+  },
+  "8s7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.44889
+  },
+  "9s7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.46194
+  },
+  "Ts7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.479865
+  },
+  "Js7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.498105
+  },
+  "Qs7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.516715
+  },
+  "Ks7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.55138
+  },
+  "As7h": {
+    "card1Rank": 7,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.58732
+  },
+  "9h8h": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 2,
+    "equity": 0.507375
+  },
+  "Th8h": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.52243
+  },
+  "Jh8h": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.53833
+  },
+  "Qh8h": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.55998
+  },
+  "Kh8h": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.583035
+  },
+  "Ah8h": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.620645
+  },
+  "8h2s": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.367805
+  },
+  "8h3s": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.376025
+  },
+  "8h4s": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.395615
+  },
+  "8h5s": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.417625
+  },
+  "8h6s": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.434205
+  },
+  "8h7s": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.452575
+  },
+  "8s8h": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.689305
+  },
+  "9s8h": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.48006
+  },
+  "Ts8h": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.49524
+  },
+  "Js8h": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.515635
+  },
+  "Qs8h": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.53466
+  },
+  "Ks8h": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.561205
+  },
+  "As8h": {
+    "card1Rank": 8,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.59595
+  },
+  "Th9h": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 2,
+    "equity": 0.5365
+  },
+  "Jh9h": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.5574
+  },
+  "Qh9h": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.574015
+  },
+  "Kh9h": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.60181
+  },
+  "Ah9h": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.627815
+  },
+  "9h2s": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.39284
+  },
+  "9h3s": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.398675
+  },
+  "9h4s": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.40792
+  },
+  "9h5s": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.42589
+  },
+  "9h6s": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.444545
+  },
+  "9h7s": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.46391
+  },
+  "9h8s": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.48033
+  },
+  "9s9h": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.720055
+  },
+  "Ts9h": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.51522
+  },
+  "Js9h": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.535195
+  },
+  "Qs9h": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.554215
+  },
+  "Ks9h": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.58031
+  },
+  "As9h": {
+    "card1Rank": 9,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.60638
+  },
+  "JhTh": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 2,
+    "equity": 0.57429
+  },
+  "QhTh": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.59532
+  },
+  "KhTh": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.62166
+  },
+  "AhTh": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.64763
+  },
+  "Th2s": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.41694
+  },
+  "Th3s": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.42565
+  },
+  "Th4s": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.4361
+  },
+  "Th5s": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.440655
+  },
+  "Th6s": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.461175
+  },
+  "Th7s": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.480685
+  },
+  "Th8s": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.49345
+  },
+  "Th9s": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.51456
+  },
+  "TsTh": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.748705
+  },
+  "JsTh": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.55299
+  },
+  "QsTh": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.57133
+  },
+  "KsTh": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.594765
+  },
+  "AsTh": {
+    "card1Rank": 10,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.6249
+  },
+  "QhJh": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 2,
+    "equity": 0.6048
+  },
+  "KhJh": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.62456
+  },
+  "AhJh": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.65479
+  },
+  "Jh2s": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.44181
+  },
+  "Jh3s": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.45068
+  },
+  "Jh4s": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.459865
+  },
+  "Jh5s": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.46971
+  },
+  "Jh6s": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.477985
+  },
+  "Jh7s": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.498405
+  },
+  "Jh8s": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.51303
+  },
+  "Jh9s": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.528885
+  },
+  "JhTs": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.551675
+  },
+  "JsJh": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.774935
+  },
+  "QsJh": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.57918
+  },
+  "KsJh": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.60703
+  },
+  "AsJh": {
+    "card1Rank": 11,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.6349
+  },
+  "KhQh": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 2,
+    "equity": 0.635395
+  },
+  "AhQh": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.660105
+  },
+  "Qh2s": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.470605
+  },
+  "Qh3s": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.47987
+  },
+  "Qh4s": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.491555
+  },
+  "Qh5s": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.505445
+  },
+  "Qh6s": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.511715
+  },
+  "Qh7s": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.51801
+  },
+  "Qh8s": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.53822
+  },
+  "Qh9s": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.553865
+  },
+  "QhTs": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.57048
+  },
+  "QhJs": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.57865
+  },
+  "QsQh": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.800235
+  },
+  "KsQh": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.6171
+  },
+  "AsQh": {
+    "card1Rank": 12,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.645175
+  },
+  "AhKh": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 2,
+    "equity": 0.6704
+  },
+  "Kh2s": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.505335
+  },
+  "Kh3s": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.514475
+  },
+  "Kh4s": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.525165
+  },
+  "Kh5s": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.53196
+  },
+  "Kh6s": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.54345
+  },
+  "Kh7s": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.551085
+  },
+  "Kh8s": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.55582
+  },
+  "Kh9s": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.57744
+  },
+  "KhTs": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.596945
+  },
+  "KhJs": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.605135
+  },
+  "KhQs": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.615235
+  },
+  "KsKh": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.82404
+  },
+  "AsKh": {
+    "card1Rank": 13,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.651155
+  },
+  "Ah2s": {
+    "card1Rank": 14,
+    "card1Suit": 2,
+    "card2Rank": 2,
+    "card2Suit": 3,
+    "equity": 0.550525
+  },
+  "Ah3s": {
+    "card1Rank": 14,
+    "card1Suit": 2,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.56045
+  },
+  "Ah4s": {
+    "card1Rank": 14,
+    "card1Suit": 2,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.567055
+  },
+  "Ah5s": {
+    "card1Rank": 14,
+    "card1Suit": 2,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.578025
+  },
+  "Ah6s": {
+    "card1Rank": 14,
+    "card1Suit": 2,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.58023
+  },
+  "Ah7s": {
+    "card1Rank": 14,
+    "card1Suit": 2,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.587885
+  },
+  "Ah8s": {
+    "card1Rank": 14,
+    "card1Suit": 2,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.60056
+  },
+  "Ah9s": {
+    "card1Rank": 14,
+    "card1Suit": 2,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.60686
+  },
+  "AhTs": {
+    "card1Rank": 14,
+    "card1Suit": 2,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.628115
+  },
+  "AhJs": {
+    "card1Rank": 14,
+    "card1Suit": 2,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.63414
+  },
+  "AhQs": {
+    "card1Rank": 14,
+    "card1Suit": 2,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.644165
+  },
+  "AhKs": {
+    "card1Rank": 14,
+    "card1Suit": 2,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.653355
+  },
+  "AsAh": {
+    "card1Rank": 14,
+    "card1Suit": 2,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.85309
+  },
+  "3s2s": {
+    "card1Rank": 2,
+    "card1Suit": 3,
+    "card2Rank": 3,
+    "card2Suit": 3,
+    "equity": 0.35964
+  },
+  "4s2s": {
+    "card1Rank": 2,
+    "card1Suit": 3,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.368435
+  },
+  "5s2s": {
+    "card1Rank": 2,
+    "card1Suit": 3,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.378965
+  },
+  "6s2s": {
+    "card1Rank": 2,
+    "card1Suit": 3,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.37806
+  },
+  "7s2s": {
+    "card1Rank": 2,
+    "card1Suit": 3,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.383215
+  },
+  "8s2s": {
+    "card1Rank": 2,
+    "card1Suit": 3,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.40322
+  },
+  "9s2s": {
+    "card1Rank": 2,
+    "card1Suit": 3,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.424665
+  },
+  "Ts2s": {
+    "card1Rank": 2,
+    "card1Suit": 3,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.44818
+  },
+  "Js2s": {
+    "card1Rank": 2,
+    "card1Suit": 3,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.474125
+  },
+  "Qs2s": {
+    "card1Rank": 2,
+    "card1Suit": 3,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.50022
+  },
+  "Ks2s": {
+    "card1Rank": 2,
+    "card1Suit": 3,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.531645
+  },
+  "As2s": {
+    "card1Rank": 2,
+    "card1Suit": 3,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.575465
+  },
+  "4s3s": {
+    "card1Rank": 3,
+    "card1Suit": 3,
+    "card2Rank": 4,
+    "card2Suit": 3,
+    "equity": 0.385595
+  },
+  "5s3s": {
+    "card1Rank": 3,
+    "card1Suit": 3,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.395665
+  },
+  "6s3s": {
+    "card1Rank": 3,
+    "card1Suit": 3,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.39553
+  },
+  "7s3s": {
+    "card1Rank": 3,
+    "card1Suit": 3,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.40085
+  },
+  "8s3s": {
+    "card1Rank": 3,
+    "card1Suit": 3,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.408535
+  },
+  "9s3s": {
+    "card1Rank": 3,
+    "card1Suit": 3,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.43284
+  },
+  "Ts3s": {
+    "card1Rank": 3,
+    "card1Suit": 3,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.456585
+  },
+  "Js3s": {
+    "card1Rank": 3,
+    "card1Suit": 3,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.484105
+  },
+  "Qs3s": {
+    "card1Rank": 3,
+    "card1Suit": 3,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.509755
+  },
+  "Ks3s": {
+    "card1Rank": 3,
+    "card1Suit": 3,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.53931
+  },
+  "As3s": {
+    "card1Rank": 3,
+    "card1Suit": 3,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.57876
+  },
+  "5s4s": {
+    "card1Rank": 4,
+    "card1Suit": 3,
+    "card2Rank": 5,
+    "card2Suit": 3,
+    "equity": 0.413055
+  },
+  "6s4s": {
+    "card1Rank": 4,
+    "card1Suit": 3,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.41308
+  },
+  "7s4s": {
+    "card1Rank": 4,
+    "card1Suit": 3,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.41702
+  },
+  "8s4s": {
+    "card1Rank": 4,
+    "card1Suit": 3,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.42941
+  },
+  "9s4s": {
+    "card1Rank": 4,
+    "card1Suit": 3,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.436985
+  },
+  "Ts4s": {
+    "card1Rank": 4,
+    "card1Suit": 3,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.467425
+  },
+  "Js4s": {
+    "card1Rank": 4,
+    "card1Suit": 3,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.49142
+  },
+  "Qs4s": {
+    "card1Rank": 4,
+    "card1Suit": 3,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.518585
+  },
+  "Ks4s": {
+    "card1Rank": 4,
+    "card1Suit": 3,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.550145
+  },
+  "As4s": {
+    "card1Rank": 4,
+    "card1Suit": 3,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.59147
+  },
+  "6s5s": {
+    "card1Rank": 5,
+    "card1Suit": 3,
+    "card2Rank": 6,
+    "card2Suit": 3,
+    "equity": 0.43151
+  },
+  "7s5s": {
+    "card1Rank": 5,
+    "card1Suit": 3,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.435075
+  },
+  "8s5s": {
+    "card1Rank": 5,
+    "card1Suit": 3,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.44448
+  },
+  "9s5s": {
+    "card1Rank": 5,
+    "card1Suit": 3,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.45846
+  },
+  "Ts5s": {
+    "card1Rank": 5,
+    "card1Suit": 3,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.47355
+  },
+  "Js5s": {
+    "card1Rank": 5,
+    "card1Suit": 3,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.5021
+  },
+  "Qs5s": {
+    "card1Rank": 5,
+    "card1Suit": 3,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.526435
+  },
+  "Ks5s": {
+    "card1Rank": 5,
+    "card1Suit": 3,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.558785
+  },
+  "As5s": {
+    "card1Rank": 5,
+    "card1Suit": 3,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.598525
+  },
+  "7s6s": {
+    "card1Rank": 6,
+    "card1Suit": 3,
+    "card2Rank": 7,
+    "card2Suit": 3,
+    "equity": 0.452125
+  },
+  "8s6s": {
+    "card1Rank": 6,
+    "card1Suit": 3,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.46165
+  },
+  "9s6s": {
+    "card1Rank": 6,
+    "card1Suit": 3,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.473895
+  },
+  "Ts6s": {
+    "card1Rank": 6,
+    "card1Suit": 3,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.48972
+  },
+  "Js6s": {
+    "card1Rank": 6,
+    "card1Suit": 3,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.504925
+  },
+  "Qs6s": {
+    "card1Rank": 6,
+    "card1Suit": 3,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.538595
+  },
+  "Ks6s": {
+    "card1Rank": 6,
+    "card1Suit": 3,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.56798
+  },
+  "As6s": {
+    "card1Rank": 6,
+    "card1Suit": 3,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.59811
+  },
+  "8s7s": {
+    "card1Rank": 7,
+    "card1Suit": 3,
+    "card2Rank": 8,
+    "card2Suit": 3,
+    "equity": 0.476325
+  },
+  "9s7s": {
+    "card1Rank": 7,
+    "card1Suit": 3,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.49177
+  },
+  "Ts7s": {
+    "card1Rank": 7,
+    "card1Suit": 3,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.507985
+  },
+  "Js7s": {
+    "card1Rank": 7,
+    "card1Suit": 3,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.52166
+  },
+  "Qs7s": {
+    "card1Rank": 7,
+    "card1Suit": 3,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.542805
+  },
+  "Ks7s": {
+    "card1Rank": 7,
+    "card1Suit": 3,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.577465
+  },
+  "As7s": {
+    "card1Rank": 7,
+    "card1Suit": 3,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.607905
+  },
+  "9s8s": {
+    "card1Rank": 8,
+    "card1Suit": 3,
+    "card2Rank": 9,
+    "card2Suit": 3,
+    "equity": 0.510095
+  },
+  "Ts8s": {
+    "card1Rank": 8,
+    "card1Suit": 3,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.5204
+  },
+  "Js8s": {
+    "card1Rank": 8,
+    "card1Suit": 3,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.53898
+  },
+  "Qs8s": {
+    "card1Rank": 8,
+    "card1Suit": 3,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.562615
+  },
+  "Ks8s": {
+    "card1Rank": 8,
+    "card1Suit": 3,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.586105
+  },
+  "As8s": {
+    "card1Rank": 8,
+    "card1Suit": 3,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.61795
+  },
+  "Ts9s": {
+    "card1Rank": 9,
+    "card1Suit": 3,
+    "card2Rank": 10,
+    "card2Suit": 3,
+    "equity": 0.540505
+  },
+  "Js9s": {
+    "card1Rank": 9,
+    "card1Suit": 3,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.5546
+  },
+  "Qs9s": {
+    "card1Rank": 9,
+    "card1Suit": 3,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.579015
+  },
+  "Ks9s": {
+    "card1Rank": 9,
+    "card1Suit": 3,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.59813
+  },
+  "As9s": {
+    "card1Rank": 9,
+    "card1Suit": 3,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.628095
+  },
+  "JsTs": {
+    "card1Rank": 10,
+    "card1Suit": 3,
+    "card2Rank": 11,
+    "card2Suit": 3,
+    "equity": 0.575165
+  },
+  "QsTs": {
+    "card1Rank": 10,
+    "card1Suit": 3,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.597135
+  },
+  "KsTs": {
+    "card1Rank": 10,
+    "card1Suit": 3,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.617575
+  },
+  "AsTs": {
+    "card1Rank": 10,
+    "card1Suit": 3,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.64643
+  },
+  "QsJs": {
+    "card1Rank": 11,
+    "card1Suit": 3,
+    "card2Rank": 12,
+    "card2Suit": 3,
+    "equity": 0.601805
+  },
+  "KsJs": {
+    "card1Rank": 11,
+    "card1Suit": 3,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.624565
+  },
+  "AsJs": {
+    "card1Rank": 11,
+    "card1Suit": 3,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.654165
+  },
+  "KsQs": {
+    "card1Rank": 12,
+    "card1Suit": 3,
+    "card2Rank": 13,
+    "card2Suit": 3,
+    "equity": 0.63196
+  },
+  "AsQs": {
+    "card1Rank": 12,
+    "card1Suit": 3,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.661665
+  },
+  "AsKs": {
+    "card1Rank": 13,
+    "card1Suit": 3,
+    "card2Rank": 14,
+    "card2Suit": 3,
+    "equity": 0.67135
+  }
+}
