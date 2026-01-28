@@ -6,6 +6,11 @@ The engine supports both deck-based random opponents and explicit opponent range
 
 Still in development
 
+## The Villain
+The villain makes decisions based on hero and GTO.
+
+Controller -> Villain -> Analyzer -> DecisionChooser
+
 ## Equity Calculation
 Equity calculation in this engine is done through a Monte Carlo simulation rather than a full enumeration simulation, as there are too many enumerations (especially pre-flop) to simulate $\binom{50}{2} \times \binom{48}{5}$.
 
