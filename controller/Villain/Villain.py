@@ -7,7 +7,6 @@ class Villain:
 
     def __init__(self, stack: float) -> None:
         self.analyzer = Analyzer()
-
         self.decisionChooser = DecisionChooser()
 
     def choose_action(self, state: GameState) -> Action:
