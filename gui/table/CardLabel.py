@@ -1,6 +1,6 @@
 from PyQt6.QtWidgets import QLabel
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, QSize
 
 from main.model.Card import Card
 from main.model.Rank import Rank
@@ -52,7 +52,10 @@ class CardLabel(QLabel):
 
         dpr = self.devicePixelRatioF()
 
-        target_size = self.size() * dpr
+        margin = 2
+        target_size = QSize(
+            int((self.width() - margin * 2) * dpr),
+            int((self.height() - margin * 2) * dpr))
 
         scaled = pixmap.scaled(
             target_size,
