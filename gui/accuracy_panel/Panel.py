@@ -12,7 +12,7 @@ class Panel(QWidget):
         self.controller = controller
         self.controller.accuracy_panel = self
         self.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Expanding)
-        self.setFixedWidth(320)
+        self.setFixedWidth(350)
 
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)

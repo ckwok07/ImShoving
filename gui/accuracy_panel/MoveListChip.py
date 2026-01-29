@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QWidget, QLabel, QHBoxLayout, QVBoxLayout, QGridLayout
+from PyQt6.QtWidgets import QWidget, QLabel, QHBoxLayout, QVBoxLayout, QGridLayout, QSizePolicy
 from PyQt6.QtCore import Qt, QPointF, QRectF
 from gui.table.CardLabel import CardLabel
 from main.model.Card import Card
@@ -30,6 +30,7 @@ class MoveListChip(QWidget):
         layout = QHBoxLayout(self)
         layout.setContentsMargins(8, 3, 8, 3)
         layout.setSpacing(6)
+        self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
 
         self.chip = QWidget()
         chip_layout = QVBoxLayout(self.chip)
