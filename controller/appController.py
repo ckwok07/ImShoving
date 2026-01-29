@@ -156,12 +156,10 @@ class AppController:
         elif self.state.street == "SHOWDOWN":
             return
 
-
         index = STREETS.index(self.state.street)
         nxt = STREETS[index + 1]
         self.state.street = nxt
         self.state.actions.clear()
-
 
         if nxt == "FLOP":
             flop = self.deck.deal(3)
@@ -185,13 +183,18 @@ class AppController:
         if self.state_change:
             self.state_change(self.state)
         
+        if nxt == "FLOP":
+            animation_time = 3 * 500 + 400
+        else:
+            animation_time = 1 * 500 + 400
+        
         if self.state.hero_all_in and self.state.villain_all_in:
-            self.advance_street()
+            QTimer.singleShot(animation_time, lambda: self.advance_street())
         elif (self.state.hero_all_in or self.state.villain_all_in) and self.state.hero_amt == self.state.villain_amt:
-            self.advance_street()
+            QTimer.singleShot(animation_time, lambda: self.advance_street())
         else:
             if self.state.to_act_index == 1:
-                self.villain_act()
+                QTimer.singleShot(animation_time, self.villain_act)
         
         self.cached_hero_equity = None
         self.compute_hero_equity()
@@ -204,10 +207,8 @@ class AppController:
         if self.state.hero_all_in and self.state.villain_all_in:
             return True
         
-        # Count actions this street (actions get cleared in advance_street)
         action_count = len(self.state.actions)
         
-        # Need at least one action from each player
         if action_count < 2 and not (self.state.hero_all_in or self.state.villain_all_in):
             return False
 

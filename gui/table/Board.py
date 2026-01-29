@@ -17,13 +17,23 @@ class Board(QWidget):
             cardLabel = CardLabel()
             self.cards.append(cardLabel)
             self.mainLayout.addWidget(cardLabel)
+        
+        self.previous_board_size = 0
 
     def set_board(self, cards: list[Card]) -> None:
-        for cardLabel in self.cards:
-            cardLabel.clear()
-
         if not cards:
+            for cardLabel in self.cards:
+                cardLabel.clear()
+            self.previous_board_size = 0
             return
 
-        for cardLabel, card in zip(self.cards, cards):
-            cardLabel.set_card(card)
+        current_size = len(cards)
+        
+        for i in range(self.previous_board_size, current_size):
+            delay = (i - self.previous_board_size) * 500
+            self.cards[i].set_card(cards[i], face_up=True, animate=True, delay=delay)
+        
+        for i in range(current_size, 5):
+            self.cards[i].clear()
+        
+        self.previous_board_size = current_size

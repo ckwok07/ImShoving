@@ -107,18 +107,17 @@ class Table(QWidget):
         self.on_state_change(self.controller.state)
 
     def on_state_change(self, state: GameState) -> None:
-        state.animating = True
+        if state.street == "PREFLOP" and len(state.board) == 0:
+            self.board.previous_board_size = 0
+        
         self.pot_label.set_pot(state.pot)
-        self.board.set_board(state.board)
         self.hero_hand.set_hand(state.hero_hand)
         self.hero_stack.set_hero_stack(state.hero_stack)
         self.villain_stack.set_villain_stack(state.villain_stack)
         self.villain_hand.set_hand(state.villain_hand, state.show_villain_cards)
-        state.animating = False
 
         actions = self.controller.get_hero_legal_actions()
         self.actions.set_actionGrid(actions)
-
 
         if state.button_index == 0:
             self.hero_button_pos()
@@ -132,6 +131,8 @@ class Table(QWidget):
         recent_actions = state.actions_list
         self.action_history.set_actions(recent_actions)
         QTimer.singleShot(0, self.scroll_actions_to_end)
+        
+        QTimer.singleShot(500, lambda: self.board.set_board(state.board))
 
 
 
