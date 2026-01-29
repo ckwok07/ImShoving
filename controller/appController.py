@@ -398,9 +398,17 @@ class AppController:
         self.state.show_villain_cards = False
 
         self.state.hand_over = False
+        self.cached_hero_equity = None
+
+        self.state.hero_hand = None
+        self.state.villain_hand = None
+        self.state.board.clear()
+
+        if self.state_change:
+            self.state_change(self.state)
+
         self.deck = Deck()
         self.deck.shuffle()
-        self.cached_hero_equity = None
         
 
         self.state.street = "PREFLOP"
@@ -491,7 +499,9 @@ class AppController:
 
         if self.state.animating:
             return actions
-
+        
+        if self.state.hero_hand is None:
+            return actions
 
         if self.state.hero_all_in or self.state.hero_stack == 0:
             return actions
@@ -546,6 +556,9 @@ class AppController:
         return actions
     
     def compute_hero_equity(self) -> float:
+        if self.state.hero_hand is None:
+            return None
+        
         if self.cached_hero_equity is None:
             if self._equity_thread is None or not self._equity_thread.is_alive():
                 def calculate():
@@ -560,7 +573,11 @@ class AppController:
         return self.cached_hero_equity
     
     def compute_action_EVs(self, actions: list[Action]) -> list[Action]:
+
         for action in actions:
+            if self.cached_hero_equity is None:
+                action.ev = 0
+                continue
             if action.name == "FOLD":
                 action.ev = 0
             elif action.name == "CHECK":
