@@ -5,6 +5,7 @@ from controller.appController import AppController
 from controller.gameState import GameState
 from gui.table.Table import Table
 from gui.accuracy_panel.Panel import Panel
+from gui.right_panel.RPanel import RPanel
 
 def main() -> None:
     app = QApplication(sys.argv)
@@ -21,11 +22,6 @@ def main() -> None:
     central = QWidget()
     layout = QHBoxLayout(central)
 
-    left_panel = QLabel("left_panel")
-    left_panel.setStyleSheet("background: #191919; color: white;")
-    right_panel = QLabel("right_panel")
-    right_panel.setStyleSheet("background: #191919; color: white;")
-
     state = GameState(street = "PREFLOP", 
                       board = [], 
                       pot = 0,
@@ -39,6 +35,7 @@ def main() -> None:
     controller = AppController(state)
     table = Table(controller)
     panel = Panel(controller)
+    rpanel = RPanel(controller)
 
     def on_state_change(state):
         table.on_state_change(state)
@@ -48,7 +45,7 @@ def main() -> None:
 
     layout.addWidget(panel)
     layout.addWidget(table, 1)
-    layout.addWidget(right_panel)
+    layout.addWidget(rpanel)
 
     window.setCentralWidget(central)
     window.show()

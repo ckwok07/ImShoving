@@ -18,7 +18,7 @@ def main():
 
     output_path = os.path.join("scripts", "data", "hand_equities_aggregated.json")
 
-    result = defaultdict(lambda: {"equity": None, "equity_list": [], "hand_list": []})
+    result = defaultdict(lambda: {"avg_equity": None, "equity_list": [], "hand_list": []})
     for key, values in data.items():
         hand = key_to_hand(key)
         result[hand]["equity_list"].append(values["equity"])
@@ -27,7 +27,7 @@ def main():
     result = dict(result)
 
     for hand in result:
-        result[hand]["equity"] = sum(result[hand]["equity_list"]) / len(result[hand]["hand_list"])
+        result[hand]["avg_equity"] = sum(result[hand]["equity_list"]) / len(result[hand]["hand_list"])
 
     with open(output_path, "w") as f:
         json.dump(result, f, indent=2)
