@@ -8,6 +8,7 @@ import random
 import threading
 from typing import Optional, Callable
 from PyQt6.QtCore import Qt, QTimer
+from controller.villain.Villain import Villain
 
 
 class AppController:
@@ -16,6 +17,7 @@ class AppController:
         self.deck = Deck()
         self.deck.shuffle()
         self.state_change = None
+        self.villain = Villain()
         self.new_hand()
         self.cached_hero_equity = None
         self.decision_quality = []
@@ -388,6 +390,9 @@ class AppController:
         self.state.villain_raise_count + 
         self.state.villain_bet_count)
 
+        if self.state.actions_list: 
+            self.villain.observe_hero(self.state)
+
         self.state.button_index = (self.state.button_index + 1) % 2
         
         self.state.to_act_index = self.state.button_index
@@ -408,7 +413,6 @@ class AppController:
         
 
         self.state.street = "PREFLOP"
-        self.state.board.clear()
 
         self.state.current_bet = 0
         self.state.hero_amt = 0

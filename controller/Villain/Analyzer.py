@@ -3,8 +3,7 @@ from controller.action import Action
 
 class Analyzer:
     def __init__(self):
-        self.preflop_flop_tree = {"BB": {}, "D": {}}
-        self.postflop_count = {}
+        self.decision_tree = {"BB": {}, "D": {}}
 
     def update_tree(self, state: GameState) -> None:
         if not state.hand_over:
@@ -12,7 +11,7 @@ class Analyzer:
         
         position = "BB" if state.button_index == 0 else "D"
 
-        current = self.preflop_flop_tree[position]
+        current = self.decision_tree[position]
 
         for action in state.actions_list:
             if action.name == "Post Blind":
@@ -35,6 +34,8 @@ class Analyzer:
         
             current = current[action_key]
 
+            print(self.decision_tree)
+
 
     def action_to_key(self, action: Action):
         if action.name == "SHOWDOWN":
@@ -52,5 +53,52 @@ class Analyzer:
         
         return None
     
-    def get_probabilities(self, state: GameState, villain_action_key: Action) -> list[float] | None:
-        pass
+    def get_probabilities(self, state: GameState, villain_action: Action) -> list[float] | None:
+        position = "BB" if state.button_index == 0 else "D"
+
+        current = self.decision_tree[position]
+
+        for action in state.actions_list:
+            if action.name == "Post Blind":
+                continue
+
+            action_key = self.action_to_key(action)
+            if action_key is None:
+                continue
+
+            if action_key not in current:
+                return None
+            current = current[action_key]
+        
+        villain_action_key = self.action_to_key(villain_action)
+        if villain_action_key is None or villain_action_key not in current:
+            return None
+        
+        current = current[villain_action_key]
+
+        if "counts" not in current:
+            return None
+        
+        counts = current["counts"]
+
+        hero_counts = {}
+        for action_key, count in counts.items():
+            if action_key.startswith("HERO_"):
+                action_type = action_key.replace("HERO_", "").split("_")[0]  # "HERO_FOLD" → "FOLD"
+                if action_type not in hero_counts:
+                    hero_counts[action_type] = 0
+                hero_counts[action_type] += count
+        
+        if not hero_counts:
+            return None
+        
+        total = sum(hero_counts.values())
+        if total < 5: 
+            return None
+        
+        probabilities = {
+            action: count / total 
+            for action, count in hero_counts.items()
+        }
+        
+        return probabilities
