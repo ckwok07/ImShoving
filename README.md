@@ -28,7 +28,7 @@ Analyzer
 - handles orginization of data (still deciding on how to do this possibly pandas dataframe.)
 
 GTOModel
-- returns a list of actions with GTO calculated expected values
+- returns a list of actions with GTO calculated expected values with a frequency distribution
 
 ExplotativeModel
 - returns a list of exploitative actions generated through hero behavior
@@ -72,7 +72,7 @@ A general expected value calculation is as follows.
 Given an `equity` ($E$), `pot` ($P$), and `call_amount` ($C_{amount}$) we can calculate the expected value ($EV$) with the following equation.
 
 $$
-EV = E \times ($P$ + C_{amount}) - C_{amount}
+EV = E \times (P + C_{amount}) - C_{amount}
 $$
 
 This equation calculates, "if I make this call, how much can I expect to earn/lose on average?" Once you make the call, $P += C_{amount}$, then multiply by the equity, giving what percentage of the pot you win on average. From there subtract the $C_{amount}$ to get 'profit'

@@ -549,8 +549,8 @@ class AppController:
 
         self.compute_action_EVs(actions)
 
-        for action in actions:
-            print(f"{action.name}, {action.size}, {action.ev: .2f}")
+        # for action in actions:
+        #     print(f"{action.name}, {action.size}, {action.ev: .2f}")
         
         self.last_hero_actions = actions
         return actions
