@@ -131,6 +131,7 @@ class Table(QWidget):
         recent_actions = state.actions_list
         self.action_history.set_actions(recent_actions)
         QTimer.singleShot(0, self.scroll_actions_to_end)
+        print(self.controller.state.actions_list)
         
         QTimer.singleShot(500, lambda: self.board.set_board(state.board))
 

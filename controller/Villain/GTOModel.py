@@ -63,6 +63,7 @@ class GTOModel:
 
         return result
 
+    # hero_prob responding to a first action by villain
     def first_to_act(self, state: GameState, legal_actions: list[Action], equity: float, hero_probs: dict[str, float] | None = None) -> dict:
         check_action = None
         bet_actions = []
@@ -78,9 +79,6 @@ class GTOModel:
             if check_action:
                 return {check_action: {"frequency": 1.0, "ev": equity * state.pot}}
             return {}
-
-        bet_freq = min(1.0, max(0.0, (equity - 0.15) / 0.40))
-        check_freq = 1 - bet_freq
 
         if equity < 0.25:  # very weak hands
             check_freq = 0.70
@@ -119,6 +117,58 @@ class GTOModel:
                 result[bet_action] = {"frequency": freq, 
                                       "ev": ev}
         return result
+    
+    # hero_prob responding to a bet by the villain after a check.
+    def facing_check(self, state: GameState, legal_actions: list[Action], equity: float, hero_probs: dict[str, float] | None = None) -> dict:
+        check_action = None
+        bet_actions = []
+        result = {}
 
-    def facing_check(self, state: GameState, legal_actions: list[Action], equity: float) -> dict:
-        pass
+        for action in legal_actions:
+            if action.name == "CHECK":
+                check_action = action
+            elif action.name in ("BET", "ALL IN"):
+                bet_actions.append(action)
+        
+        if not bet_actions:
+            if check_action:
+                return {check_action: {"frequency": 1.0, "ev": equity * state.pot}}
+            return {}
+
+        if equity < 0.25:  # very weak hands
+            check_freq = 0.65
+            bet_freq = 0.35
+        elif equity < 0.45:  # weak hands
+            check_freq = 0.60
+            bet_freq = 0.40
+        elif equity < 0.65:  # solid hands
+            check_freq = 0.80
+            bet_freq = 0.20
+        elif equity < 0.80:  # strong hands
+            check_freq = 0.45
+            bet_freq = 0.55
+        else:  # very strong hands
+            check_freq = 0.30
+            bet_freq = 0.70
+
+        if check_action:
+            result[check_action] = {"frequency": check_freq,
+                                    "ev": equity * state.pot}
+        
+        if bet_actions:
+            freq = bet_freq / len(bet_actions)
+            for bet_action in bet_actions:
+                bet_size = bet_action.size - state.villain_amt
+
+                if hero_probs and "FOLD" in hero_probs:
+                    fold_prob = hero_probs["FOLD"]
+                else:
+                    bet_to_pot_ratio = bet_size / state.pot if state.pot > 0 else 1.0
+                    fold_prob = min(0.7, 0.2 + 0.3 * bet_to_pot_ratio)
+                
+                final_pot = state.pot + 2 * bet_size
+                ev = (fold_prob * state.pot) + ((1 - fold_prob) * (equity * final_pot - bet_size))
+                
+                result[bet_action] = {"frequency": freq, 
+                                      "ev": ev}
+        return result
