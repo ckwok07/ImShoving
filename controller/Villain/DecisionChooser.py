@@ -23,7 +23,54 @@ class DecisionChooser:
         return
 
     def get_villain_legal_actions(self, state: GameState) -> list[Action]:
-        pass
+        actions = []
+
+        if state.animating:
+            return actions
+        
+        if state.villain_hand is None:
+            return actions
+
+        if state.villain_all_in or state.villain_stack == 0:
+            return actions
+
+        if state.hand_over or state.to_act_index != 1:
+            return actions
+        
+        facing_bet = state.current_bet > state.villain_amt
+        is_preflop = state.street == "PREFLOP"
+        villain_is_bb = state.villain_amt == state.current_bet and state.current_bet > 0
+        bb_option = is_preflop and villain_is_bb and not facing_bet
+        max_affordable = state.hero_stack + state.hero_amt
+
+        if facing_bet:
+            actions.append(Action("FOLD", "villain", 0))
+            actions.append(Action("CALL", "villain", state.current_bet - state.villain_amt))
+
+            for new_bet in (state.current_bet * 2, state.current_bet * 4):
+                raise_cost = new_bet - state.villain_amt
+                if raise_cost > 0 and state.villain_stack >= raise_cost and new_bet <= max_affordable:
+                    actions.append(Action("RAISE", "villain", size = new_bet))
+        elif bb_option:
+            actions.append(Action("CHECK", "villain", 0))
+
+            for new_bet in (state.current_bet * 2, state.current_bet * 4):
+                cost = new_bet - state.villain_amt
+                if cost > 0 and state.villain_stack >= cost and new_bet <= max_affordable:
+                    actions.append(Action("RAISE", "villain", size=new_bet))
+        else:
+            actions.append(Action("CHECK", "villain", 0))
+
+            for bet in (1, 2, 4):
+                if state.villain_stack >= bet:
+                    actions.append(Action("BET", "villain", size = bet))
+
+        if state.villain_stack > 0 and not state.villain_all_in:
+            max_effective_all_in = min(state.villain_stack, 
+                                        state.hero_stack + state.hero_amt - state.villain_amt)
+            actions.append(Action("ALL IN", "villain", max_effective_all_in))
+
+        return actions
     
     def get_gto_strategy(self, state: GameState, legal_actions: list[Action], equity: float) -> list[Action]:
         # facing bet or raise

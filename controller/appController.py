@@ -43,12 +43,6 @@ class AppController:
         self.state.actions.append(action)
         self.state.actions_list.append(action)
 
-        if self.state.hand_over:
-            self.state.button_index = (self.state.button_index + 1) % 2
-            if self.state_change:
-                self.state_change(self.state)
-            return
-
         if self.round_complete():
             if self.state.street == "RIVER":
                 self.state.street = "SHOWDOWN"
@@ -394,6 +388,8 @@ class AppController:
         self.state.villain_raise_count + 
         self.state.villain_bet_count)
 
+        self.state.button_index = (self.state.button_index + 1) % 2
+        
         self.state.to_act_index = self.state.button_index
         self.state.show_villain_cards = False
 
@@ -509,8 +505,10 @@ class AppController:
         if self.state.hand_over or self.state.to_act_index != 0:
             return actions
         
-        bet_exists = self.state.current_bet > 0
         facing_bet = self.state.current_bet > self.state.hero_amt
+        is_preflop = self.state.street == "PREFLOP"
+        hero_is_bb = self.state.hero_amt == self.state.current_bet and self.state.current_bet > 0
+        bb_option = is_preflop and hero_is_bb and not facing_bet
         max_affordable = self.state.villain_stack + self.state.villain_amt
 
 
@@ -522,8 +520,7 @@ class AppController:
                 raise_cost = new_bet - self.state.hero_amt
                 if raise_cost > 0 and self.state.hero_stack >= raise_cost and new_bet <= max_affordable:
                     actions.append(Action("RAISE", "hero", size = new_bet))
-        elif bet_exists:
-            actions.append(Action("FOLD", "hero", 0))
+        elif bb_option:
             actions.append(Action("CHECK", "hero", 0))
 
             for new_bet in (self.state.current_bet * 2, self.state.current_bet * 4):
@@ -531,11 +528,10 @@ class AppController:
                 if cost > 0 and self.state.hero_stack >= cost and new_bet <= max_affordable:
                     actions.append(Action("RAISE", "hero", size=new_bet))
         else:
-            actions.append(Action("FOLD", "hero", 0))
             actions.append(Action("CHECK", "hero",0 ))
 
             for bet in (1, 2, 4):
-                if self.state.hero_stack >= bet and self.state.hero_stack >= bet:
+                if self.state.hero_stack >= bet:
                     actions.append(Action("BET", "hero", size = bet))
         
         if self.state.hero_stack > 0 and not self.state.hero_all_in:
