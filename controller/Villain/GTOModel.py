@@ -2,6 +2,7 @@ from controller.action import Action
 from main.model.Card import Card
 from main.model.Simulator import Simulator
 from controller.gameState import GameState
+import math
 
 class GTOModel:
     def __init__(self):
@@ -26,12 +27,12 @@ class GTOModel:
                 raise_actions.append(action)
 
         if equity < pot_odds - 0.15: # very weak hand
-            fold_freq = 0.70
-            call_freq = 0.20
+            fold_freq = 0.60
+            call_freq = 0.30
             raise_freq = 0.10 
         elif equity < pot_odds: # weak hand
-            fold_freq = 0.60
-            call_freq = 0.25
+            fold_freq = 0.50
+            call_freq = 0.35
             raise_freq = 0.15
         elif equity < pot_odds + 0.10: # solid hand
             fold_freq = max(0.10, 1 - mdf)
@@ -39,8 +40,8 @@ class GTOModel:
             raise_freq = (1 - fold_freq) * .4
         else: # strong hand
             fold_freq = 0.05
-            call_freq = 0.45
-            raise_freq = 0.50
+            call_freq = 0.55
+            raise_freq = 0.40
 
         if fold_action:
             result[(fold_action.name, fold_action.size)] = {"frequency": fold_freq,
@@ -54,12 +55,28 @@ class GTOModel:
             freq = raise_freq / len(raise_actions)
             for raise_action in raise_actions:
                 raise_cost = raise_action.size - state.villain_amt
+
+                raise_in_pot_units = raise_cost / state.pot if state.pot > 0 else 1.0
+
+                if raise_action.name == "ALL IN":
+                    if raise_in_pot_units < 1.0:
+                        hero_fold_prob = 0.35 + 0.30 * raise_in_pot_units
+                    elif raise_in_pot_units < 3.0:
+                        hero_fold_prob = 0.65 + 0.10 * (raise_in_pot_units - 1.0)
+                    else:
+                        hero_fold_prob = min(0.85, 0.75 + 0.03 * (raise_in_pot_units - 3.0))
+                else:
+                    hero_fold_prob = min(0.75, 0.25 + 0.25 * raise_in_pot_units)
+
+                hero_call_prob = 1 - hero_fold_prob
+
+                ev_hero_folds = hero_fold_prob * state.pot
                 final_pot = state.pot + 2 * raise_cost
-                ev = equity * final_pot - raise_cost
+                ev_hero_calls = hero_call_prob * (equity * final_pot - raise_cost)
+                
+                ev = ev_hero_folds + ev_hero_calls
 
-                result[(raise_action.name, raise_action.size)] = {"frequency" : freq,
-                                                                  "ev": ev}
-
+                result[(raise_action.name, raise_action.size)] = {"frequency": freq, "ev": ev}
 
         return result
 
@@ -108,14 +125,24 @@ class GTOModel:
                 if hero_probs and "FOLD" in hero_probs:
                     fold_prob = hero_probs["FOLD"]
                 else:
-                    bet_to_pot_ratio = bet_size / state.pot if state.pot > 0 else 1.0
-                    fold_prob = min(0.7, 0.2 + 0.3 * bet_to_pot_ratio)
+                    # FIXED: Add the same scaling logic as facing_bet
+                    bet_in_pot_units = bet_size / state.pot if state.pot > 0 else 1.0
+                    
+                    if bet_action.name == "ALL IN":
+                        if bet_in_pot_units < 1.0:
+                            fold_prob = 0.35 + 0.30 * bet_in_pot_units
+                        elif bet_in_pot_units < 3.0:
+                            fold_prob = 0.65 + 0.10 * (bet_in_pot_units - 1.0)
+                        else:
+                            fold_prob = min(0.85, 0.75 + 0.03 * (bet_in_pot_units - 3.0))
+                    else:
+                        fold_prob = min(0.70, 0.20 + 0.25 * bet_in_pot_units)
                 
                 final_pot = state.pot + 2 * bet_size
                 ev = (fold_prob * state.pot) + ((1 - fold_prob) * (equity * final_pot - bet_size))
                 
                 result[(bet_action.name, bet_action.size)] = {"frequency": freq, 
-                                      "ev": ev}
+                                    "ev": ev}
         return result
     
     # hero_prob responding to a bet by the villain after a check.
@@ -163,12 +190,22 @@ class GTOModel:
                 if hero_probs and "FOLD" in hero_probs:
                     fold_prob = hero_probs["FOLD"]
                 else:
-                    bet_to_pot_ratio = bet_size / state.pot if state.pot > 0 else 1.0
-                    fold_prob = min(0.7, 0.2 + 0.3 * bet_to_pot_ratio)
+                    # FIXED: Add the same scaling logic as facing_bet
+                    bet_in_pot_units = bet_size / state.pot if state.pot > 0 else 1.0
+                    
+                    if bet_action.name == "ALL IN":
+                        if bet_in_pot_units < 1.0:
+                            fold_prob = 0.35 + 0.30 * bet_in_pot_units
+                        elif bet_in_pot_units < 3.0:
+                            fold_prob = 0.65 + 0.10 * (bet_in_pot_units - 1.0)
+                        else:
+                            fold_prob = min(0.85, 0.75 + 0.03 * (bet_in_pot_units - 3.0))
+                    else:
+                        fold_prob = min(0.50, 0.15 + 0.20 * bet_in_pot_units)
                 
                 final_pot = state.pot + 2 * bet_size
                 ev = (fold_prob * state.pot) + ((1 - fold_prob) * (equity * final_pot - bet_size))
                 
                 result[(bet_action.name, bet_action.size)] = {"frequency": freq, 
-                                      "ev": ev}
+                                    "ev": ev}
         return result

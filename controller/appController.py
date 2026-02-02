@@ -722,8 +722,8 @@ class AppController:
                     ev_call = call_prob * (self.cached_hero_equity * final_pot - cost)
                 else:
                     cost = max(self.state.hero_stack, 0)
-                    fold_prob = .85
-                    call_prob = .15
+                    fold_prob = .95
+                    call_prob = .05
 
                     ev_fold = fold_prob * self.state.pot
                     final_pot = self.state.pot + cost + min(cost, self.state.villain_stack)

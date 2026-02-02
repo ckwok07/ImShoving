@@ -7,6 +7,7 @@ from .GTOModel import GTOModel
 import json
 from pathlib import Path
 import random
+import math
 
 class DecisionChooser:
     def __init__(self, analyzer: Analyzer):
@@ -28,14 +29,14 @@ class DecisionChooser:
 
         gto_actions = self.get_gto_strategy(state, legal_actions, equity, hero_probs)
 
-        print(f"gto_actions: {gto_actions}")
-
         #gto_actions: {('FOLD', 0): {'frequency': 0.05, 'ev': 0}, 
         # ('CALL', 2): {'frequency': 0.45, 'ev': 2.478366666666666}, 
         # ('RAISE', 8): {'frequency': 0.16666666666666666, 'ev': 4.076324999999999}, 
         # ('RAISE', 16): {'frequency': 0.16666666666666666, 'ev': 5.033058333333329}, 
         # ('ALL IN', 98): {'frequency': 0.16666666666666666, 'ev': 14.839574999999982}}
 
+        gto_actions = self.normalize_gto_actions(gto_actions)
+        print(f"gto_actions:{gto_actions}")
         choice = random.uniform(0,1)
         cumulative = 0
 
@@ -45,6 +46,29 @@ class DecisionChooser:
                 return Action(name = action_name, player = "villain", size = action_size, ev = freq_ev["ev"])
             
         return Action("FOLD", "villain", 0, state.pot)
+    
+    def normalize_gto_actions(self, gto_actions: dict[str, float], temperature: float = 8.0, min_ev_threshold: float = 0) -> dict[str, float]:
+        valid_actions = {k: v for k, v in gto_actions.items() if v['ev'] >= min_ev_threshold}
+
+        if not valid_actions:
+            return gto_actions
+        
+        # Shift EVs so minimum is 0 (avoids negative exponentials)
+        min_ev = min(v['ev'] for v in valid_actions.values())
+        shifted_evs = [v['ev'] - min_ev for v in valid_actions.values()]
+        
+        # Apply softmax
+        exp_evs = [math.exp(ev / temperature) for ev in shifted_evs]
+        sum_exp = sum(exp_evs)
+        
+        normalized = {}
+        for (k, v), exp_ev in zip(valid_actions.items(), exp_evs):
+            normalized[k] = {
+                'frequency': exp_ev / sum_exp,
+                'ev': v['ev']
+            }
+        
+        return normalized
 
     def get_villain_legal_actions(self, state: GameState) -> list[Action]:
         actions = []
@@ -97,7 +121,7 @@ class DecisionChooser:
         print(f"legal actions: {actions}")
         return actions
     
-    def get_gto_strategy(self, state: GameState, legal_actions: list[Action], equity: float, hero_probs: dict[str, float]) -> list[Action]:
+    def get_gto_strategy(self, state: GameState, legal_actions: list[Action], equity: float, hero_probs: dict[str, float]) -> dict[str, float]:
         # facing bet or raise
         if state.current_bet > state.villain_amt: # facing bet
             return self.gto_model.facing_bet(state, legal_actions, equity)
