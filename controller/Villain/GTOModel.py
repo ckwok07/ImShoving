@@ -7,7 +7,7 @@ class GTOModel:
     def __init__(self):
         pass
         
-    def facing_bet(self, state: GameState, legal_actions: list[Action], equity: float) -> dict[Action, dict]:
+    def facing_bet(self, state: GameState, legal_actions: list[Action], equity: float) -> dict[(str, float), dict]:
         to_call = (state.current_bet - state.villain_amt)
         pot_odds = to_call / (state.pot + to_call)
         mdf = state.pot / (state.pot + to_call)
@@ -26,17 +26,17 @@ class GTOModel:
                 raise_actions.append(action)
 
         if equity < pot_odds - 0.15: # very weak hand
-            fold_freq = 0.85
-            call_freq = 0.10
-            raise_freq = 0.05 
+            fold_freq = 0.70
+            call_freq = 0.20
+            raise_freq = 0.10 
         elif equity < pot_odds: # weak hand
-            fold_freq = 0.65
+            fold_freq = 0.60
             call_freq = 0.25
-            raise_freq = 0.10
-        elif equity < pot_odds + 0.15: # solid hand
+            raise_freq = 0.15
+        elif equity < pot_odds + 0.10: # solid hand
             fold_freq = max(0.10, 1 - mdf)
-            call_freq = 0.60
-            raise_freq = 0.30
+            call_freq = (1 - fold_freq) * .6
+            raise_freq = (1 - fold_freq) * .4
         else: # strong hand
             fold_freq = 0.05
             call_freq = 0.45
@@ -64,7 +64,7 @@ class GTOModel:
         return result
 
     # hero_prob responding to a first action by villain
-    def first_to_act(self, state: GameState, legal_actions: list[Action], equity: float, hero_probs: dict[str, float] | None = None) -> dict:
+    def first_to_act(self, state: GameState, legal_actions: list[Action], equity: float, hero_probs: dict[str, float] | None = None) -> dict[(str, float), dict]:
         check_action = None
         bet_actions = []
         result = {}
@@ -77,7 +77,7 @@ class GTOModel:
         
         if not bet_actions:
             if check_action:
-                return {check_action: {"frequency": 1.0, "ev": equity * state.pot}}
+                return {(check_action.name, check_action.size): {"frequency": 1.0, "ev": equity * state.pot}}
             return {}
 
         if equity < 0.25:  # very weak hands
@@ -97,7 +97,7 @@ class GTOModel:
             bet_freq = 0.80
 
         if check_action:
-            result[check_action] = {"frequency": check_freq,
+            result[(check_action.name, check_action.size)] = {"frequency": check_freq,
                                     "ev": equity * state.pot}
         
         if bet_actions:
@@ -114,12 +114,12 @@ class GTOModel:
                 final_pot = state.pot + 2 * bet_size
                 ev = (fold_prob * state.pot) + ((1 - fold_prob) * (equity * final_pot - bet_size))
                 
-                result[bet_action] = {"frequency": freq, 
+                result[(bet_action.name, bet_action.size)] = {"frequency": freq, 
                                       "ev": ev}
         return result
     
     # hero_prob responding to a bet by the villain after a check.
-    def facing_check(self, state: GameState, legal_actions: list[Action], equity: float, hero_probs: dict[str, float] | None = None) -> dict:
+    def facing_check(self, state: GameState, legal_actions: list[Action], equity: float, hero_probs: dict[str, float] | None = None) -> dict[(str, float), dict]:
         check_action = None
         bet_actions = []
         result = {}
@@ -132,7 +132,7 @@ class GTOModel:
         
         if not bet_actions:
             if check_action:
-                return {check_action: {"frequency": 1.0, "ev": equity * state.pot}}
+                return {(check_action.name, check_action.size): {"frequency": 1.0, "ev": equity * state.pot}}
             return {}
 
         if equity < 0.25:  # very weak hands
@@ -152,7 +152,7 @@ class GTOModel:
             bet_freq = 0.70
 
         if check_action:
-            result[check_action] = {"frequency": check_freq,
+            result[(check_action.name, check_action.size)] = {"frequency": check_freq,
                                     "ev": equity * state.pot}
         
         if bet_actions:
@@ -169,6 +169,6 @@ class GTOModel:
                 final_pot = state.pot + 2 * bet_size
                 ev = (fold_prob * state.pot) + ((1 - fold_prob) * (equity * final_pot - bet_size))
                 
-                result[bet_action] = {"frequency": freq, 
+                result[(bet_action.name, bet_action.size)] = {"frequency": freq, 
                                       "ev": ev}
         return result

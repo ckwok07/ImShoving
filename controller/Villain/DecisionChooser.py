@@ -6,6 +6,7 @@ from .Analyzer import Analyzer
 from .GTOModel import GTOModel
 import json
 from pathlib import Path
+import random
 
 class DecisionChooser:
     def __init__(self, analyzer: Analyzer):
@@ -14,7 +15,7 @@ class DecisionChooser:
         self.current_equity = None
         self.preflop_table = self.load_preflop_equity_table()
 
-    def get_villain_decision(self, state: GameState):
+    def get_villain_decision(self, state: GameState) -> Action:
         legal_actions = self.get_villain_legal_actions(state)
         equity = self.get_equity(state)
 
@@ -27,9 +28,23 @@ class DecisionChooser:
 
         gto_actions = self.get_gto_strategy(state, legal_actions, equity, hero_probs)
 
-        # print(f"gto_actions: {gto_actions}")
+        print(f"gto_actions: {gto_actions}")
 
-        return gto_actions
+        #gto_actions: {('FOLD', 0): {'frequency': 0.05, 'ev': 0}, 
+        # ('CALL', 2): {'frequency': 0.45, 'ev': 2.478366666666666}, 
+        # ('RAISE', 8): {'frequency': 0.16666666666666666, 'ev': 4.076324999999999}, 
+        # ('RAISE', 16): {'frequency': 0.16666666666666666, 'ev': 5.033058333333329}, 
+        # ('ALL IN', 98): {'frequency': 0.16666666666666666, 'ev': 14.839574999999982}}
+
+        choice = random.uniform(0,1)
+        cumulative = 0
+
+        for (action_name, action_size), freq_ev in gto_actions.items():
+            cumulative += freq_ev["frequency"]
+            if choice <= cumulative:
+                return Action(name = action_name, player = "villain", size = action_size, ev = freq_ev["ev"])
+            
+        return Action("FOLD", "villain", 0, state.pot)
 
     def get_villain_legal_actions(self, state: GameState) -> list[Action]:
         actions = []

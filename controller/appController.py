@@ -78,9 +78,75 @@ class AppController:
         #     action = Action("CALL", "villain")
         # else:
         #     action = Action("CHECK", "villain")
+        # def do_villain_action():
+        #     self.state.animating = False
+        #     self.villain.choose_action(self.state)
+        #     if self.state.villain_all_in:
+        #         if self.round_complete():
+        #             if self.state.street == "RIVER":
+        #                 self.state.street = "SHOWDOWN"
+        #                 self.evaluate_showdown()
+        #             else:
+        #                 self.advance_street()
+        #         else:
+        #             self.state.to_act_index = 0
+        #         self.state.animating = False
+        #         if self.state_change:
+        #             self.state_change(self.state)
+        #         return
+
+        #     elif self.state.current_bet > self.state.villain_amt:
+        #         if self.state.hero_all_in:
+        #             if random.choice([True, False]):
+        #                 action = Action("CALL", "villain", min(self.state.current_bet - self.state.villain_amt, self.state.villain_stack))
+        #             else:
+        #                 action = Action("FOLD", "villain", 0)
+        #         else:
+        #             choice = random.choice([1,2,3])
+        #             if choice == 1:
+        #                 action = Action("CALL", "villain", min(self.state.current_bet - self.state.villain_amt, self.state.villain_stack))
+        #             elif choice == 2:
+        #                 action = Action("RAISE", "villain", min(2 * self.state.current_bet, self.state.villain_amt + self.state.villain_stack))
+        #             else:
+        #                 action = Action("FOLD", "villain", 0)
+        #     else:
+        #         if random.choice([True, False]):
+        #             action = Action("CHECK", "villain", 0)
+        #         else:
+        #             action = Action("BET", "villain", min(2, self.state.villain_stack))
+
+        #     if self.state.villain_stack <= 0:
+        #         self.state.villain_all_in = True
+
+        #     self.state.actions_list.append(action)
+        #     self.apply_action(action, hero=False)
+        #     action.pot_after = self.state.pot
+
+        #     if self.state.hand_over:
+        #         self.state.animating = False
+        #         if self.state_change:
+        #             self.state_change(self.state)
+        #         return
+
+        #     self.state.actions.append(action)
+            
+        #     if self.round_complete() or self.state.hero_all_in:
+        #         if self.state.street == "RIVER":
+        #             self.state.street = "SHOWDOWN"
+        #             self.evaluate_showdown()
+        #         else:
+        #             self.advance_street()
+        #     else:
+        #         self.state.to_act_index = 0
+
+        #     self.state.animating = False
+
+        #     if self.state_change:
+        #         self.state_change(self.state)
+
         def do_villain_action():
             self.state.animating = False
-            self.villain.choose_action(self.state)
+            action = self.villain.choose_action(self.state)
             if self.state.villain_all_in:
                 if self.round_complete():
                     if self.state.street == "RIVER":
@@ -94,26 +160,6 @@ class AppController:
                 if self.state_change:
                     self.state_change(self.state)
                 return
-
-            elif self.state.current_bet > self.state.villain_amt:
-                if self.state.hero_all_in:
-                    if random.choice([True, False]):
-                        action = Action("CALL", "villain", min(self.state.current_bet - self.state.villain_amt, self.state.villain_stack))
-                    else:
-                        action = Action("FOLD", "villain", 0)
-                else:
-                    choice = random.choice([1,2,3])
-                    if choice == 1:
-                        action = Action("CALL", "villain", min(self.state.current_bet - self.state.villain_amt, self.state.villain_stack))
-                    elif choice == 2:
-                        action = Action("RAISE", "villain", min(2 * self.state.current_bet, self.state.villain_amt + self.state.villain_stack))
-                    else:
-                        action = Action("FOLD", "villain", 0)
-            else:
-                if random.choice([True, False]):
-                    action = Action("CHECK", "villain", 0)
-                else:
-                    action = Action("BET", "villain", min(2, self.state.villain_stack))
 
             if self.state.villain_stack <= 0:
                 self.state.villain_all_in = True

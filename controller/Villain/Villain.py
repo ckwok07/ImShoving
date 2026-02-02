@@ -10,6 +10,7 @@ class Villain:
 
     def choose_action(self, state: GameState) -> Action:
         action = self.decisionChooser.get_villain_decision(state)
+        return action
 
     def observe_hero(self, state: GameState) -> None:
         self.analyzer.update_tree(state)
