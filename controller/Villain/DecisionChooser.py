@@ -8,19 +8,28 @@ import json
 from pathlib import Path
 
 class DecisionChooser:
-    def __init__(self):
+    def __init__(self, analyzer: Analyzer):
         self.gto_model = GTOModel()
+        self.analyzer = analyzer
         self.current_equity = None
         self.preflop_table = self.load_preflop_equity_table()
 
     def get_villain_decision(self, state: GameState):
         legal_actions = self.get_villain_legal_actions(state)
-
         equity = self.get_equity(state)
 
-        gto_actions = self.get_gto_strategy(state, legal_actions, equity)
+        hero_probs = None
+        for action in legal_actions:
+            if action.name in ["BET", "CHECK", "RAISE", "CALL", "FOLD"]:
+                hero_probs = self.analyzer.get_probabilities(state, action)
+                if hero_probs:
+                    break
 
-        return
+        gto_actions = self.get_gto_strategy(state, legal_actions, equity, hero_probs)
+
+        # print(f"gto_actions: {gto_actions}")
+
+        return gto_actions
 
     def get_villain_legal_actions(self, state: GameState) -> list[Action]:
         actions = []
@@ -70,9 +79,10 @@ class DecisionChooser:
                                         state.hero_stack + state.hero_amt - state.villain_amt)
             actions.append(Action("ALL IN", "villain", max_effective_all_in))
 
+        print(f"legal actions: {actions}")
         return actions
     
-    def get_gto_strategy(self, state: GameState, legal_actions: list[Action], equity: float) -> list[Action]:
+    def get_gto_strategy(self, state: GameState, legal_actions: list[Action], equity: float, hero_probs: dict[str, float]) -> list[Action]:
         # facing bet or raise
         if state.current_bet > state.villain_amt: # facing bet
             return self.gto_model.facing_bet(state, legal_actions, equity)
@@ -84,15 +94,15 @@ class DecisionChooser:
 
         # first to act
         if state.current_bet == 0 and state.villain_amt == 0 and villain_acts_first:
-            return self.gto_model.first_to_act(state, legal_actions, equity)
+            return self.gto_model.first_to_act(state, legal_actions, equity, hero_probs)
         # facing a check
         else:
-            return self.gto_model.facing_check(state, legal_actions, equity)
+            return self.gto_model.facing_check(state, legal_actions, equity, hero_probs)
 
     def get_equity(self, state: GameState) -> float:
         if state.street == "PREFLOP":
             key = self.hand_to_key(state.villain_hand)
-            return self.preflop_equity_table[key]["avg_equity"]
+            return self.preflop_table[key]["avg_equity"]
 
         else:
             return Simulator.simulate_equity(hand = state.villain_hand,

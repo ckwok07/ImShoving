@@ -43,12 +43,12 @@ class GTOModel:
             raise_freq = 0.50
 
         if fold_action:
-            result[fold_action] = {"frequency": fold_freq,
-                                   "ev": 0}
+            result[(fold_action.name, fold_action.size)] = {"frequency": fold_freq,
+                                                            "ev": 0}
         
         if call_action:
-            result[call_action] = {"frequency": call_freq,
-                                   "ev": (equity * (state.pot + to_call)) - to_call}
+            result[(call_action.name, call_action.size)] = {"frequency": call_freq,
+                                                            "ev": (equity * (state.pot + to_call)) - to_call}
             
         if raise_actions:
             freq = raise_freq / len(raise_actions)
@@ -57,8 +57,8 @@ class GTOModel:
                 final_pot = state.pot + 2 * raise_cost
                 ev = equity * final_pot - raise_cost
 
-                result[raise_action] = {"frequency" : freq,
-                                        "ev": ev}
+                result[(raise_action.name, raise_action.size)] = {"frequency" : freq,
+                                                                  "ev": ev}
 
 
         return result

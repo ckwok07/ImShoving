@@ -34,7 +34,7 @@ class Analyzer:
         
             current = current[action_key]
 
-            print(self.decision_tree)
+            # print(self.decision_tree)
 
 
     def action_to_key(self, action: Action):
@@ -53,7 +53,7 @@ class Analyzer:
         
         return None
     
-    def get_probabilities(self, state: GameState, villain_action: Action) -> list[float] | None:
+    def get_probabilities(self, state: GameState, villain_action: Action) -> dict[str, float] | None:
         position = "BB" if state.button_index == 0 else "D"
 
         current = self.decision_tree[position]

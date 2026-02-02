@@ -79,6 +79,8 @@ class AppController:
         # else:
         #     action = Action("CHECK", "villain")
         def do_villain_action():
+            self.state.animating = False
+            self.villain.choose_action(self.state)
             if self.state.villain_all_in:
                 if self.round_complete():
                     if self.state.street == "RIVER":

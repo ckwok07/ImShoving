@@ -6,10 +6,10 @@ from .DecisionChooser import DecisionChooser
 class Villain:
     def __init__(self) -> None:
         self.analyzer = Analyzer()
-        self.decisionChooser = DecisionChooser()
+        self.decisionChooser = DecisionChooser(self.analyzer)
 
     def choose_action(self, state: GameState) -> Action:
-        pass
+        action = self.decisionChooser.get_villain_decision(state)
 
     def observe_hero(self, state: GameState) -> None:
         self.analyzer.update_tree(state)
