@@ -38,6 +38,7 @@ class DecisionChooser:
         gto_actions = self.normalize_gto_actions(gto_actions)
         print(f"gto_actions:{gto_actions}")
         choice = random.uniform(0,1)
+        print(choice)
         cumulative = 0
 
         for (action_name, action_size), freq_ev in gto_actions.items():
@@ -124,7 +125,7 @@ class DecisionChooser:
     def get_gto_strategy(self, state: GameState, legal_actions: list[Action], equity: float, hero_probs: dict[str, float]) -> dict[str, float]:
         # facing bet or raise
         if state.current_bet > state.villain_amt: # facing bet
-            return self.gto_model.facing_bet(state, legal_actions, equity)
+            return self.gto_model.facing_bet(state, legal_actions, equity, hero_probs)
             
         if state.street == "PREFLOP":
             villain_acts_first = bool(state.button_index == 1)

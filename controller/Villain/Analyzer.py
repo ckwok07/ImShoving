@@ -10,14 +10,16 @@ class Analyzer:
             return
         
         position = "BB" if state.button_index == 0 else "D"
-
         current = self.decision_tree[position]
+        
+        pot = 0
 
         for action in state.actions_list:
             if action.name == "Post Blind":
+                pot += action.size
                 continue
 
-            action_key = self.action_to_key(action)
+            action_key = self.action_to_key(action, pot)
 
             if action_key is None:
                 continue
@@ -33,11 +35,14 @@ class Analyzer:
                 current[action_key] = {}
         
             current = current[action_key]
+            
+            if action.name in ["BET", "RAISE", "ALL IN", "CALL"]:
+                pot += action.size
+            
+            print(self.decision_tree)
 
-            # print(self.decision_tree)
 
-
-    def action_to_key(self, action: Action):
+    def action_to_key(self, action: Action, pot: float):
         if action.name == "SHOWDOWN":
             return None
     
@@ -49,28 +54,51 @@ class Analyzer:
         if action.name in ["CHECK", "FOLD", "CALL"]:
             return f"{player}_{action.name}"
         elif action.name in ["BET", "RAISE", "ALL IN"]:
-            return f"{player}_{action.name}"
+            if pot <= 0:
+                return f"{player}_{action.name}_UNKNOWN"
+            
+            ratio = action.size / pot
+            
+            if ratio < 0.40:
+                bucket = "TINY"
+            elif ratio < 0.75:
+                bucket = "SMALL"
+            elif ratio < 1.20:
+                bucket = "POT"
+            elif ratio < 1.75:
+                bucket = "OVERBET1"
+            elif ratio < 2.50:
+                bucket = "OVERBET2"
+            else:
+                bucket = "OVERBET3"
+            
+            return f"{player}_{action.name}_{bucket}"
         
         return None
     
     def get_probabilities(self, state: GameState, villain_action: Action) -> dict[str, float] | None:
         position = "BB" if state.button_index == 0 else "D"
-
         current = self.decision_tree[position]
+        
+        pot = 0
 
         for action in state.actions_list:
             if action.name == "Post Blind":
+                pot += action.size
                 continue
 
-            action_key = self.action_to_key(action)
+            action_key = self.action_to_key(action, pot)
             if action_key is None:
                 continue
 
             if action_key not in current:
                 return None
             current = current[action_key]
+            
+            if action.name in ["BET", "RAISE", "ALL IN", "CALL"]:
+                pot += action.size
         
-        villain_action_key = self.action_to_key(villain_action)
+        villain_action_key = self.action_to_key(villain_action, pot)
         if villain_action_key is None or villain_action_key not in current:
             return None
         
@@ -84,7 +112,7 @@ class Analyzer:
         hero_counts = {}
         for action_key, count in counts.items():
             if action_key.startswith("HERO_"):
-                action_type = action_key.replace("HERO_", "").split("_")[0]  # "HERO_FOLD" → "FOLD"
+                action_type = action_key.replace("HERO_", "").split("_")[0]
                 if action_type not in hero_counts:
                     hero_counts[action_type] = 0
                 hero_counts[action_type] += count

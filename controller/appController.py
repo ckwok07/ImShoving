@@ -277,6 +277,8 @@ class AppController:
 
             self.state.pot = 0
             self.state.hand_over = True
+            if self.state.actions_list: 
+                self.villain.observe_hero(self.state)
             self.state.street = "SHOWDOWN"
 
             if self.state_change:
@@ -438,9 +440,6 @@ class AppController:
         self.state.villain_raise_count + 
         self.state.villain_bet_count)
 
-        if self.state.actions_list: 
-            self.villain.observe_hero(self.state)
-
         self.state.button_index = (self.state.button_index + 1) % 2
         
         self.state.to_act_index = self.state.button_index
@@ -538,6 +537,8 @@ class AppController:
             self.state.actions_list.append(Action("SHOWDOWN", "tie", size = 0, cards = hero_best, cards2 = villain_best))
         
         self.state.hand_over = True
+        if self.state.actions_list: 
+            self.villain.observe_hero(self.state)
         
         if self.state_change:
             self.state_change(self.state)
