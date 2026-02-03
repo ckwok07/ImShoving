@@ -1,3 +1,4 @@
+from math import sqrt
 from controller.decisionAccuracy import DecisionQuality, ACCURACY_LABELS
 from main.model.Deck import Deck
 from .gameState import GameState, STREETS
@@ -730,7 +731,7 @@ class AppController:
                     base_call = 0.35
                     base_raise = 0.10
                     
-                    size_factor = min(1.0, 1.0 / bet_to_pot_ratio)
+                    size_factor = min(2.0, sqrt(bet_to_pot_ratio))
                     
                     adjusted_fold = base_fold * size_factor
                     adjusted_call = base_call + (base_fold - adjusted_fold) * 0.7
@@ -765,31 +766,46 @@ class AppController:
                 villain_fold_call = self.state.villain_fold_count + self.state.villain_call_count
                 
                 if villain_fold_call > 50:
-
                     base_fold_prob = self.state.villain_fold_count / villain_fold_call
                     base_call_prob = self.state.villain_call_count / villain_fold_call
                     
-                    size_factor = min(1.0, 1.0 / bet_to_pot_ratio)
-                    adjusted_fold = base_fold_prob * size_factor
-                    adjusted_call = base_call_prob + (base_fold_prob - adjusted_fold)
-                    
-                    total = adjusted_fold + adjusted_call
-                    fold_prob = adjusted_fold / total
-                    call_prob = adjusted_call / total
-                else:
-                    size_factor = min(1.0, 1.0 / bet_to_pot_ratio)
-                    
-                    base_fold = 0.50
-                    adjusted_fold = base_fold * size_factor
+                    size_factor = min(2.5, 1.0 + (bet_to_pot_ratio ** 0.5) * 0.3)
+                    adjusted_fold = min(0.95, base_fold_prob * size_factor)
                     adjusted_call = 1.0 - adjusted_fold
                     
                     fold_prob = adjusted_fold
                     call_prob = adjusted_call
+                else:
+                    if bet_to_pot_ratio > 10:
+                        fold_prob = 0.75
+                    elif bet_to_pot_ratio > 3:
+                        fold_prob = 0.65
+                    elif bet_to_pot_ratio > 1.5:
+                        fold_prob = 0.55
+                    elif bet_to_pot_ratio > 0.75:
+                        fold_prob = 0.50
+                    else:
+                        fold_prob = 0.40
+                    
+                    call_prob = 1.0 - fold_prob
+                
+                if bet_to_pot_ratio > 10:
+                    equity_multiplier = 0.35
+                elif bet_to_pot_ratio > 5:
+                    equity_multiplier = 0.50
+                elif bet_to_pot_ratio > 3:
+                    equity_multiplier = 0.65
+                elif bet_to_pot_ratio > 1.5:
+                    equity_multiplier = 0.80
+                else:
+                    equity_multiplier = 0.90
+                
+                equity_when_called = self.cached_hero_equity * equity_multiplier
                 
                 ev_fold = fold_prob * pot_before
                 villain_call_amount = min(cost, self.state.villain_stack)
                 final_pot = pot_before + cost + villain_call_amount
-                ev_call = call_prob * (self.cached_hero_equity * final_pot - cost)
+                ev_call = call_prob * (equity_when_called * final_pot - cost)
                 
                 action.ev = ev_fold + ev_call
 
