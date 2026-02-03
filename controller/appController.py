@@ -55,7 +55,9 @@ class AppController:
 
         
         self.state.to_act_index = 1
-        self.villain_act()
+        if not self.round_complete() and not self.state.hand_over:
+            self.villain_act()
+
 
         if self.round_complete():
             self.advance_street()
@@ -426,6 +428,8 @@ class AppController:
             self.state.villain_all_in = True
 
     def new_hand(self) -> None:
+        print(f"START OF new_hand(): button_index = {self.state.button_index}")
+        print("GameState id:", id(self.state))
         assert self.state.hero_action_count == (
         self.state.hero_check_count + 
         self.state.hero_fold_count + 
@@ -440,9 +444,11 @@ class AppController:
         self.state.villain_raise_count + 
         self.state.villain_bet_count)
 
+        print(f"BEFORE: button_index = {self.state.button_index}")
         self.state.button_index = (self.state.button_index + 1) % 2
+        print(f"AFTER: button_index = {self.state.button_index}")
         
-        self.state.to_act_index = self.state.button_index
+        # self.state.to_act_index = self.state.button_index
         self.state.show_villain_cards = False
 
         self.state.hand_over = False
@@ -478,10 +484,13 @@ class AppController:
 
         if self.state_change:
             self.state_change(self.state)
+        
+        print(f"END OF new_hand(): button_index = {self.state.button_index}")
 
     def post_big_blind(self) -> None:
         bb = 1
         bb_player = 1 - self.state.button_index
+        print(f"BB player: {bb_player}, Button: {self.state.button_index}")
 
         self.state.hero_amt = 0
         self.state.villain_amt = 0
@@ -567,12 +576,24 @@ class AppController:
 
         if facing_bet:
             actions.append(Action("FOLD", "hero", 0))
-            actions.append(Action("CALL", "hero", self.state.current_bet - self.state.hero_amt))
+            
+            if self.state.villain_all_in:
+                call_amount = min(self.state.current_bet - self.state.hero_amt, self.state.hero_stack)
+                actions.append(Action("CALL", "hero", call_amount))
+            else:
+                actions.append(Action("CALL", "hero", self.state.current_bet - self.state.hero_amt))
 
-            for new_bet in (self.state.current_bet * 2, self.state.current_bet * 4):
-                raise_cost = new_bet - self.state.hero_amt
-                if raise_cost > 0 and self.state.hero_stack >= raise_cost and new_bet <= max_affordable:
-                    actions.append(Action("RAISE", "hero", size = new_bet))
+                for new_bet in (self.state.current_bet * 2, self.state.current_bet * 4):
+                    raise_cost = new_bet - self.state.hero_amt
+                    if raise_cost > 0 and self.state.hero_stack >= raise_cost and new_bet <= max_affordable:
+                        actions.append(Action("RAISE", "hero", size = new_bet))
+                
+                if self.state.hero_stack > 0 and not self.state.hero_all_in:
+                    max_effective_all_in = min(self.state.hero_stack, 
+                                                self.state.villain_stack + self.state.villain_amt - self.state.hero_amt)
+                    if max_effective_all_in > 0:  # ← Only add if there's an actual amount to go all-in for
+                        actions.append(Action("ALL IN", "hero", max_effective_all_in))
+
         elif bb_option:
             actions.append(Action("CHECK", "hero", 0))
 
@@ -580,17 +601,23 @@ class AppController:
                 cost = new_bet - self.state.hero_amt
                 if cost > 0 and self.state.hero_stack >= cost and new_bet <= max_affordable:
                     actions.append(Action("RAISE", "hero", size=new_bet))
+            
+            if self.state.hero_stack > 0 and not self.state.hero_all_in:
+                max_effective_all_in = min(self.state.hero_stack, 
+                                            self.state.villain_stack + self.state.villain_amt - self.state.hero_amt)
+                actions.append(Action("ALL IN", "hero", max_effective_all_in))
+
         else:
-            actions.append(Action("CHECK", "hero",0 ))
+            actions.append(Action("CHECK", "hero", 0))
 
             for bet in (1, 2, 4):
                 if self.state.hero_stack >= bet:
                     actions.append(Action("BET", "hero", size = bet))
-        
-        if self.state.hero_stack > 0 and not self.state.hero_all_in:
-            max_effective_all_in = min(self.state.hero_stack, 
-                                        self.state.villain_stack + self.state.villain_amt - self.state.hero_amt)
-            actions.append(Action("ALL IN", "hero", max_effective_all_in))
+
+            if self.state.hero_stack > 0 and not self.state.hero_all_in:
+                max_effective_all_in = min(self.state.hero_stack, 
+                                            self.state.villain_stack + self.state.villain_amt - self.state.hero_amt)
+                actions.append(Action("ALL IN", "hero", max_effective_all_in))
 
         self.compute_hero_equity()
         if self._equity_thread and self._equity_thread.is_alive():
@@ -622,7 +649,6 @@ class AppController:
         return self.cached_hero_equity
     
     def compute_action_EVs(self, actions: list[Action]) -> list[Action]:
-
         for action in actions:
             if self.cached_hero_equity is None:
                 action.ev = 0
@@ -631,7 +657,7 @@ class AppController:
                 action.ev = 0
             elif action.name == "CHECK":
                 villain_check_or_bet = self.state.villain_check_count + self.state.villain_bet_count
-                if villain_check_or_bet > 0:
+                if villain_check_or_bet > 50:
                     villain_checks_prob = self.state.villain_check_count / villain_check_or_bet
                     villain_bet_prob = self.state.villain_bet_count / villain_check_or_bet
                     ev_villain_checks = villain_checks_prob * (self.cached_hero_equity * self.state.pot)
@@ -651,7 +677,7 @@ class AppController:
 
             elif action.name == "BET":
                 villain_fold_call_raise = self.state.villain_fold_count + self.state.villain_call_count + self.state.villain_raise_count
-                if villain_fold_call_raise > 0:
+                if villain_fold_call_raise > 50:
                     fold_prob = self.state.villain_fold_count / villain_fold_call_raise
                     call_prob = self.state.villain_call_count / villain_fold_call_raise
                     raise_prob = self.state.villain_raise_count / villain_fold_call_raise
@@ -681,7 +707,7 @@ class AppController:
                 action.ev = ev_fold + ev_call + ev_raise
             elif action.name == "RAISE":
                 villain_fold_call_raise = self.state.villain_fold_count + self.state.villain_call_count + self.state.villain_raise_count
-                if villain_fold_call_raise > 0:
+                if villain_fold_call_raise > 50:
                     fold_prob = self.state.villain_fold_count / villain_fold_call_raise
                     call_prob = self.state.villain_call_count / villain_fold_call_raise
                     raise_prob = self.state.villain_raise_count / villain_fold_call_raise
@@ -695,40 +721,75 @@ class AppController:
                     else:
                         ev_raise = 0
                 else: 
-                    fold_prob = 1/3
-                    call_prob = 1/3
-                    raise_prob = 1/3
-
                     cost = max(action.size - self.state.hero_amt, 0)
+                    pot_before = self.state.pot
+                    bet_to_pot_ratio = cost / max(pot_before, 0.1)
+                    
+
+                    base_fold = 0.55
+                    base_call = 0.35
+                    base_raise = 0.10
+                    
+                    size_factor = min(1.0, 1.0 / bet_to_pot_ratio)
+                    
+                    adjusted_fold = base_fold * size_factor
+                    adjusted_call = base_call + (base_fold - adjusted_fold) * 0.7
+                    adjusted_raise = base_raise + (base_fold - adjusted_fold) * 0.3
+
+                    total = adjusted_fold + adjusted_call + adjusted_raise
+                    fold_prob = adjusted_fold / total
+                    call_prob = adjusted_call / total
+                    raise_prob = adjusted_raise / total
                     
                     ev_fold = fold_prob * self.state.pot
                     
                     ev_call = call_prob * (self.cached_hero_equity * (self.state.pot + 2 * cost) - cost)
+
+                    villain_reraise_size = 2 * action.size
+                    reraise_cost = villain_reraise_size - action.size
                     
-                    if 2 * action.size - action.size <= self.state.hero_stack - cost:
-                        ev_raise = raise_prob * max(self.cached_hero_equity * (self.state.pot + cost + 2 * action.size + (2 * action.size - action.size)) - (cost + (2 * action.size - action.size)), 0)
+                    if self.cached_hero_equity > 0.45:
+                        final_pot_after_reraise = self.state.pot + cost + villain_reraise_size + reraise_cost
+                        ev_hero_calls_reraise = self.cached_hero_equity * final_pot_after_reraise - (cost + reraise_cost)
+                        ev_raise = raise_prob * ev_hero_calls_reraise
                     else:
-                        ev_raise = 0
+                        ev_raise = raise_prob * (-cost)
                 
                 action.ev = ev_fold + ev_call + ev_raise
+
             elif action.name == "ALL IN":
+                cost = max(action.size, 0)
+                pot_before = self.state.pot
+                bet_to_pot_ratio = cost / max(pot_before, 0.1)
+                
                 villain_fold_call = self.state.villain_fold_count + self.state.villain_call_count
-                if villain_fold_call > 0:
-                    cost = max(self.state.hero_stack, 0)
-                    fold_prob = self.state.villain_fold_count / villain_fold_call
-                    call_prob = self.state.villain_call_count / villain_fold_call
+                
+                if villain_fold_call > 50:
 
-                    ev_fold = fold_prob * self.state.pot
-                    final_pot = self.state.pot + cost + min(cost, self.state.villain_stack)
-                    ev_call = call_prob * (self.cached_hero_equity * final_pot - cost)
+                    base_fold_prob = self.state.villain_fold_count / villain_fold_call
+                    base_call_prob = self.state.villain_call_count / villain_fold_call
+                    
+                    size_factor = min(1.0, 1.0 / bet_to_pot_ratio)
+                    adjusted_fold = base_fold_prob * size_factor
+                    adjusted_call = base_call_prob + (base_fold_prob - adjusted_fold)
+                    
+                    total = adjusted_fold + adjusted_call
+                    fold_prob = adjusted_fold / total
+                    call_prob = adjusted_call / total
                 else:
-                    cost = max(self.state.hero_stack, 0)
-                    fold_prob = .95
-                    call_prob = .05
-
-                    ev_fold = fold_prob * self.state.pot
-                    final_pot = self.state.pot + cost + min(cost, self.state.villain_stack)
-                    ev_call = call_prob * (self.cached_hero_equity * final_pot - cost)
+                    size_factor = min(1.0, 1.0 / bet_to_pot_ratio)
+                    
+                    base_fold = 0.50
+                    adjusted_fold = base_fold * size_factor
+                    adjusted_call = 1.0 - adjusted_fold
+                    
+                    fold_prob = adjusted_fold
+                    call_prob = adjusted_call
+                
+                ev_fold = fold_prob * pot_before
+                villain_call_amount = min(cost, self.state.villain_stack)
+                final_pot = pot_before + cost + villain_call_amount
+                ev_call = call_prob * (self.cached_hero_equity * final_pot - cost)
                 
                 action.ev = ev_fold + ev_call
 

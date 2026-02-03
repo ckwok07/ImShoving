@@ -35,7 +35,6 @@ class DecisionChooser:
         # ('RAISE', 16): {'frequency': 0.16666666666666666, 'ev': 5.033058333333329}, 
         # ('ALL IN', 98): {'frequency': 0.16666666666666666, 'ev': 14.839574999999982}}
 
-        gto_actions = self.normalize_gto_actions(gto_actions)
         print(f"gto_actions:{gto_actions}")
         choice = random.uniform(0,1)
         print(choice)
@@ -48,29 +47,6 @@ class DecisionChooser:
             
         return Action("FOLD", "villain", 0, state.pot)
     
-    def normalize_gto_actions(self, gto_actions: dict[str, float], temperature: float = 8.0, min_ev_threshold: float = 0) -> dict[str, float]:
-        valid_actions = {k: v for k, v in gto_actions.items() if v['ev'] >= min_ev_threshold}
-
-        if not valid_actions:
-            return gto_actions
-        
-        # Shift EVs so minimum is 0 (avoids negative exponentials)
-        min_ev = min(v['ev'] for v in valid_actions.values())
-        shifted_evs = [v['ev'] - min_ev for v in valid_actions.values()]
-        
-        # Apply softmax
-        exp_evs = [math.exp(ev / temperature) for ev in shifted_evs]
-        sum_exp = sum(exp_evs)
-        
-        normalized = {}
-        for (k, v), exp_ev in zip(valid_actions.items(), exp_evs):
-            normalized[k] = {
-                'frequency': exp_ev / sum_exp,
-                'ev': v['ev']
-            }
-        
-        return normalized
-
     def get_villain_legal_actions(self, state: GameState) -> list[Action]:
         actions = []
 
@@ -145,10 +121,12 @@ class DecisionChooser:
             return self.preflop_table[key]["avg_equity"]
 
         else:
-            return Simulator.simulate_equity(hand = state.villain_hand,
+            equity = Simulator.simulate_equity(hand = state.villain_hand,
                                              board = state.board,
                                              players = 2,
                                              trials = 15000)
+            print(f"equity : {equity} for {state.villain_hand}")
+            return equity
     
     def load_preflop_equity_table(self) -> None:
         current_file = Path(__file__)

@@ -32,16 +32,16 @@ class GTOModel:
             raise_freq = 0.10 
         elif equity < pot_odds: # weak hand
             fold_freq = 0.50
-            call_freq = 0.35
-            raise_freq = 0.15
-        elif equity < pot_odds + 0.10: # solid hand
+            call_freq = 0.40
+            raise_freq = 0.10
+        elif equity < pot_odds + 0.15: # solid hand
             fold_freq = max(0.10, 1 - mdf)
-            call_freq = (1 - fold_freq) * .6
-            raise_freq = (1 - fold_freq) * .4
+            call_freq = (1 - fold_freq) * .65
+            raise_freq = (1 - fold_freq) * .35
         else: # strong hand
             fold_freq = 0.05
-            call_freq = 0.55
-            raise_freq = 0.40
+            call_freq = 0.60
+            raise_freq = 0.35
 
         if fold_action:
             result[(fold_action.name, fold_action.size)] = {"frequency": fold_freq,
@@ -74,7 +74,7 @@ class GTOModel:
                             hero_fold_prob = 0.55 + 0.10 * (raise_in_pot_units - 2.0)
                             hero_fold_prob = min(hero_fold_prob, 1 - mdf)
                         else:
-                            hero_fold_prob = min(0.80, 0.75 + 0.01 * (raise_in_pot_units - 4.0))
+                            hero_fold_prob = min(0.94, 0.80 + 0.01 * (raise_in_pot_units - 4.0))
                             hero_fold_prob = min(hero_fold_prob, 1 - mdf)
                     
                     hero_call_prob = 1 - hero_fold_prob

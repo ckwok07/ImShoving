@@ -148,7 +148,7 @@ class Table(QWidget):
         self.dealer.show()
 
     def on_next_hand_clicked(self):
-        self.controller.state.button_index = (self.controller.state.button_index + 1) % 2
+        # self.controller.state.button_index = (self.controller.state.button_index + 1) % 2
         self.controller.new_hand()
 
     def scroll_actions_to_end(self):

@@ -3,11 +3,20 @@ from typing import List, Optional
 from main.model.Card import Card
 
 from controller.action import Action
+import traceback
 
 STREETS = ["PREFLOP", "FLOP", "TURN", "RIVER", "SHOWDOWN"]
 
 @dataclass
 class GameState:
+        # ... your existing init / dataclass ...
+
+    def __setattr__(self, name, value):
+        if name == "button_index":
+            print("\n🔴 button_index assignment detected:", value)
+            traceback.print_stack(limit=12)
+        super().__setattr__(name, value)
+
     street: str
     board: List[Card]
     pot:float
