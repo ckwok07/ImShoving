@@ -1,8 +1,8 @@
 from PyQt6.QtWidgets import QPushButton
 
-class NextHand(QPushButton):
+class ResetStacks(QPushButton):
     def __init__(self) -> None:
-        super().__init__("NEXT HAND")
+        super().__init__("RESET STACKS")
 
         self.setStyleSheet("""
                            QPushButton {
@@ -24,3 +24,4 @@ class NextHand(QPushButton):
                                 background-color: #2b2b2b;
                                 color: white;
                             }""")
+                                    

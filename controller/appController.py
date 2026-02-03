@@ -592,7 +592,7 @@ class AppController:
                 if self.state.hero_stack > 0 and not self.state.hero_all_in:
                     max_effective_all_in = min(self.state.hero_stack, 
                                                 self.state.villain_stack + self.state.villain_amt - self.state.hero_amt)
-                    if max_effective_all_in > 0:  # ← Only add if there's an actual amount to go all-in for
+                    if max_effective_all_in > 0:
                         actions.append(Action("ALL IN", "hero", max_effective_all_in))
 
         elif bb_option:
@@ -858,5 +858,13 @@ class AppController:
         for threshold in sorted(ACCURACY_LABELS.keys(), reverse=True):
             if accuracy >= threshold:
                 return ACCURACY_LABELS[threshold]
+            
+    def reset_stacks(self):
+        if not self.state.hand_over:
+            return
+        self.state.villain_stack = 100
+        self.state.hero_stack = 100
+        self.new_hand()
+
 
     

@@ -70,12 +70,21 @@ class DecisionChooser:
 
         if facing_bet:
             actions.append(Action("FOLD", "villain", 0))
-            actions.append(Action("CALL", "villain", state.current_bet - state.villain_amt))
 
-            for new_bet in (state.current_bet * 2, state.current_bet * 4):
-                raise_cost = new_bet - state.villain_amt
-                if raise_cost > 0 and state.villain_stack >= raise_cost and new_bet <= max_affordable:
-                    actions.append(Action("RAISE", "villain", size = new_bet))
+            if state.hero_all_in:
+                call_amount =  min(state.current_bet - state.villain_amt, state.villain_stack)
+                actions.append(Action("CALL", "villain", call_amount))
+            else:
+                actions.append(Action("CALL", "hero", state.current_bet - state.villain_amt))
+                for new_bet in (state.current_bet * 2, state.current_bet * 4):
+                    raise_cost = new_bet - state.villain_amt
+                    if raise_cost > 0 and state.villain_stack >= raise_cost and new_bet <= max_affordable:
+                        actions.append(Action("RAISE", "villain", size = new_bet))
+
+                if state.villain_stack > 0 and not state.villain_all_in:
+                    max_effective_all_in = min(state.villain_stack, state.hero_stack + state.hero_amt - state.villain_amt)
+                    if max_effective_all_in > 0:
+                        actions.append(Action("ALL IN", "villain", max_effective_all_in))
         elif bb_option:
             actions.append(Action("CHECK", "villain", 0))
 
@@ -83,17 +92,26 @@ class DecisionChooser:
                 cost = new_bet - state.villain_amt
                 if cost > 0 and state.villain_stack >= cost and new_bet <= max_affordable:
                     actions.append(Action("RAISE", "villain", size=new_bet))
+            if state.villain_stack > 0 and not state.villain_all_in:
+                max_effective_all_in = min(state.villain_stack, state.hero_stack + state.hero_amt - state.villain_amt)
+                if max_effective_all_in > 0:
+                    actions.append(Action("ALL IN", "villain", max_effective_all_in))
         else:
             actions.append(Action("CHECK", "villain", 0))
 
             for bet in (1, 2, 4):
                 if state.villain_stack >= bet:
                     actions.append(Action("BET", "villain", size = bet))
+            
+            if state.villain_stack > 0 and not state.villain_all_in:
+                max_effective_all_in = min(state.villain_stack, state.hero_stack + state.hero_amt - state.villain_amt)
+                if max_effective_all_in > 0:
+                    actions.append(Action("ALL IN", "villain", max_effective_all_in))
 
-        if state.villain_stack > 0 and not state.villain_all_in:
-            max_effective_all_in = min(state.villain_stack, 
-                                        state.hero_stack + state.hero_amt - state.villain_amt)
-            actions.append(Action("ALL IN", "villain", max_effective_all_in))
+        # if state.villain_stack > 0 and not state.villain_all_in:
+        #     max_effective_all_in = min(state.villain_stack, 
+        #                                 state.hero_stack + state.hero_amt - state.villain_amt)
+        #     actions.append(Action("ALL IN", "villain", max_effective_all_in))
 
         print(f"legal actions: {actions}")
         return actions

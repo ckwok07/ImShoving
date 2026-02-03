@@ -11,6 +11,7 @@ from .HeroStack import HeroStack
 from .VillainStack import VillainStack
 from .VillainHand import VillainHand
 from .NextHand import NextHand
+from .ResetStacks import ResetStacks
 
 
 class Table(QWidget):
@@ -64,7 +65,9 @@ class Table(QWidget):
         self.actions = ActionGrid()
         self.actions.action_clicked.connect(self.on_action)
         self.next_hand = NextHand()
+        self.reset_stacks = ResetStacks()
         self.next_hand.clicked.connect(self.on_next_hand_clicked)
+        self.reset_stacks.clicked.connect(self.on_reset_stacks_clicked)
 
         layout.addWidget(self.action_scroll)
 
@@ -95,7 +98,10 @@ class Table(QWidget):
         layout.addWidget(hero_row, alignment=Qt.AlignmentFlag.AlignHCenter)
 
         layout.addWidget(self.actions, alignment=Qt.AlignmentFlag.AlignHCenter)
+        hero_layout.setSpacing(20)
         layout.addWidget(self.next_hand, alignment=Qt.AlignmentFlag.AlignHCenter)
+        layout.addSpacing(10)
+        layout.addWidget(self.reset_stacks, alignment=Qt.AlignmentFlag.AlignHCenter)
         layout.addStretch()
     
     def on_action(self, action) -> None:
@@ -126,7 +132,11 @@ class Table(QWidget):
 
         self.hero_hand.set_active(state.to_act_index == 0)
         self.villain_hand.set_active(state.to_act_index == 1)
-        self.next_hand.setEnabled(state.hand_over)
+
+        can_reset = (state.hand_over and (state.hero_stack == 0 or state.villain_stack == 0))
+        self.reset_stacks.setEnabled(can_reset)
+        self.next_hand.setEnabled(state.hand_over and not can_reset)
+
 
         recent_actions = state.actions_list
         self.action_history.set_actions(recent_actions)
@@ -150,6 +160,9 @@ class Table(QWidget):
     def on_next_hand_clicked(self):
         # self.controller.state.button_index = (self.controller.state.button_index + 1) % 2
         self.controller.new_hand()
+    
+    def on_reset_stacks_clicked(self):
+        self.controller.reset_stacks()
 
     def scroll_actions_to_end(self):
         bar = self.action_scroll.horizontalScrollBar()
