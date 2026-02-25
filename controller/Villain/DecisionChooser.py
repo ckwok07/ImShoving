@@ -104,7 +104,7 @@ class DecisionChooser:
                     actions.append(Action("BET", "villain", size = bet))
             
             if state.villain_stack > 0 and not state.villain_all_in:
-                max_effective_all_in = min(state.villain_stack, state.hero_stack + state.hero_amt - state.villain_amt)
+                max_effective_all_in = min(state.villain_stack, state.hero_stack)
                 if max_effective_all_in > 0:
                     actions.append(Action("ALL IN", "villain", max_effective_all_in))
 
