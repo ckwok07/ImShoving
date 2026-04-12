@@ -1,19 +1,22 @@
 {
   "BB": {
     "counts": {
-      "HERO_CALL": 2
+      "HERO_CALL": 3,
+      "HERO_RAISE_OVERBET3": 1,
+      "HERO_RAISE_OVERBET2": 1
     },
     "HERO_CALL": {
       "counts": {
-        "VILLAIN_CHECK": 2
+        "VILLAIN_CHECK": 3
       },
       "VILLAIN_CHECK": {
         "counts": {
-          "FLOP": 2
+          "FLOP": 3
         },
         "FLOP": {
           "counts": {
-            "VILLAIN_CHECK": 2
+            "VILLAIN_CHECK": 2,
+            "VILLAIN_BET_POT": 1
           },
           "VILLAIN_CHECK": {
             "counts": {
@@ -97,6 +100,74 @@
                 }
               }
             }
+          },
+          "VILLAIN_BET_POT": {
+            "counts": {
+              "HERO_CALL": 1
+            },
+            "HERO_CALL": {
+              "counts": {
+                "TURN": 1
+              },
+              "TURN": {
+                "counts": {
+                  "VILLAIN_CHECK": 1
+                },
+                "VILLAIN_CHECK": {
+                  "counts": {
+                    "HERO_CHECK": 1
+                  },
+                  "HERO_CHECK": {
+                    "counts": {
+                      "RIVER": 1
+                    },
+                    "RIVER": {
+                      "counts": {
+                        "VILLAIN_CHECK": 1
+                      },
+                      "VILLAIN_CHECK": {
+                        "counts": {
+                          "HERO_CHECK": 1
+                        },
+                        "HERO_CHECK": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "HERO_RAISE_OVERBET3": {
+      "counts": {
+        "VILLAIN_FOLD": 1
+      },
+      "VILLAIN_FOLD": {}
+    },
+    "HERO_RAISE_OVERBET2": {
+      "counts": {
+        "VILLAIN_ALL IN_OVERBET3": 1
+      },
+      "VILLAIN_ALL IN_OVERBET3": {
+        "counts": {
+          "HERO_CALL": 1
+        },
+        "HERO_CALL": {
+          "counts": {
+            "FLOP": 1
+          },
+          "FLOP": {
+            "counts": {
+              "TURN": 1
+            },
+            "TURN": {
+              "counts": {
+                "RIVER": 1
+              },
+              "RIVER": {}
+            }
           }
         }
       }
@@ -105,7 +176,8 @@
   "D": {
     "counts": {
       "VILLAIN_RAISE_OVERBET3": 1,
-      "VILLAIN_CALL": 1
+      "VILLAIN_CALL": 1,
+      "VILLAIN_FOLD": 3
     },
     "VILLAIN_RAISE_OVERBET3": {
       "counts": {
@@ -193,6 +265,7 @@
           }
         }
       }
-    }
+    },
+    "VILLAIN_FOLD": {}
   }
 }
