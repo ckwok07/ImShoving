@@ -13,7 +13,6 @@ class GameState:
 
     def __setattr__(self, name, value):
         if name == "button_index":
-            print("\n🔴 button_index assignment detected:", value)
             traceback.print_stack(limit=12)
         super().__setattr__(name, value)
 

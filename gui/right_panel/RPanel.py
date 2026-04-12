@@ -5,7 +5,7 @@ class RPanel(QWidget):
     def __init__(self, controller) -> None:
         super().__init__()
         self.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Expanding)
-        self.setFixedWidth(350)
+        self.setFixedWidth(0)
 
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)

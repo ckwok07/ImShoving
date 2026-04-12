@@ -1,0 +1,198 @@
+{
+  "BB": {
+    "counts": {
+      "HERO_CALL": 2
+    },
+    "HERO_CALL": {
+      "counts": {
+        "VILLAIN_CHECK": 2
+      },
+      "VILLAIN_CHECK": {
+        "counts": {
+          "FLOP": 2
+        },
+        "FLOP": {
+          "counts": {
+            "VILLAIN_CHECK": 2
+          },
+          "VILLAIN_CHECK": {
+            "counts": {
+              "HERO_BET_OVERBET2": 1,
+              "HERO_CHECK": 1
+            },
+            "HERO_BET_OVERBET2": {
+              "counts": {
+                "VILLAIN_RAISE_OVERBET3": 1
+              },
+              "VILLAIN_RAISE_OVERBET3": {
+                "counts": {
+                  "HERO_CALL": 1
+                },
+                "HERO_CALL": {
+                  "counts": {
+                    "TURN": 1
+                  },
+                  "TURN": {
+                    "counts": {
+                      "VILLAIN_CHECK": 1
+                    },
+                    "VILLAIN_CHECK": {
+                      "counts": {
+                        "HERO_CHECK": 1
+                      },
+                      "HERO_CHECK": {
+                        "counts": {
+                          "RIVER": 1
+                        },
+                        "RIVER": {
+                          "counts": {
+                            "VILLAIN_CHECK": 1
+                          },
+                          "VILLAIN_CHECK": {
+                            "counts": {
+                              "HERO_BET_TINY": 1
+                            },
+                            "HERO_BET_TINY": {
+                              "counts": {
+                                "VILLAIN_CALL": 1
+                              },
+                              "VILLAIN_CALL": {}
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "HERO_CHECK": {
+              "counts": {
+                "TURN": 1
+              },
+              "TURN": {
+                "counts": {
+                  "VILLAIN_CHECK": 1
+                },
+                "VILLAIN_CHECK": {
+                  "counts": {
+                    "HERO_CHECK": 1
+                  },
+                  "HERO_CHECK": {
+                    "counts": {
+                      "RIVER": 1
+                    },
+                    "RIVER": {
+                      "counts": {
+                        "VILLAIN_BET_POT": 1
+                      },
+                      "VILLAIN_BET_POT": {
+                        "counts": {
+                          "HERO_CALL": 1
+                        },
+                        "HERO_CALL": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "D": {
+    "counts": {
+      "VILLAIN_RAISE_OVERBET3": 1,
+      "VILLAIN_CALL": 1
+    },
+    "VILLAIN_RAISE_OVERBET3": {
+      "counts": {
+        "HERO_CALL": 1
+      },
+      "HERO_CALL": {
+        "counts": {
+          "FLOP": 1
+        },
+        "FLOP": {
+          "counts": {
+            "HERO_CHECK": 1
+          },
+          "HERO_CHECK": {
+            "counts": {
+              "VILLAIN_CHECK": 1
+            },
+            "VILLAIN_CHECK": {
+              "counts": {
+                "TURN": 1
+              },
+              "TURN": {
+                "counts": {
+                  "HERO_CHECK": 1
+                },
+                "HERO_CHECK": {
+                  "counts": {
+                    "VILLAIN_BET_SMALL": 1
+                  },
+                  "VILLAIN_BET_SMALL": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "VILLAIN_CALL": {
+      "counts": {
+        "HERO_CHECK": 1
+      },
+      "HERO_CHECK": {
+        "counts": {
+          "FLOP": 1
+        },
+        "FLOP": {
+          "counts": {
+            "HERO_BET_OVERBET2": 1
+          },
+          "HERO_BET_OVERBET2": {
+            "counts": {
+              "VILLAIN_CALL": 1
+            },
+            "VILLAIN_CALL": {
+              "counts": {
+                "TURN": 1
+              },
+              "TURN": {
+                "counts": {
+                  "HERO_CHECK": 1
+                },
+                "HERO_CHECK": {
+                  "counts": {
+                    "VILLAIN_CHECK": 1
+                  },
+                  "VILLAIN_CHECK": {
+                    "counts": {
+                      "RIVER": 1
+                    },
+                    "RIVER": {
+                      "counts": {
+                        "HERO_CHECK": 1
+                      },
+                      "HERO_CHECK": {
+                        "counts": {
+                          "VILLAIN_CHECK": 1
+                        },
+                        "VILLAIN_CHECK": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
