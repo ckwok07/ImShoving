@@ -6,9 +6,10 @@ The engine supports both deck-based random opponents and explicit opponent range
 
 Still in development
 
-![Description](data/image1.png)
-
-![Description](data/image2.png)
+<p align="center">
+  <img src="data/image1.png" width="45%"/>
+  <img src="data/image2.png" width="45%"/>
+</p>
 
 ## The Villain
 The villain makes decisions based on hero and GTO.
